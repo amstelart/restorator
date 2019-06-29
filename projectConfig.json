@@ -58,7 +58,9 @@
     "embed-responsive": [],
     "pie-chart": [],
     "fields-group": [],
-    "tooltip": []
+    "tooltip": [],
+    "top-nav": [],
+    "social": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

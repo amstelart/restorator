@@ -12,7 +12,7 @@ $gray-lighter:                hsl(0, 0%, 80%);
 $gray-lightest:               hsl(0, 0%, 90%);
 $white:                       hsl(0, 0%, 100%);
 
-$color-main:                  hsl(208, 98%, 43%);
+$color-main:                  #af232f;
 $color-success:               hsl(120, 39%, 54%);
 $color-danger:                hsl(2, 64%, 58%);
 $color-warning:               hsl(35, 84%, 62%);
@@ -21,20 +21,20 @@ $color-warning:               hsl(35, 84%, 62%);
 
 // Семантические цвета
 
-$text-color:                  $gray-darkest;
-$text-color--muted:           $gray;
-$body-bg:                     #fff;
+$text-color:                  $black;
+$text-color--muted:           #b8b8b8;
+$body-bg:                     #fbfbfb;
 
 $link-color:                  $color-main;
 $link-color--hover:           darken($color-main, 15%);
 
-$border-color:                $gray-light;
+$border-color:                #e7e7e7;
 
 
 
 // Базовая типографика
 
-$font-size:                   14px;
+$font-size:                   16px;
 $font-size--h1:               2.25em;
 $font-size--h2:               1.875em;
 $font-size--h3:               1.5em;
@@ -45,7 +45,7 @@ $font-size--small:            0.75em;
 
 $line-height:                 1.375em;
 
-$font-family:                 -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
+$font-family:                 'Panton', 'Arial', sans-serif;
 $font-family--serif:          'Georgia', 'Times New Roman', 'Times', serif;
 $font-family--monospace:      'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
 $font-family--headings:       $font-family;

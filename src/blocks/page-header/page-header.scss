@@ -6,3 +6,95 @@
 
   $block-name:                &; // #{$block-name}__element
 }
+
+.header-top {
+  $block-name:                &; // #{$block-name}__element
+
+  border-bottom: 1px solid $border-color;
+
+  &__inner {
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+
+    &--nav {
+      margin-right: auto;
+    }
+
+    &--entry {
+      background-color: rgb(43, 43, 43);
+      text-decoration: none;
+      color: #fff;
+      align-self: stretch;
+      text-align: center;
+      width: 133px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+
+      }
+    }
+  }
+}
+
+.header-main {
+
+  &__inner {
+    height: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+
+    &--logo {
+      min-width: 279px;
+    }
+
+    &--contacts {
+      a {
+        display: block;
+      }
+    }
+  }
+}
+
+.header-navbar {
+
+  background: #efefef;
+
+  &__inner {
+    height: 65px;
+    display: flex;
+  }
+
+  &__nav {
+
+    min-width: 279px;
+    margin-right: 26px;
+
+    .btn {
+      background: $color-main;
+      color: #fff;
+      border: none;
+      height: 65px;
+      min-width: 100%;
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-self: center;
+    flex-grow: 1;
+
+    .field-text__input {
+      
+    }
+  }
+}
