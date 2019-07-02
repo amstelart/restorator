@@ -129,15 +129,43 @@
               </div>
             </div>
             <div class="header-main__item">
-              <div>
-                <div>Избранное</div>
-                <div>2530р</div>
-              </div>
+              <a id="dropdown-basket" href="#" class="header-btn dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <div class="header-btn__inner">
+                  <div class="header-btn__icon-wrap">
+                    <span class="value">12</span>
+                    <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#favorit-icon"></use></svg>
+                  </div>
+                  <div class="header-btn__content">
+                    <h5>Избранное</h5>
+                    <div>2530р</div>
+                  </div>
+                </div>
+              </a>
             </div>
             <div class="header-main__item">
-              <div>
-                <div>Корзина</div>
-                <div>1550р</div>
+              <div class="dropdown dropdown--basket">
+                <a id="dropdown-basket" href="#" class="header-btn dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <div class="header-btn__inner">
+                    <div class="header-btn__icon-wrap">
+                      <span class="value">12</span>
+                      <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#basket-icon"></use></svg>
+                    </div>
+                    <div class="header-btn__content">
+                      <h5>Корзина</h5>
+                      <span>1550р</span>
+                    </div>
+                  </div>
+                </a>
+                <div class="dropdown__menu dropdown__menu--right" aria-labelledby="dropdown-basket">
+                  <form action="https://httpbin.org/post" method="post">
+                    <input type="text">
+                    <select>
+                      <option>Название пункта</option>
+                    </select>
+                    <textarea rows="3"></textarea>
+                    <button class="btn">Отправить эту форму</button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
@@ -487,7 +515,7 @@
                         <div class="product-card__info">
                           <h5 class="product-card__name">Средство для чистки плит 3л</h5>
                           <div class="product-card__price">
-                            <div class="sub-price">280</div>
+                            <div class="sub-price"><s>280</s></div>
                             <div class="price"><span>180</span> руб</div>
                           </div>
                         </div>
@@ -530,7 +558,7 @@
                         <div class="product-card__info">
                           <h5 class="product-card__name">Средство для чистки плит 3л</h5>
                           <div class="product-card__price">
-                            <div class="sub-price">280</div>
+                            <div class="sub-price"><s>280</s></div>
                             <div class="price"><span>180</span> руб</div>
                           </div>
                         </div>
@@ -573,7 +601,7 @@
                         <div class="product-card__info">
                           <h5 class="product-card__name">Средство для чистки плит 3л</h5>
                           <div class="product-card__price">
-                            <div class="sub-price">280</div>
+                            <div class="sub-price"><s>280</s></div>
                             <div class="price"><span>180</span> руб</div>
                           </div>
                         </div>
@@ -622,7 +650,7 @@
                         <div class="product-card__info">
                           <h5 class="product-card__name">Средство для чистки плит 3л</h5>
                           <div class="product-card__price">
-                            <div class="sub-price">280</div>
+                            <div class="sub-price"><s>280</s></div>
                             <div class="price"><span>180</span> руб</div>
                           </div>
                         </div>
@@ -665,7 +693,7 @@
                         <div class="product-card__info">
                           <h5 class="product-card__name">Средство для чистки плит 3л</h5>
                           <div class="product-card__price">
-                            <div class="sub-price">280</div>
+                            <div class="sub-price"><s>280</s></div>
                             <div class="price"><span>180</span> руб</div>
                           </div>
                         </div>
@@ -708,7 +736,7 @@
                         <div class="product-card__info">
                           <h5 class="product-card__name">Средство для чистки плит 3л</h5>
                           <div class="product-card__price">
-                            <div class="sub-price">280</div>
+                            <div class="sub-price"><s>280</s></div>
                             <div class="price"><span>180</span> руб</div>
                           </div>
                         </div>
