@@ -1,0 +1,52 @@
+// В этом файле должны быть стили для БЭМ-блока reviews-card, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.reviews-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin-bottom: 30px;
+
+  &__inner {
+    background: #fff;
+    border: 1px solid $border-color;
+    padding: 30px 25px;
+  }
+
+  &__header {
+    display: flex;
+  }
+
+  &__img-wrap {
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    background: #444;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 30px;
+  }
+
+  &__info {
+    flex-grow: 1;
+    margin-right: 30px;
+  }
+
+  &__social {
+
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 14px;
+    font-weight: 700;
+  }
+
+  &__date {
+    margin-top: 0;
+    color: #cac8c8;
+    font-weight: 500;
+  }
+
+}

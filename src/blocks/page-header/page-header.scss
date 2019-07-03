@@ -24,8 +24,12 @@
       margin-right: auto;
     }
 
+    &--social {
+      margin-right: 20px;
+    }
+
     &--entry {
-      background-color: rgb(43, 43, 43);
+      background-color: #2b2b2b;
       text-decoration: none;
       color: #fff;
       align-self: stretch;
@@ -35,8 +39,17 @@
       align-items: center;
       justify-content: center;
 
+      svg {
+        fill: #fff;
+        margin-right: 10px;
+      }
+
       span {
 
+      }
+
+      &:hover {
+        background-color: darken(#2b2b2b, 5%);
       }
     }
   }
@@ -48,53 +61,80 @@
     height: 128px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
   }
 
   &__item {
 
+    width: 15%;
+
     &--logo {
-      min-width: 279px;
+      min-width: 23%;
+      margin-right: 30px;
+
+      img {
+        margin-left: 1em;
+      }
     }
 
     &--contacts {
+      min-width: 20%;
+
       a {
         display: block;
       }
     }
+
+    &--wt {
+      min-width: 20%;
+    }
   }
 }
 
-.header-navbar {
+.header-btn {
 
-  background: #efefef;
+  text-decoration: none;
+  color: #000;
+  padding: 20px;
+  display: block;
+  border-radius: 10px;
+
 
   &__inner {
-    height: 65px;
     display: flex;
   }
 
-  &__nav {
+  &__icon-wrap {
 
-    min-width: 279px;
-    margin-right: 26px;
+    position: relative;
+    width: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
 
-    .btn {
-      background: $color-main;
+    .value {
+      height: 20px;
+      min-width: 22px;
+      text-align: center;
+      font-size: 10px;
+      line-height: 19px;
+      font-weight: 700;
+      background-color: $color-main;
       color: #fff;
-      border: none;
-      height: 65px;
-      min-width: 100%;
+      padding: 2px 4px;
+      border-radius: 8px;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 
-  &__search {
-    display: flex;
-    align-self: center;
-    flex-grow: 1;
-
-    .field-text__input {
-      
+  &__content {
+    h5 {
+      margin: 0;
     }
   }
 }

@@ -7,5 +7,132 @@
   $block-name:                &; // #{$block-name}__element
 
   background: #2c2c2c;
+  color: #d3d2d2;
   padding: 60px 0;
+
+  @media (max-width: ($screen-lg - 1)) {
+    padding: 30px 0 15px 0;
+  }
+
+  &__inner {
+    @include row;
+  }
+
+  &__item {
+    @include col();
+
+    &--contacts {
+      order: 1;
+      @include col(lg, 2);
+      @include col(md, 4);
+
+      margin-top: 20px;
+
+      @media (max-width: ($screen-lg - 1)) {
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin: 0.3em 0;
+      }
+
+      .main-phone {
+        color: #fff;
+        font-size: 18px;
+      }
+    }
+
+    &--links {
+      order: 2;
+      @include col(lg, 5);
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+
+      @media (max-width: ($screen-lg - 1)) {
+        order: 3
+      }
+
+      #{$block-name}__list {
+        @include col();
+        @include col(md, 6);
+
+        @media (max-width: ($screen-lg - 1)) {
+          padding-left: 0 !important;
+        }
+      }
+
+      #{$block-name}__copyright {
+        margin-top: auto;
+
+        @media (max-width: ($screen-lg - 1)) {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    &--map {
+      order: 3;
+      @include col(lg, 5);
+      @include col(md, 8);
+      align-self: flex-start;
+
+      @media (max-width: ($screen-lg - 1)) {
+        order: 2;
+      }
+    }
+  }
+
+  &__list {
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding-left: 9px;
+      position: relative;
+      margin-bottom: 5px;
+
+      &:before {
+        content: "";
+        width: 2px;
+        height: 2px;
+        background: $color-main;
+        position: absolute;
+        left: 0;
+        top: 9px;
+      }
+    }
+
+    a {
+      color: #d3d2d2;
+      text-decoration: none;
+
+      &:hover {
+        color: #f09402;
+      }
+    }
+  }
+
+  &__logo {
+
+    margin-bottom: 30px;
+    display: block;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__contacts {
+    margin-bottom: 30px;
+  }
+
+  &__copyright {
+    font-size: 12px;
+    line-height: 1.2;
+    color: #d3d2d2;
+  }
 }

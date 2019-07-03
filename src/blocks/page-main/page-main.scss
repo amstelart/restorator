@@ -1,0 +1,32 @@
+// В этом файле должны быть стили для БЭМ-блока page-main, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.page-main {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    @include row;
+
+    .sidebar {
+      @include col();
+      @include col(lg, 3);
+    }
+
+    .main {
+      @include col();
+      @include col(lg, 9);
+
+      &__inner {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      &__title {
+        margin-top: 0;
+        font-size: 24px;
+      }
+    }
+  }
+}

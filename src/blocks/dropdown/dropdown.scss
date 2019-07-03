@@ -54,4 +54,23 @@ $transition-time:             0.3s !default;
       width: auto;
     }
   }
+
+
+  &--basket {
+
+    &.dropdown--open {
+      .dropdown__toggler {
+        background: #fff;
+        border-radius: 10px 10px 0 0;
+        box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.1);
+      }
+
+      #{$block-name}__menu {
+        box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.1);
+        border-radius: 10px 0 10px 10px;
+        padding: 20px;
+        z-index: 2;
+      }
+    }
+  }
 }

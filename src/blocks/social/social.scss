@@ -15,19 +15,19 @@
   list-style: none;
 
   &__link-wrap {
-    margin-right: 10px;
+    margin-right: 5px;
   }
 
   &__link {
     display: block;
     padding: 5px;
-    background-color: $gray;
+    background-color: #fff;
 
-    #{$block-name}__link-wrap--fb & {
-      background-color: #444;
-    }
+    // #{$block-name}__link-wrap--you & {
+    //   background-color: #444;
+    // }
 
-    // #{$block-name}__link-wrap--vk & {
+    // #{$block-name}__link-wrap--fb & {
     //   background-color: $color-vk;
     // }
 
@@ -35,7 +35,7 @@
     //   background-color: $color-tw;
     // }
 
-    // #{$block-name}__link-wrap--gh & {
+    // #{$block-name}__link-wrap--inst & {
     //   background-color: $color-gh;
     // }
 
@@ -43,7 +43,11 @@
       display: block;
       width: 16px;
       height: 16px;
-      fill: #fff;
+      fill: #000;
+    }
+
+    &:hover {
+      background-color: #efefef;
     }
   }
 

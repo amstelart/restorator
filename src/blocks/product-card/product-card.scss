@@ -1,0 +1,100 @@
+// В этом файле должны быть стили для БЭМ-блока product-card, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.product-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid $border-color;
+    padding: 20px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+
+    .label {
+      margin-right: 10px;
+    }
+
+    .vendor-code {
+      font-size: 14px;
+      line-height: 1.2;
+    }
+  }
+
+  &__body {
+    display: flex;
+  }
+
+  &__kit {
+    flex-shrink: 0;
+    width: 75px;
+
+    .kit-item {
+      font-size: 14px;
+      margin-bottom: 5px;
+
+      span {
+        background: #ececec;
+        padding: 0.1em 0.6em;
+        min-width: 40px;
+        text-align: center;
+        display: inline-block;
+      }
+    }
+  }
+
+  &__img-wrap {
+    flex-grow: 1;
+  }
+
+  &__info {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 15px;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+
+  &__price {
+
+    text-align: right;
+    margin-left: 15px;
+
+    .sub-price {
+      font-size: 16px;
+      color: #b8b8b8;
+      font-weight: 600;
+    }
+
+    .price {
+      font-size: 16px;
+      white-space: nowrap;
+      color: #ae232f;
+      font-weight: 700;
+
+      span {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__action {
+    display: flex;
+  }
+
+  &__field-num {
+    margin: 0 15px;
+    flex-grow: 1;
+  }
+}

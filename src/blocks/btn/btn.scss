@@ -19,12 +19,13 @@ $border-radius:               3px !default;
   box-sizing: border-box;
   display: inline-block;
   margin: 0;
-  padding: $field-padding-vertical  $field-padding-horizontal;
+  padding: 16px  32px;
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
   text-align: center;
-  font-size: 1em;
+  font-size: 16px;
+  font-weight: 700;
   font-family: inherit;
   line-height: $line-height;
   text-decoration: none;
@@ -67,25 +68,23 @@ $border-radius:               3px !default;
   //   vertical-align: middle;
   // }
 
+  &--main {
+    color: #fff;
+    background-color: $color-main;
+    border: 1px solid $color-main;
 
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: darken($color-main, 10%);
+      border-color: darken($color-main, 12%);
+    }
 
-  // &--main {
-  //   color: #fff;
-  //   background-color: $color-main;
-  //   border: 1px solid $color-main;
-
-  //   &:hover,
-  //   &:focus {
-  //     color: #fff;
-  //     background-color: darken($color-main, 10%);
-  //     border-color: darken($color-main, 12%);
-  //   }
-
-  //   &--disabled,
-  //   &:disabled {
-  //     color: #fff;
-  //     background-color: $color-main;
-  //     border-color: $color-main;
-  //   }
-  // }
+    &--disabled,
+    &:disabled {
+      color: #fff;
+      background-color: $color-main;
+      border-color: $color-main;
+    }
+  }
 }

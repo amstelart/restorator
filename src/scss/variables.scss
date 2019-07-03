@@ -13,10 +13,11 @@ $gray-lightest:               hsl(0, 0%, 90%);
 $white:                       hsl(0, 0%, 100%);
 
 $color-main:                  #af232f;
+$color-blue:                  #0a6ec3;
+$color-orange:                #f09402;
 $color-success:               hsl(120, 39%, 54%);
 $color-danger:                hsl(2, 64%, 58%);
 $color-warning:               hsl(35, 84%, 62%);
-
 
 
 // Семантические цвета
@@ -36,9 +37,9 @@ $border-color:                #e7e7e7;
 
 $font-size:                   16px;
 $font-size--h1:               2.25em;
-$font-size--h2:               1.875em;
+$font-size--h2:               30px;
 $font-size--h3:               1.5em;
-$font-size--h4:               1.25em;
+$font-size--h4:               24px;
 $font-size--h5:               1em;
 $font-size--h6:               1em;
 $font-size--small:            0.75em;
@@ -59,13 +60,11 @@ $screen-sm:                   480px;
 $screen-md:                   768px;
 $screen-lg:                   992px;
 $screen-xl:                   1200px;
-$screen-xxl:                  1800px;
 
 $container-sm:                100%;
 $container-md:                100%;
 $container-lg:                $screen-lg - 30;
-$container-xl:                $screen-xl - 30;
-$container-xxl:               $screen-xxl - 30;
+$container-xl:                1200px;
 
 
 

@@ -1,0 +1,41 @@
+// В этом файле должны быть стили для БЭМ-блока media-box, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.media-box {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+
+  &__slider {
+    flex-grow: 1;
+    max-width: 72%;
+  }
+
+  &__banner {
+
+    width: 28%;
+    flex-shrink: 0;
+    position: relative;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    a {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 20px;
+      color: $color-main;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+}

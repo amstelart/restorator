@@ -1,0 +1,25 @@
+// В этом файле должны быть стили для БЭМ-блока carousel-photo-item, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.carousel-photo-item {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: block;
+  border: 1px solid $border-color;
+  background: #fff;
+  max-width: 220px;
+  height: 220px;
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+}

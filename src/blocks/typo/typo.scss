@@ -258,9 +258,11 @@ h6 {
 // .h3,
 h1,
 h2,
-h3 {
+h3,
+h4 {
   margin-top: $line-height;
   margin-bottom: ($line-height / 2);
+  font-weight: 800;
 }
 
 // .h4,
@@ -421,4 +423,13 @@ pre {
   width: 100%;
   overflow-x: auto;
   tab-size: 2;
+}
+
+a {
+  color: $color-main;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
 }

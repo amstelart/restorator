@@ -1,0 +1,21 @@
+// В этом файле должны быть стили для БЭМ-блока registration, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.registration {
+
+  $block-name:                &; // #{$block-name}__element
+
+  @include row;
+
+  &__col {
+    @include col();
+    @include col(lg, 4);
+  }
+
+  &__action {
+    @include col();
+    @include col(sm, 12);
+  }
+
+}

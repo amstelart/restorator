@@ -19,10 +19,10 @@ $border-radius:               3px !default;
   padding: 0.7em 1em;
   margin-top: 1em;
   margin-bottom: 1em;
-  border: 1px solid $gray-lighter;
+  border: 1px solid $border-color;
   border-radius: $border-radius;
   color: $text-color;
-  background-color: $gray-lightest;
+  background-color: #fff;
 
   > * {
 

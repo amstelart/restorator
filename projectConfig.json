@@ -29,6 +29,7 @@
     "field-select": [
       "--error"
     ],
+    "field-num": [],
     "field-actions": [],
     "form": [],
     "code": [],
@@ -60,13 +61,26 @@
     "fields-group": [],
     "tooltip": [],
     "top-nav": [],
-    "social": []
+    "social": [],
+    "page-main": [],
+    "widget": [],
+    "media-box": [],
+    "product-card": [],
+    "brand-item": [],
+    "reviews-card": [],
+    "text-box": [],
+    "carousel-photo-item": [],
+    "catalog-nav": [],
+    "btn-icon": [],
+    "catalog-grid": [],
+    "main-top": [],
+    "registration": [],
+    "contacts": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "./src/scss/functions.scss",
-    "../../node_modules/owl.carousel/dist/assets/owl.carousel.css",
     "../../node_modules/nouislider/distribute/nouislider.css"
   ],
   "addCssAfter": [

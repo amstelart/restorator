@@ -2,9 +2,123 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
+
+@import './node_modules/owl.carousel/src/scss/_core.scss';
+@import './node_modules/owl.carousel/src/scss/_animate';
+@import './node_modules/owl.carousel/src/scss/_autoheight';
+@import './node_modules/owl.carousel/src/scss/_lazyload';
+@import './node_modules/owl.carousel/src/scss/_video';
+
+$color-base:			#869791 !default;
+$color-white:			#FFF !default;
+$color-gray:			#D6D6D6 !default;
+
+//nav
+
+$nav-color: 			$color-white !default;
+$nav-color-hover:		$color-white !default;
+$nav-font-size: 		14px !default;
+$nav-rounded: 			3px !default;
+$nav-margin: 			5px !default;
+$nav-padding: 			4px 7px !default;
+$nav-background: 		$color-gray !default;
+$nav-background-hover:	$color-base !default;
+$nav-disabled-opacity: 	0.5 !default;
+
+//dots
+
+$dot-width:				10px !default;
+$dot-height:			10px !default;
+$dot-rounded:			30px !default;
+$dot-margin: 			10px !default;
+$dot-background:		#d8d8d8 !default;
+$dot-background-active:	#af232f !default;
+
 .owl-carousel {
-  // По умолчанию в сборку берется стилевой файл этого блока, предоставляемый
-  // автором пакета (см. файл настройки проекта, там подключается
-  // node_modules/owl.carousel/dist/assets/owl.carousel.css).
-  // Надо стилизовать — копипастить из исходника и убирать исходник из сборки.
+  // Styling Next and Prev buttons
+	.owl-nav {
+		margin-top: 10px;
+		text-align: center;
+		-webkit-tap-highlight-color: transparent;
+
+		[class*='owl-'] {
+			color: $nav-color;
+			font-size: $nav-font-size;
+			margin: $nav-margin;
+			padding: $nav-padding;
+			background: $nav-background;
+			display: inline-block;
+			cursor: pointer;
+			border-radius: 3px;
+
+			&:hover {
+				background: $nav-background-hover;
+				color:$nav-color-hover;
+				text-decoration: none;
+			}
+		}
+		.disabled {
+			opacity: $nav-disabled-opacity;
+			cursor: default;
+		}
+	}
+
+	// Styling dots
+	.owl-nav.disabled + .owl-dots {
+		margin-top: 10px;
+	}
+}
+
+.owl-dots,
+.carousel__dots-wrap {
+  text-align: left;
+  -webkit-tap-highlight-color: transparent;
+
+  .owl-dot {
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    *display: inline;
+    border: none;
+    background: transparent;
+
+    span {
+      width: $dot-width;
+      height: $dot-height;
+      transform: scale(0.6);
+      margin: $dot-margin;
+      background: $dot-background;
+      display: block;
+      -webkit-backface-visibility: visible;
+      transition: opacity 200ms ease;
+      border-radius: $dot-rounded;
+      box-shadow: 0px 0px 0px 0 #e7c3c6, 5px 5px 15px 5px rgba(0,0,0,0);
+      transition: box-shadow 0.3s;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.active,
+    &:hover {
+      span {
+        background: $dot-background-active;
+      }
+    }
+
+    &.active {
+      span {
+        box-shadow: 0px 0px 0px 5px #e7c3c6, 5px 5px 15px 5px rgba(0,0,0,0);
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+
+.carousel__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

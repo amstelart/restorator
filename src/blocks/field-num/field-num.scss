@@ -1,0 +1,104 @@
+// В этом файле должны быть стили для БЭМ-блока field-num, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+$typo-margin-vertical:        1em;
+
+.field-num {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: block;
+  margin-bottom: $typo-margin-vertical;
+
+  &__name {
+    @include field-name;
+  }
+
+  &__input-wrap {
+    display: block;
+  }
+
+  &__input-and-btns {
+    position: relative;
+    display: block;
+    // width: 140px;
+    width: 100%;
+  }
+
+  &__input {
+    @include field-text;
+    padding: $field-padding-vertical 45px;
+    text-align: center;
+    border-radius: 0;
+    height: 45px;
+
+    #{$block-name}:not(#{$block-name}--disabled) button:focus ~ & { // stylelint-disable-line
+      @include field-focus;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    width: 40px;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    font: 0/0 a; // stylelint-disable-line
+    color: transparent;
+    background: transparent;
+
+    &:hover,
+    &:focus {
+      background-color: $gray-lightest;
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &--plus {
+      right: 1px;
+      background: svg-load('../blocks/field-num/img_to_bg/plus.svg') center no-repeat;
+      background-size: 14px 14px;
+    }
+
+    &--minus {
+      left: 1px;
+      background: svg-load('../blocks/field-num/img_to_bg/minus.svg') center no-repeat;
+      background-size: 14px 14px;
+    }
+
+    #{$block-name}--disabled & {
+      cursor: not-allowed;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__help-text {
+    @include field-help-text;
+  }
+
+
+
+  &--error {
+
+    #{$block-name}__name,
+    #{$block-name}__input,
+    #{$block-name}__help-text {
+      color: $color-danger;
+    }
+
+    #{$block-name}__input {
+      border-color: $color-danger;
+      background-color: lighten($color-danger, 35%);
+    }
+  }
+}

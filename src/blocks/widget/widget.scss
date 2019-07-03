@@ -1,0 +1,45 @@
+// В этом файле должны быть стили для БЭМ-блока widget, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.widget {
+
+  $block-name:                &; // #{$block-name}__element
+
+  width: 100%;
+  background: #fff;
+  border: 1px solid $border-color;
+  margin-bottom: 20px;
+
+  &__inner {
+    padding: 20px;
+  }
+
+  &__header {
+    border-bottom: 1px solid $border-color;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+  }
+
+  &--news {
+    #{$block-name}__footer {
+      display: flex;
+      justify-content: space-between;
+
+      .date {
+        color: #c4c3c3;
+      }
+    }
+  }
+
+  &--youtube {
+
+    #{$block-name}__body {
+      padding-top: 15px;
+    }
+  }
+}
