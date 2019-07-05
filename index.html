@@ -42,6 +42,12 @@
 </head>
 
 <body>
+  <!-- Временный блок для отображения модальных окон -->
+  <div style="position: fixed;z-index:999;right:0;bottom:0;background: #fff;padding: 0.5em; font-size: 14px;">
+    <a href="#modal-call" data-toggle="modal">Заказ звонка</a>,
+    <a href="#modal-reviews" data-toggle="modal">Оставить отзыв</a>
+  </div>
+  <!-- ./end Временный блок для отображения модальных окон -->
 
   <div class="page__inner">
 
@@ -118,7 +124,7 @@
               <div class="header-main__item header-main__item--contacts">
                 <p>г. Челябинск</p>
                 <a class="main-phone" href="tel:+78001234567">8 800 123-45-67</a>
-                <p><a class="call-link" href="#">Вам перезонить?</a></p>
+                <p><a class="call-link" href="#modal-call" data-toggle="modal">Вам перезонить?</a></p>
               </div>
               <div class="header-main__item header-main__item--wt">
                 <div class="main-wt">
@@ -1456,7 +1462,7 @@
               <div class="page-footer__contacts">
                 <p>г. Челябинск</p>
                 <a class="main-phone" href="tel:+78001234567">8 800 123-45-67</a>
-                <p><a class="call-link" href="#">Вам перезонить?</a></p>
+                <p><a class="call-link" href="#modal-call" data-toggle="modal">Вам перезонить?</a></p>
               </div>
               <div class="page-footer__wt">
                 <div><b>Пн-пт с 9 до 18</b></div>
@@ -1489,6 +1495,68 @@
 
     </div>
 
+  </div>
+
+  <!-- Заказ звонка -->
+  <div id="modal-call" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+          <h4 class="modal__title">Заказать звонок</h4>
+        </div>
+        <div class="modal__body">
+          <form action="" class="form--modal">
+            <label class="field-text">
+              <span class="field-text__name">Ваше имя</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+              </span>
+            </label>
+            <label class="field-text">
+              <span class="field-text__name">Ваш телефон</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+              </span>
+            </label>
+            <div class="field-actions">
+              <button class="btn btn--block btn--orange">Заказать звонок</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Добавить отзыв -->
+  <div id="modal-reviews" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+          <h4 class="modal__title">Добавить отзыв</h4>
+        </div>
+        <div class="modal__body">
+          <form action="" class="form--modal">
+            <label class="field-text">
+              <span class="field-text__name">Ваше имя</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+              </span>
+            </label>
+            <label class="field-text">
+              <span class="field-text__name">Ваш отзыв</span>
+              <span class="field-text__input-wrap">
+                <textarea class="field-text__input" placeholder="textarea"></textarea>
+              </span>
+            </label>
+            <div class="field-actions">
+              <button class="btn btn--block btn--orange">Добавить отзыв</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="js/script.min.js"></script>
 
