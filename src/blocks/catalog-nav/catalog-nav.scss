@@ -9,9 +9,30 @@
   position: relative;
   z-index: 10;
   background-color: #fff;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.09);
+  // box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.09);
   padding: 0 20px;
   margin-bottom: 20px;
+
+  @media (min-width: $screen-lg) {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s;
+
+    &--show {
+      max-height: 100%;
+      transition: max-height 0.6s;
+    }
+  }
+
+  @media (max-width: ($screen-lg - 1)) {
+    position: absolute;
+    top: 111px;
+    left: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+  }
+
 
   &__form {
 
@@ -25,46 +46,73 @@
     }
   }
 
+  &__wrap {
+    // мобильный вид списка
+    @media (max-width: ($menu-desktop-width - 1)) {
+
+      position: relative;
+      left: -334px;
+      z-index: 2;
+      width: 320px;
+      height: calc(100vh - 111px);
+      padding: 10px 15px;
+      overflow-y: auto;
+      background-color: #fff;
+
+
+      #{$block-name}--open & {
+        left: 0;
+        transition: left 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
+        // box-shadow: 0 2px 40px rgba(72, 72, 72, 0.35);
+      }
+    }
+  }
+
+  &__backdrop {
+    position: fixed;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transition: opacity $transition-time;
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+
+      #{$block-name}--open & {
+        display: block;
+        height: auto;
+        width: auto;
+        top: 111px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        opacity: 0.85;
+      }
+    }
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+
   // первый уровень
   &__list {
     margin: 0;
     padding: 0;
     list-style: none;
 
-    // мобильный вид списка
-    @media (max-width: ($menu-desktop-width - 1)) {
+    // @media (min-width: $screen-lg) and (max-width: ($screen-xl - 1)) {
+    //   font-size: 14px;
+    // }
 
-      // открытие/закрытие меню только в случае работающего JS
-
-      .js & {
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.2s;
-      }
-
-      .js #{$block-name}--open & {
-        max-height: 100vh;
-        transition: max-height 0.6s;
-      }
-    }
-
-    // настольный вид списка
-    @media (min-width: $menu-desktop-width) {
-      display: block;
-      // display: flex;
-      // flex-wrap: wrap;
+    @media (max-width: ($screen-xl - 1)) {
+      font-size: 14px;
     }
   }
 
   &__item {
     position: relative;
-
-    &--active {
-
-      & > #{$block-name}__link {
-        color: #000;
-      }
-    }
   }
 
   &__pseudolink {
@@ -76,12 +124,20 @@
     border-bottom: 1px solid $border-color;
     cursor: pointer;
 
+    @media (max-width: ($screen-xl - 1)) {
+      font-size: 14px;
+    }
+
     svg {
       top: 0;
       left: 0;
       display: inline-block;
       vertical-align: middle;
       margin-right: 6px;
+
+      @media (min-width: $screen-lg) and (max-width: ($screen-xl - 1)) {
+        display: none;
+      }
     }
 
     &:after {
@@ -95,6 +151,12 @@
       border-right: 1px solid #000;
       transform: translateY(-70%) rotate(45deg);
       transition: transform 0.3s, border-color 0.3s, -webkit-transform 0.3s;
+    }
+
+    #{$block-name}__item--show-child & {
+      &:after {
+        transform: translateY(-30%) rotate(225deg);
+      }
     }
   }
 
@@ -110,38 +172,21 @@
       text-decoration: none;
       color: $color-main;
     }
-
-    &--lvl-2 {
-
-      @media (max-width: ($menu-desktop-width - 1)) {
-        padding-left: 1.2em;
-      }
-    }
   }
 
   &__sublist-wrapper {
 
-    &--lvl-2 {
+    @media (min-width: $menu-desktop-width) {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s;
+      z-index: 1;
+      border-bottom: 1px solid transparent;
 
-      @media (min-width: $menu-desktop-width) {
-        // position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1;
-        opacity: 0;
-        height: 0;
-        overflow: hidden;
-        transition: opacity $transition-time;
-        border-bottom: 1px solid $border-color;
-
-        // stylelint-disable  max-nesting-depth
-        #{$block-name}__item--show-child > &,
-        #{$block-name}__item:hover & {
-          opacity: 1;
-          height: auto;
-          overflow: visible;
-        }
-        // stylelint-enable
+      #{$block-name}__item--show-child > & {
+        max-height: 100vh;
+        transition: max-height 0.6s;
+        border-color: $border-color;
       }
     }
   }
@@ -152,6 +197,8 @@
 
   &__toggler {
     display: inline-block;
+    position: relative;
+    text-align: left;
     padding: 0;
     background: none;
     border: none;
@@ -159,19 +206,36 @@
     color: #fff;
     border: none;
     height: 65px;
+    padding: 15px 20px;
     min-width: 100%;
     font-size: 16px;
     cursor: pointer;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 50%;
+      right: 15px;
+      border-bottom: 2px solid #fff;
+      border-right: 2px solid #fff;
+      transform: translateY(-70%) rotate(45deg);
+      transition: transform 0.3s, border-color 0.3s, -webkit-transform 0.3s;
+    }
 
     &:hover,
     &:focus {
       color: #fff;
       background-color: darken($color-main, 10%);
       border-color: darken($color-main, 12%);
+      outline: none;
     }
 
-    // @media (min-width: $menu-desktop-width) {
-    //   display: none;
-    // }
+    &.open {
+      &:after {
+        transform: translateY(-30%) rotate(225deg);
+      }
+    }
   }
 }

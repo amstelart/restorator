@@ -38,23 +38,24 @@ $field-padding-horizontal:    0.7em !default;
       content: '';
       flex-grow: 1;
       height: 1px;
-      background-color: $border-color;
     }
   }
 
   &__link-wrap {
     position: relative;
-    border: 1px solid $border-color;
-
-    &:not(:last-child) {
-      border-right: none;
-    }
+    margin-bottom: 15px;
 
     &--active {
 
       #{$block-name}__link {
-        color: $text-color;
-        background-color: #fff;
+        color: #000;
+        text-decoration: underline;
+        font-weight: 800;
+
+        &:hover,
+        &:focus {
+          color: #000;
+        }
       }
     }
   }
@@ -62,20 +63,20 @@ $field-padding-horizontal:    0.7em !default;
   &__link {
     display: block;
     padding: $field-padding-vertical $field-padding-horizontal;
-    color: $text-color--muted;
+    color: #000;
     text-decoration: none;
-    background-color: $gray-lightest;
+    font-weight: 600;
+    font-size: 24px;
 
     &:hover,
     &:focus {
-      color: $text-color--muted;
+      color: $color-main;
     }
   }
 
   &__content-wrapper {
     display: block;
-    padding: $field-padding-vertical $field-padding-horizontal;
-    border: 1px solid $border-color;
+    padding: $field-padding-vertical 0;
     border-top: none;
   }
 
@@ -93,4 +94,3 @@ $field-padding-horizontal:    0.7em !default;
     }
   }
 }
-

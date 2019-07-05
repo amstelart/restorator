@@ -12,11 +12,19 @@
     .sidebar {
       @include col();
       @include col(lg, 3);
+
+      @media (max-width: ($screen-lg - 1)) {
+        order: 2;
+      }
     }
 
     .main {
       @include col();
       @include col(lg, 9);
+
+      @media (max-width: ($screen-lg - 1)) {
+        order: 1;
+      }
 
       &__inner {
         padding-top: 20px;
@@ -26,6 +34,23 @@
       &__title {
         margin-top: 0;
         font-size: 24px;
+      }
+    }
+  }
+
+  &--no-sidebar {
+
+    #{$block-name}__inner {
+
+      .sidebar {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+      }
+
+      .main {
+        @include col();
+        @include col(lg, 12);
       }
     }
   }

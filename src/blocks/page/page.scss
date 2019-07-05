@@ -50,6 +50,10 @@ body {
   min-height: 100%;
 }
 
+.no-scroll {
+  overflow-y: hidden;
+}
+
 [tabindex='-1']:focus {
   outline: none !important; // stylelint-disable-line  declaration-no-important
 }
@@ -61,7 +65,8 @@ body {
 
 // We love Safari
 input[type='search'] {
-  -webkit-appearance: textfield; // stylelint-disable-line  property-no-vendor-prefix
+  -webkit-appearance: none; // stylelint-disable-line  property-no-vendor-prefix
+  border-radius: 0;
 }
 
 // Avoid 300ms click delay on touch devices that support the `touch-action` CSS property.

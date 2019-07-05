@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Restorator</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="page-main page-main--no-sidebar" role="main">
+        <div class="main-top">
+          <div class="container">
+            <div class="main-top__inner">
+              <div class="main-top__sidebar">
+                <button class="catalog-nav__toggler">Каталог товаров</button>
+              </div>
+              <div class="main-top__content">
+                <ul class="breadcrumbs">
+                  <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+                  <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Оформление заказа</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="page-main__inner">
+
+            @@include('blocks/sidebar/sidebar.html')
+
+            <div class="main">
+              <div class="main__inner">
+                <h1 class="main__title">Оформление заказа</h1>
+                <form action="" class="checkout checkout--sm">
+                  <div class="checkout__group">
+                    <div class="checkout__col-6">
+                      <label class="field-text">
+                        <span class="field-text__name">Дата доставки</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="date" placeholder="placeholder" id="" name="">
+                        </span>
+                      </label>
+                    </div>
+                    <div class="checkout__col-6">
+                      <p>Дата желаемой доставки</p>
+                    </div>
+                  </div>
+                  <div class="checkout__group">
+                    <div class="checkout__col-6">
+                      <label class="field-select">
+                        <div class="field-select__name">Адрес доставки</div>
+                        <div class="field-select__select-wrap">
+                          <select class="field-select__select" id="" name="">
+                            <option>Город</option>
+                            <option>Значение 1</option>
+                            <option>Значение 2</option>
+                            <option>Значение 3</option>>
+                          </select>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="checkout__col-2">
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="Улица" id="" name="">
+                        </span>
+                      </label>
+                    </div>
+                    <div class="checkout__col-1">
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="Дом" id="" name="">
+                        </span>
+                      </label>
+                    </div>
+                    <div class="checkout__col-1">
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="Кв" id="" name="">
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="checkout__group">
+                    <div class="checkout__col-6">
+                      <div class="field-radio">
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" id="" name="demo-radio">
+                            <span class="field-radio__name-text">Доставка</span>
+                          </label>
+                        </div>
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" id="" name="demo-radio">
+                            <span class="field-radio__name-text">Самовывоз</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="checkout__group">
+                    <div class="checkout__col-6">
+                      <label class="field-select">
+                        <div class="field-select__name">Самовывоз со склада</div>
+                        <div class="field-select__select-wrap">
+                          <select class="field-select__select" id="" name="">
+                            <option>Склад № 1</option>
+                            <option>Значение 1</option>
+                            <option>Значение 2</option>
+                            <option>Значение 3</option>>
+                          </select>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="checkout__group">
+                    <div class="checkout__col-12">
+                      <div class="field-radio">
+                        <div class="field-radio__title">Способ оплаты:</div>
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" id="" name="demo-radio">
+                            <span class="field-radio__name-text">Наличными при получении</span>
+                          </label>
+                        </div>
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" id="" name="demo-radio">
+                            <span class="field-radio__name-text">Счет на оплату</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="checkout__group">
+                    <div class="checkout__col-12">
+                      <label class="field-text">
+                        <span class="field-text__name">Комментарий к заказу</span>
+                        <span class="field-text__input-wrap">
+                          <textarea class="field-text__input" placeholder="textarea"></textarea>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <button class="btn btn--main" type="submit">Оформить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

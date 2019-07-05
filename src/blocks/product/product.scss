@@ -1,0 +1,201 @@
+// В этом файле должны быть стили для БЭМ-блока product, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.product {
+
+  $block-name:                &; // #{$block-name}__element
+
+  @include row;
+
+  &__view {
+    @include col();
+    @include col(lg, 7);
+  }
+
+  &__content {
+    @include col();
+    @include col(lg, 5);
+  }
+
+  &__carousel {
+
+  }
+
+  .product-view__carousel-wrap {
+    position: relative;
+  }
+
+  .product-view__carousel-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    padding-left: 15px;
+
+    .label {
+      margin-right: 10px;
+    }
+
+    .vendor-code {
+      font-size: 14px;
+      line-height: 1.3;
+      padding: 0 10px;
+    }
+  }
+
+  #sync1 {
+
+    .owl-nav [class*='owl-'] {
+      color: #d6d2d2;
+      font-size: 32px;
+    }
+
+    margin-bottom: 15px;
+
+    .owl-stage-outer {
+      border: 1px solid $border-color;
+      background: #fff;
+      padding-top: 60px;
+    }
+
+    .product-view__img-wrap {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      margin: auto;
+      outline: 0;
+    }
+
+    .product-view__img {
+      max-width: 300px;
+      max-height: 300px;
+      margin: auto;
+    }
+  }
+
+  #sync2 {
+    .product-view__thumb {
+      border: 1px solid $border-color;
+      background: #fff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      margin: auto;
+      outline: 0;
+      padding: 10px;
+
+      img {
+        max-width: 75px;
+        max-height: 75px;
+        margin: auto;
+      }
+    }
+  }
+
+  &__img-wrap {
+
+  }
+
+  &__img {
+
+  }
+
+  &__view-text {
+    font-size: 16px;
+    font-weight: 800;
+    span {
+      color: $color-main;
+    }
+  }
+
+  &__headed {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+  &__price {
+
+    &-text {
+      font-size: 24px;
+      font-weight: 700;
+      margin-right: 5px;
+    }
+
+    .sub-price {
+      font-size: 16px;
+      color: #b8b8b8;
+      font-weight: 600;
+      margin-right: 5px;
+    }
+
+    .price {
+      font-size: 16px;
+      white-space: nowrap;
+      color: #ae232f;
+      font-weight: 700;
+
+      span {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__field-num {
+    max-width: 130px;
+  }
+
+  &__btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
+    .btn {
+      min-width: 190px;
+    }
+
+    .btn,
+    .btn-icon {
+      margin-right: 10px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__specifications {
+    background: #fff;
+    padding: 5px;
+    margin-bottom: 20px;
+
+    h5 {
+      margin-top: 0;
+    }
+
+    .dashed-list {
+      max-width: 290px;
+    }
+  }
+
+  &__contacts {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+
+    &-info {
+
+    }
+
+    &-social {
+
+    }
+  }
+}

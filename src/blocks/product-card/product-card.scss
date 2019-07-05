@@ -6,6 +6,8 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  max-width: 290px;
+
   &__inner {
     overflow: hidden;
     background: #fff;

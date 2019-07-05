@@ -75,7 +75,15 @@
     "catalog-grid": [],
     "main-top": [],
     "registration": [],
-    "contacts": []
+    "contacts": [],
+    "sidebar": [],
+    "product": [],
+    "basket": [],
+    "checkout": [],
+    "lk": [],
+    "manager-card": [],
+    "order": [],
+    "basket-list": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

@@ -18,6 +18,16 @@ $toggler-part-bg-color:       #000 !default;
   user-select: none;
   cursor: pointer;
 
+  display: inline-block;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+
+  &:focus {
+    outline: none;
+  }
+
   > span {
     display: inline-block;
     width: 100%;

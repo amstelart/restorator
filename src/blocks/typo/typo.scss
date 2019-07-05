@@ -433,3 +433,39 @@ a {
     text-decoration: none;
   }
 }
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.dashed-list {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+
+  li {
+    display: flex;
+
+    .name {
+      display: flex;
+      flex-grow: 1;
+      align-items: flex-end;
+
+      &:after {
+        content: '';
+        flex-grow: 1;
+        height: 1px;
+        margin-bottom: 6px;
+        border-bottom: 1px dashed #d6d2d2;
+      }
+    }
+
+    .value {
+      text-decoration: underline;
+    }
+  }
+}

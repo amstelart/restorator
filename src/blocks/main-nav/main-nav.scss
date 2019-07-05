@@ -151,11 +151,11 @@ $transition-time:             0.3s !default;
     background: none;
     border: none;
 
-    .no-js & {
-      display: none;
-    }
-
-    @media (min-width: $menu-desktop-width) {
+    // .no-js & {
+    //   display: none;
+    // }
+    //
+    @media (min-width: $screen-lg) {
       display: none;
     }
   }

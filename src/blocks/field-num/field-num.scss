@@ -101,4 +101,35 @@ $typo-margin-vertical:        1em;
       background-color: lighten($color-danger, 35%);
     }
   }
+
+  &--light {
+    margin-bottom: 0;
+
+    #{$block-name}__btn {
+      width: 22px;
+      height: 23px;
+      border: 1px solid #e7e7e7;
+    }
+
+    #{$block-name}__input {
+      width: 62px;
+      padding: 0.3em 22px 0.3em 0.3em;
+    }
+
+    .field-num__btn--plus {
+      right: 0;
+      top: 0;
+      background: svg-load('../blocks/field-num/img_to_bg/plus.svg') center no-repeat;
+      background-size: 10px 10px;
+    }
+
+    .field-num__btn--minus {
+      right: 0px;
+      left: auto;
+      top: auto;
+      bottom: 0;
+      background: svg-load('../blocks/field-num/img_to_bg/minus.svg') center no-repeat;
+      background-size: 10px 10px;
+    }
+  }
 }

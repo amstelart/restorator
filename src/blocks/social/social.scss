@@ -21,7 +21,7 @@
   &__link {
     display: block;
     padding: 5px;
-    background-color: #fff;
+    background-color: transparent;
 
     // #{$block-name}__link-wrap--you & {
     //   background-color: #444;
@@ -47,7 +47,10 @@
     }
 
     &:hover {
-      background-color: #efefef;
+
+      svg {
+        fill: $color-main;
+      }
     }
   }
 

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Restorator</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="page-main" role="main">
+        <div class="main-top">
+          <div class="container">
+            <div class="main-top__inner">
+              <div class="main-top__sidebar">
+                <button class="catalog-nav__toggler">Каталог товаров</button>
+              </div>
+              <div class="main-top__content">
+                <ul class="breadcrumbs">
+                  <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Каталог товаров</a></li>
+                  <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Личный кабинет</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="page-main__inner">
+
+            @@include('blocks/sidebar/sidebar.html')
+
+            <div class="main">
+              <div class="main__inner">
+                <div class="lk">
+                  <ul class="lk__nav">
+                    <li><a href="#">Мои реквизиты</a></li>
+                    <li><a href="#">Персональные данные</a></li>
+                    <li><a href="#">Адреса доставки</a></li>
+                    <li><a href="#">История заказов</a></li>
+                    <li><a href="#">Мои реквизиты</a></li>
+                    <li><a href="#">Персональные данные</a></li>
+                    <li><a href="#">Адреса доставки</a></li>
+                    <li><a href="#">История заказов</a></li>
+                  </ul>
+                  <h1 class="main__title">Адреса доставки</h1>
+                  <div class="table-mobile-scroll">
+
+                    <table class="table">
+                      <tr>
+                        <th></th>
+                        <th>Адрес</th>
+                        <th>Телефон</th>
+                        <th>Ответственное лицо</th>
+                        <th></th>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>г. Волгоград, ул. Пролетарская, д.23, кв 44</td>
+                        <td>+7 (919) 655-55-55</td>
+                        <td>Маликов Сергей Викторович</td>
+                        <td><span class="close" aria-label="Закрыть"><span></span></span></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>г. Волгоград, ул. Пролетарская, д.23, кв 44</td>
+                        <td>+7 (919) 655-55-55</td>
+                        <td>Маликов Сергей Викторович</td>
+                        <td><span class="close" aria-label="Закрыть"><span></span></span></td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>г. Волгоград, ул. Пролетарская, д.23, кв 44</td>
+                        <td>+7 (919) 655-55-55</td>
+                        <td>Маликов Сергей Викторович</td>
+                        <td><span class="close" aria-label="Закрыть"><span></span></span></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

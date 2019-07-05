@@ -1,0 +1,28 @@
+// В этом файле должны быть стили для БЭМ-блока order, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.order {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__item {
+    font-size: 14px;
+    margin-bottom: 5px;
+
+    @media (min-width: $screen-lg) {
+      font-size: 18px;
+      margin-bottom: 10px;
+
+      .name {
+        margin-right: 60px;
+      }
+    }
+
+    .name {
+      font-weight: 700;
+      margin-right: 20px;
+    }
+  }
+
+}

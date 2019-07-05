@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Restorator</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="page-main" role="main">
+        <div class="main-top">
+          <div class="container">
+            <div class="main-top__inner">
+              <div class="main-top__sidebar">
+                <button class="catalog-nav__toggler">Каталог товаров</button>
+              </div>
+              <div class="main-top__content">
+                <ul class="breadcrumbs">
+                  <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Каталог товаров</a></li>
+                  <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Личный кабинет</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="page-main__inner">
+
+            @@include('blocks/sidebar/sidebar.html')
+
+            <div class="main">
+              <div class="main__inner">
+                <ul>
+                  <li style="margin-bottom: 5px;"><a target="_blank" href="index.html">Главная</a></li>
+                  <li style="margin-bottom: 5px;"><a target="_blank" href="catalog-part.html">Каталог</a></li>
+                  <li style="margin-bottom: 5px;"><a target="_blank" href="product.html">Карточка товара</a></li>
+                  <li style="margin-bottom: 5px;"><a target="_blank" href="contacts.html">Контакты</a></li>
+                  <li style="margin-bottom: 5px;"><a target="_blank" href="basket.html">Корзина</a></li>
+                  <li style="margin-bottom: 5px;"><a target="_blank" href="lk.html">Личный кабинет</a></li>
+                  <li style="margin-bottom: 5px;"><a target="_blank" href="lk--order.html">Личный кабинет заказ</a></li>
+                  <li style="margin-bottom: 5px;"><a target="_blank" href="lk--manager.html">Личный кабинет мой менеджер</a></li>
+                  <li style="margin-bottom: 5px;"><a target="_blank" href="checkout.html">Оформление заказа</a></li>
+                  <li style="margin-bottom: 5px;"><a target="_blank" href="registration.html">Регистрация авторизация</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

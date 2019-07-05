@@ -63,7 +63,8 @@ $line-height:                 1.375em !default;
       left: 0;
       width: 14px;
       height: 14px;
-      border: 2px solid currentColor;
+      border: 2px solid #ccc;
+      background: #fff;
       border-radius: 50%;
     }
 
@@ -80,7 +81,7 @@ $line-height:                 1.375em !default;
       height: 6px;
       opacity: 0;
       border-radius: 50%;
-      background-color: currentColor;
+      background-color: $color-main;
       transition: opacity $transition-time;
 
       @at-root input:checked ~ & {

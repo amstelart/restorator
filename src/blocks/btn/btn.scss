@@ -63,15 +63,24 @@ $border-radius:               3px !default;
     }
   }
 
-  // &__icon {
-  //   display: inline-block;
-  //   vertical-align: middle;
-  // }
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &--sm {
+    font-size: 14px;
+    padding: 0.8em 1.7em;
+  }
 
   &--main {
     color: #fff;
     background-color: $color-main;
     border: 1px solid $color-main;
+
+    #{$block-name}__icon {
+      fill: #fff;
+    }
 
     &:hover,
     &:focus {
@@ -82,9 +91,37 @@ $border-radius:               3px !default;
 
     &--disabled,
     &:disabled {
-      color: #fff;
-      background-color: $color-main;
-      border-color: $color-main;
+      color: $text-color;
+      background-color: $gray-lightest;
+      border-color: $gray-lighter;
     }
+  }
+
+  &--orange {
+    color: #fff;
+    background-color: $color-orange;
+    border: 1px solid $color-orange;
+
+    #{$block-name}__icon {
+      fill: #fff;
+    }
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: darken($color-orange, 10%);
+      border-color: darken($color-orange, 12%);
+    }
+
+    &--disabled,
+    &:disabled {
+      color: $text-color;
+      background-color: $gray-lightest;
+      border-color: $gray-lighter;
+    }
+  }
+
+  &--block {
+    width: 100%;
   }
 }

@@ -68,56 +68,111 @@
     </div>
   </div>
   <div class="header-main">
-    <div class="container header-main__inner">
-      <a href="index.html" class="header-main__item header-main__item--logo">
-        <img src="img/logo.png" alt="">
-      </a>
-      <div class="header-main__item header-main__item--contacts">
-        <p>г. Челябинск</p>
-        <a class="main-phone" href="tel:+78001234567">8 800 123-45-67</a>
-        <p><a class="call-link" href="#">Вам перезонить?</a></p>
-      </div>
-      <div class="header-main__item header-main__item--wt">
-        <div class="main-wt">
-          <div><b>Пн-пт с 9 до 18</b></div>
-          <div>сб и вс выходной</div>
-        </div>
-      </div>
-      <div class="header-main__item">
-        <div>
-          <img src="img/med.png" alt="">
-        </div>
-      </div>
-      <div class="header-main__item">
-        <a id="dropdown-basket" href="#" class="header-btn dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-          <div class="header-btn__inner">
-            <div class="header-btn__icon-wrap">
-              <span class="value">12</span>
-              <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#favorit-icon"></use></svg>
-            </div>
-            <div class="header-btn__content">
-              <h5>Избранное</h5>
-              <div>2530р</div>
-            </div>
-          </div>
+    <div class="container">
+      <div class="header-main__inner">
+        <button class="burger"><span></span></button>
+        <a href="index.html" class="header-main__item header-main__item--logo">
+          <img src="img/logo.png" alt="">
         </a>
-      </div>
-      <div class="header-main__item">
-        <div class="dropdown dropdown--basket">
-          <a id="dropdown-basket" href="#" class="header-btn dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        <div class="header-main__item header-main__item--contacts">
+          <p>г. Челябинск</p>
+          <a class="main-phone" href="tel:+78001234567">8 800 123-45-67</a>
+          <p><a class="call-link" href="#modal-call" data-toggle="modal">Вам перезонить?</a></p>
+        </div>
+        <div class="header-main__item header-main__item--wt">
+          <div class="main-wt">
+            <div><b>Пн-пт с 9 до 18</b></div>
+            <div>сб и вс выходной</div>
+          </div>
+        </div>
+        <div class="header-main__item header-main__item--med">
+          <a class="header-med" href="#">
+            <img src="img/med.png" alt="">
+          </a>
+        </div>
+        <div class="header-main__item">
+          <a href="#" class="header-btn header-btn--favorit">
             <div class="header-btn__inner">
               <div class="header-btn__icon-wrap">
                 <span class="value">12</span>
-                <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#basket-icon"></use></svg>
+                <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#favorit-icon"></use></svg>
               </div>
               <div class="header-btn__content">
-                <h5>Корзина</h5>
-                <span>1550р</span>
+                <h5>Избранное</h5>
+                <div>2530р</div>
               </div>
             </div>
           </a>
-          <div class="dropdown__menu dropdown__menu--right" aria-labelledby="dropdown-basket">
-            <button class="btn btn--main">Оформить заказ</button>
+        </div>
+        <div class="header-main__item">
+          <div class="dropdown dropdown--basket">
+            <a id="dropdown-basket" href="#" class="header-btn header-btn--basket dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <div class="header-btn__inner">
+                <div class="header-btn__icon-wrap">
+                  <span class="value">12</span>
+                  <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#basket-icon"></use></svg>
+                </div>
+                <div class="header-btn__content">
+                  <h5>Корзина</h5>
+                  <span>1550р</span>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown__menu dropdown__menu--right" aria-labelledby="dropdown-basket">
+              <div class="basket-list">
+                <div class="basket-list__header">
+                  <div class="basket-list__cell name">Наименование</div>
+                  <div class="basket-list__cell price">Цена</div>
+                  <div class="basket-list__cell cost">Стоимость</div>
+                </div>
+                <div class="basket-list__el">
+                  <div class="basket-list__cell name">
+                    <div class="basket-el__img-wrap">
+                      <img src="img/product-card-img.png" alt="">
+                    </div>
+                    <div class="basket-el__name">Средство для чистки плит</div>
+                  </div>
+                  <div class="basket-list__cell price">
+                    <span class="price-value">180&nbsp;руб</span>
+                    <div class="field-num field-num--light">
+                      <span class="field-num__input-wrap">
+                        <span class="field-num__input-and-btns">
+                          <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                          <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                          <input class="field-num__input" type="number" value="9" name="quantity" max="10" min="1" step="1">
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="basket-list__cell cost"><span class="price-value">360&nbsp;руб</span></div>
+                </div>
+                <div class="basket-list__el">
+                  <div class="basket-list__cell name">
+                    <div class="basket-el__img-wrap">
+                      <img src="img/product-card-img.png" alt="">
+                    </div>
+                    <div class="basket-el__name">Средство для чистки плит</div>
+                  </div>
+                  <div class="basket-list__cell price">
+                    <span class="price-value">180&nbsp;руб</span>
+                    <div class="field-num field-num--light">
+                      <span class="field-num__input-wrap">
+                        <span class="field-num__input-and-btns">
+                          <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                          <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                          <input class="field-num__input" type="number" value="9" name="quantity" max="10" min="1" step="1">
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="basket-list__cell cost"><span class="price-value">1080&nbsp;руб</span></div>
+                </div>
+                <div class="basket-list__footer">
+                  <div class="basket-list__cell all-cost">Всего <span class="price-value">1440&nbsp;руб</span></div>
+                  <div class="basket-list__cell action"><a href="#" class="btn btn--sm btn--orange">Оформить заказ</a></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

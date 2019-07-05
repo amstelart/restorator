@@ -1,0 +1,163 @@
+// В этом файле должны быть стили для БЭМ-блока basket, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.basket {
+
+  $block-name:                &; // #{$block-name}__element
+
+}
+
+.basket-table {
+
+  th {
+    background: #efefef;
+    padding: 15px;
+    vertical-align: middle;
+    font-weight: 600;
+  }
+
+  td {
+    background: #fff;
+    vertical-align: top;
+    padding: 5px 12px 15px;
+
+    &.cell-name,
+    &.cell-amount-pack,
+    &.cell-amount,
+    &.cell-status,
+    &.cell-close {
+      padding-top: 25px;
+    }
+  }
+
+  .cell-image {
+    width: 175px;
+    padding: 15px 12px;
+
+    img {
+      min-width: 60px;
+    }
+  }
+  .cell-name {
+    width: 215;
+
+    h5 {
+      margin-top: 0;
+    }
+
+    .vendor-code {
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+
+      .name {
+        margin-right: auto;
+      }
+
+      .value {
+        margin-left: 10px;
+      }
+    }
+  }
+  .cell-price-pack {
+    width: 135px;
+  }
+  .cell-amount-pack {
+    width: 135px;
+  }
+  .cell-amount {
+    width: 160px;
+  }
+  .cell-price {
+    width: 135px;
+  }
+  .cell-status {
+    width: 135px;
+  }
+  .cell-close {
+    width: 47px;
+  }
+}
+
+.basket-action {
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #fff;
+  border: 1px solid $border-color;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  &__form {
+    .btn {
+      width: 100%;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      align-items: center;
+
+      .field-text {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+      }
+
+      .field-text__name {
+        flex-grow: 1;
+        white-space: nowrap;
+        margin-right: 10px;
+      }
+      .field-text__input-wrap {
+        min-width: 150px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__clear {
+    margin-right: 20px;
+    display: inline-block;
+
+    @media (min-width: $screen-xl) {
+      align-self: center;
+      margin-right: auto;
+    }
+  }
+
+  &__price {
+    font-weight: 600;
+    margin-right: 20px;
+
+    span {
+      font-weight: 700;
+      color: $color-main;
+    }
+
+    @media (max-width: ($screen-xl - 1)) {
+      margin: 1.1em 0;
+    }
+  }
+
+  @media (max-width: ($screen-xl - 1)) {
+    // align-items: flex-end;
+  }
+
+  &__item {
+    @include col();
+    @include col(md, 6);
+    @include col(lg, 4);
+    @include col(xl, 6);
+    display: flex;
+
+    @media (max-width: ($screen-xl - 1)) {
+      flex-direction: column;
+    }
+
+    @media (max-width: ($screen-lg - 1)) {
+      margin-bottom: 20px;
+    }
+  }
+}
