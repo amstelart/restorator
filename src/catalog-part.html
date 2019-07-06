@@ -10,207 +10,564 @@
 
 <body>
 
-  <div class="page__inner">
+  <div class="off-canvas" id="off-canvas">
+    <aside class="off-canvas__aside" role="complementary" aria-label="Боковое меню">
+      <div class="off-canvas__header">
+        <button class="catalog-nav__toggler">Каталог товаров</button>
+        <button class="btn btn--sm btn--main" type="button" data-toggle="off-canvas">закрыть</button>
+      </div>
+      <div class="m-nav"></div>
+    </aside>
+    <div class="page__inner off-canvas__page-content">
 
-    <div class="page__content">
+      <div class="page__content">
 
-      @@include('blocks/page-header/page-header.html')
+        @@include('blocks/page-header/page-header.html')
 
-      <main class="page-main" role="main">
-        <div class="main-top">
-          <div class="container">
-            <div class="main-top__inner">
-              <div class="main-top__sidebar">
-                <button class="catalog-nav__toggler">Каталог товаров</button>
-              </div>
-              <div class="main-top__content">
-                <ul class="breadcrumbs">
-                  <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Каталог товаров</a></li>
-                  <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Бытовая химия</a></li>
-                  <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Чистящие и моющие средства</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="container">
-          <div class="page-main__inner">
-
-            @@include('blocks/sidebar/sidebar.html')
-
-            <div class="main">
-              <div class="main__inner">
-                <div class="alert">
-                  <p>Лучшая цена - для зарегистрированных пользователей! <a href="#">Авторизация</a><a href="#">Регистрация</a></p>
+        <main class="page-main" role="main">
+          <div class="main-top">
+            <div class="container">
+              <div class="main-top__inner">
+                <div class="main-top__sidebar">
+                  <button class="catalog-nav__toggler">Каталог товаров</button>
                 </div>
-                <h4 class="h4">Универсальные чистящие и моющие средства</h4>
-
-                <div class="mini-card-grid">
-                  <div class="mini-card">
-                    <a href="#" class="mini-card__inner">
-                      <div class="mini-card__img-wrap">
-                        <img src="img/product-card-img.png" alt="" class="mini-card__img">
-                      </div>
-                      <div class="mini-card__name">Средства для мытья посуды</div>
-                      <div class="mini-card__description">
-                        Вдруг услышал я крик: "Постойте,окаянные! погодите!.." Палачи остановились. Гляжу: Савельич лежит в ногах уПугачева. "Отец родной!" - говорил бедный дядька.
-                      </div>
-                    </a>
-                  </div>
-                  <div class="mini-card">
-                    <a href="#" class="mini-card__inner">
-                      <div class="mini-card__img-wrap">
-                        <img src="img/product-card-img.png" alt="" class="mini-card__img">
-                      </div>
-                      <div class="mini-card__name">Средства для мытья посуды</div>
-                      <div class="mini-card__description">
-                        Вдруг услышал я крик: "Постойте,окаянные! погодите!.." Палачи остановились. Гляжу: Савельич лежит в ногах уПугачева. "Отец родной!" - говорил бедный дядька.
-                      </div>
-                    </a>
-                  </div>
-                  <div class="mini-card">
-                    <a href="#" class="mini-card__inner">
-                      <div class="mini-card__img-wrap">
-                        <img src="img/product-card-img.png" alt="" class="mini-card__img">
-                      </div>
-                      <div class="mini-card__name">Средства для мытья посуды</div>
-                      <div class="mini-card__description">
-                        Вдруг услышал я крик: "Постойте,окаянные! погодите!.." Палачи остановились. Гляжу: Савельич лежит в ногах уПугачева. "Отец родной!" - говорил бедный дядька.
-                      </div>
-                    </a>
-                  </div>
-                  <div class="mini-card">
-                    <a href="#" class="mini-card__inner">
-                      <div class="mini-card__img-wrap">
-                        <img src="img/product-card-img.png" alt="" class="mini-card__img">
-                      </div>
-                      <div class="mini-card__name">Средства для мытья посуды</div>
-                      <div class="mini-card__description">
-                        Вдруг услышал я крик: "Постойте,окаянные! погодите!.." Палачи остановились. Гляжу: Савельич лежит в ногах уПугачева. "Отец родной!" - говорил бедный дядька.
-                      </div>
-                    </a>
-                  </div>
-                </div>
-
-                <!-- блок сортировки -->
-                <div class="catalog-sort">
-                  <div class="catalog-sort__item">
-                    <span class="dropdown dropdown--sort">
-                      <span class="dropdown__name">Сортировать по:</span>
-                      <span class="dropdown__toggler field-select__select" id="dropdown-sort-1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Цена &uarr;
-                      </span>
-                      <ul class="dropdown__menu  menu" aria-labelledby="dropdown-sort-1">
-                        <li class="menu__item"><a class="menu__link" href="#">Цена &uarr;</a></li>
-                        <li class="menu__item"><a class="menu__link" href="#">Цена &darr;</a></li>
-                        <li class="menu__item"><a class="menu__link" href="#">Название &uarr;</a></li>
-                        <li class="menu__item"><a class="menu__link" href="#">Название &darr;</a></li>
-                      </ul>
-                    </span>
-                  </div>
-
-                  <div class="catalog-sort__item">
-                    <span class="dropdown dropdown--sort">
-                      <span class="dropdown__name">Показывать по:</span>
-                      <span class="dropdown__toggler field-select__select" id="dropdown-sort-2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        8
-                      </span>
-                      <ul class="dropdown__menu  menu" aria-labelledby="dropdown-sort-2">
-                        <li class="menu__item"><a class="menu__link" href="#">16</a></li>
-                        <li class="menu__item"><a class="menu__link" href="#">24</a></li>
-                        <li class="menu__item"><a class="menu__link" href="#">32</a></li>
-                      </ul>
-                    </span>
-                  </div>
-
-                  <div class="catalog-sort__viewer">
-                    <div class="view-switch">
-                      <a href="#" class="view-switch__item active" title="Сетка">
-                        <svg width="38" height="38"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#grid-option-icon"></use></svg>
-                      </a>
-                      <a href="#" class="view-switch__item" title="Список">
-                        <svg width="38" height="38"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#listing-option-icon"></use></svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <!-- ./end блок сортировки -->
-
-                <!-- каталог -->
-                <div class="catalog-grid">
-                  @@include('blocks/product-card/product-card.html')
-                  @@include('blocks/product-card/product-card.html')
-                  @@include('blocks/product-card/product-card.html')
-                  @@include('blocks/product-card/product-card.html')
-                  @@include('blocks/product-card/product-card.html')
-                  @@include('blocks/product-card/product-card.html')
-                </div>
-                <!-- ./end каталог -->
-
-                @@include('blocks/pagination/pagination.html')
-
-                <!-- Карусель брендов -->
-                <div class="carousel-box">
-                  <h2 class="carousel-box__title text-center">Популярные бренды</h2>
-                  <div class="owl-carousel owl-theme" id="brands-carousel">
-                    @@include('blocks/brand-item/brand-item.html')
-                  </div>
-                </div>
-                <!-- ./end карусель брендов -->
-
-                <!-- Карусель галлерея -->
-                <div class="carousel-box">
-                  <h4>О нас</h4>
-                  <p>Широкий ассортимент одноразовой посуды, пищевой упаковки, гигиенической продукции, упаковочных материалов, хозтоваров для уборки, бытовой химии, расходников и множество других полезных товаров.</p>
-                  <ul>
-                    <li>Labore et dolore</li>
-                    <li>Ultrices gravida</li>
-                    <li>Maecenas accumsan</li>
+                <div class="main-top__content">
+                  <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Каталог товаров</a></li>
+                    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Бытовая химия</a></li>
+                    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Чистящие и моющие средства</a></li>
                   </ul>
-                  <div class="owl-carousel owl-theme" id="photo-carousel">
-                    @@include('blocks/carousel-photo-item/carousel-photo-item.html')
-                  </div>
-                  <p>Чтобы узнать больше о нас <a href="restorator.ru/about-us">restorator.ru/about-us</a></p>
                 </div>
-                <!-- ./end Карусель галлерея -->
-
-                <div class="text-box text-box--wrapper">
-                  <h4>О доставе</h4>
-                  <p>Для удобства клиентов и возможности поставок по всей России наша компания имеет собственные склады, автопарк и разветвленную сеть региональных филиалов.</p>
-                  <p>Мы используем комбинированный вариант доставки заказов, а значит, можем доставить любой заказ в крупные города РФ максимально быстро и с оптимальной стоимостью доставки.</p>
-                  <p>Можем предложить логистическое решение для заказа любого веса и объема, а также будем сотрудничать с любой транспортной компанией по пожеланию клиента. География поставок постоянно расширяется.</p>
-                  <p><a href="#">Подробнее о доставке</a></p>
-                </div>
-                <!-- Карусель отзывы -->
-                <div class="carousel-box">
-                  <h2 class="carousel-box__title">Отзывы о нашей работе</h2>
-                  <div class="owl-carousel owl-theme" id="reviews-carousel">
-                    @@include('blocks/reviews-card/reviews-card.html')
-                    @@include('blocks/reviews-card/reviews-card.html')
-                    @@include('blocks/reviews-card/reviews-card.html')
-                  </div>
-                  <div class="carousel__footer">
-                    <div class="carousel__dots-wrap"></div>
-                    <div class="carousel__btn-group">
-                      <a class="btn btn--main" href="#">Смотреть еще отзывы</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- ./end Карусель отзывы -->
               </div>
             </div>
           </div>
-        </div>
 
-      </main>
+          <div class="container">
+            <div class="page-main__inner">
+
+              <div class="sidebar">
+                <div class="d-nav"></div>
+                <nav class="catalog-nav catalog-nav--show">
+                  <div class="catalog-nav__wrap">
+                    <form action="" class="catalog-nav__form">
+                      <div class="field-checkbox">
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" id="catalog-group" name="" checked>
+                            <span class="field-checkbox__name-text">Стандарт</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" id="catalog-group" name="">
+                            <span class="field-checkbox__name-text">Эконом</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" id="catalog-group" name="">
+                            <span class="field-checkbox__name-text">Премиум</span>
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+                    <ul class="catalog-nav__list">
+                      <li class="catalog-nav__item catalog-nav__item--show-child">
+                        <span class="catalog-nav__pseudolink">
+                          <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-dishwasher"></use></svg>
+                          Кухонная зона
+                        </span>
+                        <div class="catalog-nav__sublist-wrapper">
+                          <ul class="catalog-nav__list">
+                            <li class="catalog-nav__item">
+                              <a href="#" class="catalog-nav__link">
+                                Все для мытья посуды
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Средства индивидуальной защиты
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Салфетки для уборки
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Салфетки для чистки плит
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Одноразовая посуда
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Пищевая упаковка
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Бумажная продукция для кухни
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Фасовочные пакеты, мешки для мусора
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="catalog-nav__item catalog-nav__item--show-child">
+                        <span class="catalog-nav__pseudolink">
+                          <svg width="22" height="22"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-tissue"></use></svg>
+                          Все для туалетных комнат
+                        </span>
+                        <div class="catalog-nav__sublist-wrapper">
+                          <ul class="catalog-nav__list">
+                            <li class="catalog-nav__item">
+                              <a href="#" class="catalog-nav__link">
+                                Диспенсеры
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Гигиеническая продукция
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Дезинфицирующие средства и таблетки
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Сушилки для рук
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Средства для мытья стекол и зеркал
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Освежители воздуха
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Мыло
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Средства для сантехники
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Уборка мусора
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="catalog-nav__item  catalog-nav__item--show-child">
+                        <span class="catalog-nav__pseudolink">
+                          <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-furniture"></use></svg>
+                          Гостевой зал
+                        </span>
+                        <div class="catalog-nav__sublist-wrapper">
+                          <ul class="catalog-nav__list">
+                            <li class="catalog-nav__item">
+                              <a href="#" class="catalog-nav__link">
+                                Салфетки сервировочные и диспенсеры
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Средства для мытья стекол и зеркал
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Стиральные порошки
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Средства для уборки
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="catalog-nav__item  catalog-nav__item--show-child">
+                        <span class="catalog-nav__pseudolink">
+                          <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-mop"></use></svg>
+                          Чистота полов
+                        </span>
+                        <div class="catalog-nav__sublist-wrapper">
+                          <ul class="catalog-nav__list">
+                            <li class="catalog-nav__item">
+                              <a href="#" class="catalog-nav__link">
+                                Швабры и тряпки для мытья полов
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Средства для мытья полов
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Тележки уборочные
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="catalog-nav__item  catalog-nav__item--show-child">
+                        <span class="catalog-nav__pseudolink">
+                          <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-skewer"></use></svg>
+                          Барные принадлежности
+                        </span>
+                        <div class="catalog-nav__sublist-wrapper">
+                          <ul class="catalog-nav__list">
+                            <li class="catalog-nav__item">
+                              <a href="#" class="catalog-nav__link">
+                                Трубочки
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Шпажки
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Вафельное полотно
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Прочее
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="catalog-nav__item  catalog-nav__item--show-child">
+                        <span class="catalog-nav__pseudolink">
+                          <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-stationery"></use></svg>
+                          Канцтовары
+                        </span>
+                        <div class="catalog-nav__sublist-wrapper">
+                          <ul class="catalog-nav__list">
+                            <li class="catalog-nav__item">
+                              <a href="#" class="catalog-nav__link">
+                                Чековая лента
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Детский уголок
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Офисные принадлежности
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Фискальные накопители для терминалов
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+
+                <div class="widget widget--news">
+                  <div class="widget__inner">
+                    <div class="widget__header">
+                      <h6 class="widget__title">Новости</h6>
+                    </div>
+                    <div class="widget__body">
+                      <h5>Приглашаем на выставку RosUpack 2019</h5>
+                      <p>Приглашаем посетить наш стенд на выставке RosUpack 2019 С 18 по 21 июня «Триал Маркет» примет участие в крупнейшей в России и Восточной Европе...</p>
+                    </div>
+                    <div class="widget__footer">
+                      <span class="date">10.10.2019</span>
+                      <a href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="widget widget--youtube">
+                  <div class="widget__inner">
+                    <div class="widget__header">
+                      <h6 class="widget__title">Видео с Youtube</h6>
+                    </div>
+                    <div class="widget__body">
+                      <div class="embed-responsive  embed-responsive--16-9">
+                        <iframe src="https://www.youtube.com/embed/HNpLuXOg7xQ" frameborder="0" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                    <div class="widget__footer"></div>
+                  </div>
+                </div>
+                <div class="widget widget--filter">
+                  <div class="widget__inner">
+                    <div class="widget__header">
+                      <h6 class="widget__title">Подбор по параметрам</h6>
+                    </div>
+                    <div class="widget__body">
+                      <form action="" class="catalog-filter">
+                        <div class="catalog-filter__part">
+                          <div class="catalog-filter__name">Параметр 1</div>
+                          <div class="field-checkbox">
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                                <span class="field-checkbox__name-text">Текст у флажка</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="checkbox" id="" name="">
+                                <span class="field-checkbox__name-text">Текст у флажка</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="checkbox" id="" name="">
+                                <span class="field-checkbox__name-text">Текст у флажка</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="catalog-filter__part">
+                          <div class="catalog-filter__name">Параметр 2</div>
+                          <div class="field-radio field-radio--inline">
+                            <div class="field-radio__input-wrap">
+                              <label class="field-radio__name">
+                                <input class="field-radio__input" type="radio" id="" name="demo-radio" checked>
+                                <span class="field-radio__name-text">Да</span>
+                              </label>
+                            </div>
+                            <div class="field-radio__input-wrap">
+                              <label class="field-radio__name">
+                                <input class="field-radio__input" type="radio" id="" name="demo-radio">
+                                <span class="field-radio__name-text">Нет</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="catalog-filter__part">
+                          <div class="catalog-filter__name">Параметр 3</div>
+                          <div class="range-filter">
+                            <div class="range-filter__input-wrap">
+                              <input class="range-filter__input" type="text" id="input-with-keypress-0">
+                              <div class="range-filter__separator">до</div>
+                              <input class="range-filter__input" type="text" id="input-with-keypress-1">
+                            </div>
+                            <div class="range-filter__slider">
+                              <div id="steps-slider"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="widget__footer">
+                      <a href="#" class="btn btn--sm btn--orange">Сбросить</a>
+                      <a href="#" class="btn btn--sm btn--main">Применить</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="main">
+                <div class="main__inner">
+                  <div class="alert alert--xl">
+                    <p>Лучшая цена - для зарегистрированных пользователей!&emsp;<span class="login-link-group"><a href="#">Авторизация</a><span>/</span><a href="#">Регистрация</a></span></p>
+                  </div>
+                  <h4 class="h4">Универсальные чистящие и моющие средства</h4>
+
+                  <div class="mini-card-grid">
+                    <div class="mini-card">
+                      <a href="#" class="mini-card__inner">
+                        <div class="mini-card__img-wrap">
+                          <img src="img/product-card-img.png" alt="" class="mini-card__img">
+                        </div>
+                        <div class="mini-card__name">Средства для мытья посуды</div>
+                        <div class="mini-card__description">
+                          Вдруг услышал я крик: "Постойте,окаянные! погодите!.." Палачи остановились. Гляжу: Савельич лежит в ногах уПугачева. "Отец родной!" - говорил бедный дядька.
+                        </div>
+                      </a>
+                    </div>
+                    <div class="mini-card">
+                      <a href="#" class="mini-card__inner">
+                        <div class="mini-card__img-wrap">
+                          <img src="img/product-card-img.png" alt="" class="mini-card__img">
+                        </div>
+                        <div class="mini-card__name">Средства для мытья посуды</div>
+                        <div class="mini-card__description">
+                          Вдруг услышал я крик: "Постойте,окаянные! погодите!.." Палачи остановились. Гляжу: Савельич лежит в ногах уПугачева. "Отец родной!" - говорил бедный дядька.
+                        </div>
+                      </a>
+                    </div>
+                    <div class="mini-card">
+                      <a href="#" class="mini-card__inner">
+                        <div class="mini-card__img-wrap">
+                          <img src="img/product-card-img.png" alt="" class="mini-card__img">
+                        </div>
+                        <div class="mini-card__name">Средства для мытья посуды</div>
+                        <div class="mini-card__description">
+                          Вдруг услышал я крик: "Постойте,окаянные! погодите!.." Палачи остановились. Гляжу: Савельич лежит в ногах уПугачева. "Отец родной!" - говорил бедный дядька.
+                        </div>
+                      </a>
+                    </div>
+                    <div class="mini-card">
+                      <a href="#" class="mini-card__inner">
+                        <div class="mini-card__img-wrap">
+                          <img src="img/product-card-img.png" alt="" class="mini-card__img">
+                        </div>
+                        <div class="mini-card__name">Средства для мытья посуды</div>
+                        <div class="mini-card__description">
+                          Вдруг услышал я крик: "Постойте,окаянные! погодите!.." Палачи остановились. Гляжу: Савельич лежит в ногах уПугачева. "Отец родной!" - говорил бедный дядька.
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- блок сортировки -->
+                  <div class="catalog-sort">
+                    <div class="catalog-sort__item">
+                      <span class="dropdown dropdown--sort">
+                        <span class="dropdown__name">Сортировать по:</span>
+                        <span class="dropdown__toggler field-select__select" id="dropdown-sort-1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Цена &uarr;
+                        </span>
+                        <ul class="dropdown__menu  menu" aria-labelledby="dropdown-sort-1">
+                          <li class="menu__item"><a class="menu__link" href="#">Цена &uarr;</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#">Цена &darr;</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#">Название &uarr;</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#">Название &darr;</a></li>
+                        </ul>
+                      </span>
+                    </div>
+
+                    <div class="catalog-sort__item">
+                      <span class="dropdown dropdown--sort">
+                        <span class="dropdown__name">Показывать по:</span>
+                        <span class="dropdown__toggler field-select__select" id="dropdown-sort-2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          8
+                        </span>
+                        <ul class="dropdown__menu  menu" aria-labelledby="dropdown-sort-2">
+                          <li class="menu__item"><a class="menu__link" href="#">16</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#">24</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#">32</a></li>
+                        </ul>
+                      </span>
+                    </div>
+
+                    <div class="catalog-sort__viewer">
+                      <div class="view-switch">
+                        <a href="#" class="view-switch__item active" title="Сетка">
+                          <svg width="38" height="38"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#grid-option-icon"></use></svg>
+                        </a>
+                        <a href="#" class="view-switch__item" title="Список">
+                          <svg width="38" height="38"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#listing-option-icon"></use></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ./end блок сортировки -->
+
+                  <!-- каталог -->
+                  <div class="catalog-grid">
+                    @@include('blocks/product-card/product-card.html')
+                    @@include('blocks/product-card/product-card.html')
+                    @@include('blocks/product-card/product-card.html')
+                    @@include('blocks/product-card/product-card.html')
+                    @@include('blocks/product-card/product-card.html')
+                    @@include('blocks/product-card/product-card.html')
+                  </div>
+                  <!-- ./end каталог -->
+
+                  @@include('blocks/pagination/pagination.html')
+
+                  <!-- Карусель брендов -->
+                  <div class="carousel-box">
+                    <h2 class="carousel-box__title text-center">Популярные бренды</h2>
+                    <div class="owl-carousel owl-theme" id="brands-carousel">
+                      @@include('blocks/brand-item/brand-item.html')
+                    </div>
+                  </div>
+                  <!-- ./end карусель брендов -->
+
+                  <!-- Карусель галлерея -->
+                  <div class="carousel-box">
+                    <h4>О нас</h4>
+                    <p>Широкий ассортимент одноразовой посуды, пищевой упаковки, гигиенической продукции, упаковочных материалов, хозтоваров для уборки, бытовой химии, расходников и множество других полезных товаров.</p>
+                    <ul>
+                      <li>Labore et dolore</li>
+                      <li>Ultrices gravida</li>
+                      <li>Maecenas accumsan</li>
+                    </ul>
+                    <div class="owl-carousel owl-theme" id="photo-carousel">
+                      @@include('blocks/carousel-photo-item/carousel-photo-item.html')
+                    </div>
+                    <p>Чтобы узнать больше о нас <a href="restorator.ru/about-us">restorator.ru/about-us</a></p>
+                  </div>
+                  <!-- ./end Карусель галлерея -->
+
+                  <div class="text-box text-box--wrapper">
+                    <h4>О доставе</h4>
+                    <p>Для удобства клиентов и возможности поставок по всей России наша компания имеет собственные склады, автопарк и разветвленную сеть региональных филиалов.</p>
+                    <p>Мы используем комбинированный вариант доставки заказов, а значит, можем доставить любой заказ в крупные города РФ максимально быстро и с оптимальной стоимостью доставки.</p>
+                    <p>Можем предложить логистическое решение для заказа любого веса и объема, а также будем сотрудничать с любой транспортной компанией по пожеланию клиента. География поставок постоянно расширяется.</p>
+                    <p><a href="#">Подробнее о доставке</a></p>
+                  </div>
+                  <!-- Карусель отзывы -->
+                  <div class="carousel-box">
+                    <h2 class="carousel-box__title">Отзывы о нашей работе</h2>
+                    <div class="owl-carousel owl-theme" id="reviews-carousel">
+                      @@include('blocks/reviews-card/reviews-card.html')
+                      @@include('blocks/reviews-card/reviews-card.html')
+                      @@include('blocks/reviews-card/reviews-card.html')
+                    </div>
+                    <div class="carousel__footer">
+                      <div class="carousel__dots-wrap"></div>
+                      <div class="carousel__btn-group">
+                        <a class="btn btn--main" href="#">Смотреть еще отзывы</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ./end Карусель отзывы -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </main>
+
+      </div>
+
+      <div class="page__footer-wrapper">
+        @@include('blocks/page-footer/page-footer.html')
+      </div>
 
     </div>
-
-    <div class="page__footer-wrapper">
-      @@include('blocks/page-footer/page-footer.html')
-    </div>
-
+    <div class="off-canvas__overlay" data-toggle="off-canvas"></div>
   </div>
 
   @@include('_include/page_bottom.html')

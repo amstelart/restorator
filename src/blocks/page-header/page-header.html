@@ -70,7 +70,9 @@
   <div class="header-main">
     <div class="container">
       <div class="header-main__inner">
-        <button class="burger"><span></span></button>
+        <button class="burger" data-toggle="off-canvas">
+          <svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#menu-button"></use></svg>
+        </button>
         <a href="index.html" class="header-main__item header-main__item--logo">
           <img src="img/logo.png" alt="">
         </a>
@@ -105,8 +107,8 @@
           </a>
         </div>
         <div class="header-main__item">
-          <div class="dropdown dropdown--basket">
-            <a id="dropdown-basket" href="#" class="header-btn header-btn--basket dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <div class="header-basket">
+            <a href="#" class="header-btn header-btn--basket">
               <div class="header-btn__inner">
                 <div class="header-btn__icon-wrap">
                   <span class="value">12</span>
@@ -118,7 +120,7 @@
                 </div>
               </div>
             </a>
-            <div class="dropdown__menu dropdown__menu--right" aria-labelledby="dropdown-basket">
+            <div class="header-basket__info">
               <div class="basket-list">
                 <div class="basket-list__header">
                   <div class="basket-list__cell name">Наименование</div>

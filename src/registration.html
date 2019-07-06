@@ -10,158 +10,168 @@
 
 <body>
 
-  <div class="page__inner">
+  <div class="off-canvas" id="off-canvas">
+    <aside class="off-canvas__aside" role="complementary" aria-label="Боковое меню">
+      <div class="off-canvas__header">
+        <button class="catalog-nav__toggler">Каталог товаров</button>
+        <button class="btn btn--sm btn--main" type="button" data-toggle="off-canvas">закрыть</button>
+      </div>
+      <div class="m-nav"></div>
+    </aside>
+    <div class="page__inner off-canvas__page-content">
 
-    <div class="page__content">
+      <div class="page__content">
 
-      @@include('blocks/page-header/page-header.html')
+        @@include('blocks/page-header/page-header.html')
 
-      <main class="page-main" role="main">
-        <div class="main-top">
+        <main class="page-main" role="main">
+          <div class="main-top">
+            <div class="container">
+              <div class="main-top__inner">
+                <div class="main-top__sidebar">
+                  <button class="catalog-nav__toggler">Каталог товаров</button>
+                </div>
+                <div class="main-top__content">
+                  <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+                    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Регистрация</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="container">
-            <div class="main-top__inner">
-              <div class="main-top__sidebar">
-                <button class="catalog-nav__toggler">Каталог товаров</button>
-              </div>
-              <div class="main-top__content">
-                <ul class="breadcrumbs">
-                  <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
-                  <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Регистрация</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+            <div class="page-main__inner">
 
-        <div class="container">
-          <div class="page-main__inner">
+              @@include('blocks/sidebar/sidebar.html')
 
-            @@include('blocks/sidebar/sidebar.html')
+              <div class="main">
+                <div class="main__inner">
+                  <h1 class="main__title">Регистрация</h1>
 
-            <div class="main">
-              <div class="main__inner">
-                <h1 class="main__title">Регистрация</h1>
-
-                <form action="" class="registration">
-                  <div class="registration__col">
-                    <label class="field-select">
-                      <div class="field-select__name">Вы являетесь<span>*</span></div>
-                      <div class="field-select__select-wrap">
-                        <select class="field-select__select" id="" name="">
-                          <option>Новый клиент</option>
-                          <option>Значение 1</option>
-                          <option>Значение 2</option>
-                          <option>Значение 3</option>
-                        </select>
-                      </div>
-                    </label>
-                    <label class="field-text">
-                      <span class="field-text__name">Вид деятельности</span>
-                      <span class="field-text__input-wrap">
-                        <input class="field-text__input" type="text" id="" name="">
-                      </span>
-                    </label>
-                    <label class="field-text">
-                      <span class="field-text__name">Email</span>
-                      <span class="field-text__input-wrap">
-                        <input class="field-text__input" type="email" id="" name="">
-                      </span>
-                    </label>
-                    <label class="field-text">
-                      <span class="field-text__name">Фамилия</span>
-                      <span class="field-text__input-wrap">
-                        <input class="field-text__input" type="text" id="" name="">
-                      </span>
-                    </label>
-                    <label class="field-text">
-                      <span class="field-text__name">Имя</span>
-                      <span class="field-text__input-wrap">
-                        <input class="field-text__input" type="text" id="" name="">
-                      </span>
-                    </label>
-                  </div>
-                  <div class="registration__col">
-                    <label class="field-text">
-                      <span class="field-text__name">Номер телефона</span>
-                      <span class="field-text__input-wrap">
-                        <input class="field-text__input" type="tel" id="" name="">
-                      </span>
-                    </label>
-                    <label class="field-text">
-                      <span class="field-text__name">Компания</span>
-                      <span class="field-text__input-wrap">
-                        <input class="field-text__input" type="tel" id="" name="">
-                      </span>
-                    </label>
-                    <div class="field-checkbox">
-                      <div class="field-checkbox__title">Форма собственности</div>
-                      <div class="field-checkbox--inline">
-                        <div class="field-checkbox__input-wrap">
-                          <label class="field-checkbox__name">
-                            <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
-                            <span class="field-checkbox__name-text">ООО</span>
-                          </label>
+                  <form action="" class="registration">
+                    <div class="registration__col">
+                      <label class="field-select">
+                        <div class="field-select__name">Вы являетесь<span>*</span></div>
+                        <div class="field-select__select-wrap">
+                          <select class="field-select__select" id="" name="">
+                            <option>Новый клиент</option>
+                            <option>Значение 1</option>
+                            <option>Значение 2</option>
+                            <option>Значение 3</option>
+                          </select>
                         </div>
-                        <div class="field-checkbox__input-wrap">
-                          <label class="field-checkbox__name">
-                            <input class="field-checkbox__input" type="checkbox" id="" name="">
-                            <span class="field-checkbox__name-text">ИП</span>
-                          </label>
-                        </div>
-                      </div>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">Вид деятельности</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" id="" name="">
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">Email</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="email" id="" name="">
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">Фамилия</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" id="" name="">
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">Имя</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" id="" name="">
+                        </span>
+                      </label>
                     </div>
-                    <div class="field-table">
-                      <div class="table-mobile-scroll">
-
-                        <table class="table">
-                          <tr>
-                            <td class="mw">Название</td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td class="mw">ИНН</td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td class="mw">КПП</td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td class="mw">ОГРН</td>
-                            <td></td>
-                          </tr>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="registration__action">
-                    <div class="field-actions">
+                    <div class="registration__col">
+                      <label class="field-text">
+                        <span class="field-text__name">Номер телефона</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="tel" id="" name="">
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">Компания</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="tel" id="" name="">
+                        </span>
+                      </label>
                       <div class="field-checkbox">
-                        <div class="field-checkbox__input-wrap">
-                          <label class="field-checkbox__name">
-                            <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
-                            <span class="field-checkbox__name-text">Я согласен</span>
-                            <a href="#">на обработку персональных данных</a>
-                          </label>
+                        <div class="field-checkbox__title">Форма собственности</div>
+                        <div class="field-checkbox--inline">
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                              <span class="field-checkbox__name-text">ООО</span>
+                            </label>
+                          </div>
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox" id="" name="">
+                              <span class="field-checkbox__name-text">ИП</span>
+                            </label>
+                          </div>
                         </div>
                       </div>
-                      <button class="btn btn--main">Отправить</button>
+                      <div class="field-table">
+                        <div class="table-mobile-scroll">
+
+                          <table class="table">
+                            <tr>
+                              <td class="mw">Название</td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td class="mw">ИНН</td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td class="mw">КПП</td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td class="mw">ОГРН</td>
+                              <td></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </form>
+                    <div class="registration__action">
+                      <div class="field-actions">
+                        <div class="field-checkbox">
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                              <span class="field-checkbox__name-text">Я согласен</span>
+                              <a href="#">на обработку персональных данных</a>
+                            </label>
+                          </div>
+                        </div>
+                        <button class="btn btn--main">Отправить</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-      </main>
+        </main>
+
+      </div>
+
+      <div class="page__footer-wrapper">
+        @@include('blocks/page-footer/page-footer.html')
+      </div>
 
     </div>
-
-    <div class="page__footer-wrapper">
-      @@include('blocks/page-footer/page-footer.html')
-    </div>
-
+    <div class="off-canvas__overlay" data-toggle="off-canvas"></div>
   </div>
 
   @@include('_include/page_bottom.html')

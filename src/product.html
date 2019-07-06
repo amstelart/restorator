@@ -10,155 +10,163 @@
 
 <body>
 
-  <div class="page__inner">
+  <div class="off-canvas" id="off-canvas">
+    <aside class="off-canvas__aside" role="complementary" aria-label="Боковое меню">
+      <div class="off-canvas__header">
+        <button class="catalog-nav__toggler">Каталог товаров</button>
+        <button class="btn btn--sm btn--main" type="button" data-toggle="off-canvas">закрыть</button>
+      </div>
+      <div class="m-nav"></div>
+    </aside>
+    <div class="page__inner off-canvas__page-content">
 
-    <div class="page__content">
+      <div class="page__content">
 
-      @@include('blocks/page-header/page-header.html')
+        @@include('blocks/page-header/page-header.html')
 
-      <main class="page-main" role="main">
-        <div class="main-top">
-          <div class="container">
-            <div class="main-top__inner">
-              <div class="main-top__sidebar">
-                <button class="catalog-nav__toggler">Каталог товаров</button>
-              </div>
-              <div class="main-top__content">
-                <ul class="breadcrumbs">
-                  <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
-                  <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Чистящие средства</a></li>
-                  <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Жироудалитель "Unicum"</a></li>
-                </ul>
+        <main class="page-main" role="main">
+          <div class="main-top">
+            <div class="container">
+              <div class="main-top__inner">
+                <div class="main-top__sidebar">
+                  <button class="catalog-nav__toggler">Каталог товаров</button>
+                </div>
+                <div class="main-top__content">
+                  <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+                    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Чистящие средства</a></li>
+                    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Жироудалитель "Unicum"</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="container">
-          <div class="page-main__inner">
+          <div class="container">
+            <div class="page-main__inner">
 
-            @@include('blocks/sidebar/sidebar.html')
+              @@include('blocks/sidebar/sidebar.html')
 
-            <div class="main">
-              <div class="main__inner">
+              <div class="main">
+                <div class="main__inner">
 
-                <div class="product">
-                  <div class="product__view">
-                    <div class="product-view">
-                      <div class="product-view__carousel-wrap">
-                        <div class="product-view__carousel-header">
-                          <div class="label label--hit">Хит</div>
-                          <div class="label label--new">Новинка</div>
-                          <div class="vendor-code">Артикул: <br>6325945</div>
-                        </div>
-                        <div class="product-view__carousel">
-                          <div id="sync1" class="owl-carousel owl-theme">
-                            <div class="item">
-                              <a href="img/product-card-img.png" class="product-view__img-wrap" data-fancybox>
-                                <img class="product-view__img" src="img/product-card-img.png" alt="">
-                              </a>
-                            </div>
-                            <div class="item">
-                              <a href="img/product-card-img.png" class="product-view__img-wrap" data-fancybox>
-                                <img class="product-view__img" src="img/product-card-img.png" alt="">
-                              </a>
-                            </div>
-                            <div class="item">
-                              <a href="img/product-card-img.png" class="product-view__img-wrap" data-fancybox>
-                                <img class="product-view__img" src="img/product-card-img.png" alt="">
-                              </a>
-                            </div>
-                            <div class="item">
-                              <a href="img/product-card-img.png" class="product-view__img-wrap" data-fancybox>
-                                <img class="product-view__img" src="img/product-card-img.png" alt="">
-                              </a>
-                            </div>
+                  <div class="product">
+                    <div class="product__view">
+                      <div class="product-view">
+                        <div class="product-view__carousel-wrap">
+                          <div class="product-view__carousel-header">
+                            <div class="label label--hit">Хит</div>
+                            <div class="label label--new">Новинка</div>
+                            <div class="vendor-code">Артикул: <br>6325945</div>
                           </div>
+                          <div class="product-view__carousel">
+                            <div id="sync1" class="owl-carousel owl-theme">
+                              <div class="item">
+                                <a href="img/product-card-img.png" class="product-view__img-wrap" data-fancybox>
+                                  <img class="product-view__img" src="img/product-card-img.png" alt="">
+                                </a>
+                              </div>
+                              <div class="item">
+                                <a href="img/product-card-img.png" class="product-view__img-wrap" data-fancybox>
+                                  <img class="product-view__img" src="img/product-card-img.png" alt="">
+                                </a>
+                              </div>
+                              <div class="item">
+                                <a href="img/product-card-img.png" class="product-view__img-wrap" data-fancybox>
+                                  <img class="product-view__img" src="img/product-card-img.png" alt="">
+                                </a>
+                              </div>
+                              <div class="item">
+                                <a href="img/product-card-img.png" class="product-view__img-wrap" data-fancybox>
+                                  <img class="product-view__img" src="img/product-card-img.png" alt="">
+                                </a>
+                              </div>
+                            </div>
 
-                          <div id="sync2" class="owl-carousel owl-theme">
-                            <div class="item">
-                              <div class="product-view__thumb">
-                                <img class="product-card-img" src="img/product-card-img.png" alt="">
+                            <div id="sync2" class="owl-carousel owl-theme">
+                              <div class="item">
+                                <div class="product-view__thumb">
+                                  <img class="product-card-img" src="img/product-card-img.png" alt="">
+                                </div>
+                              </div>
+                              <div class="item">
+                                <div class="product-view__thumb">
+                                  <img class="product-card-img" src="img/product-card-img.png" alt="">
+                                </div>
+                              </div>
+                              <div class="item">
+                                <div class="product-view__thumb">
+                                  <img class="product-card-img" src="img/product-card-img.png" alt="">
+                                </div>
+                              </div>
+                              <div class="item">
+                                <div class="product-view__thumb">
+                                  <img class="product-card-img" src="img/product-card-img.png" alt="">
+                                </div>
                               </div>
                             </div>
-                            <div class="item">
-                              <div class="product-view__thumb">
-                                <img class="product-card-img" src="img/product-card-img.png" alt="">
-                              </div>
-                            </div>
-                            <div class="item">
-                              <div class="product-view__thumb">
-                                <img class="product-card-img" src="img/product-card-img.png" alt="">
-                              </div>
-                            </div>
-                            <div class="item">
-                              <div class="product-view__thumb">
-                                <img class="product-card-img" src="img/product-card-img.png" alt="">
-                              </div>
-                            </div>
+
                           </div>
+                        </div>
+                        <p class="product__view-text"><span>Бесплатная доставка</span> по Челябинску при заказе <br> от 1000 рублейч</p>
+                      </div>
 
+                    </div>
+                    <div class="product__content">
+                      <div class="product__headed">
+                        <h1 class="product__title">Жироудалитель “Unicum”</h1>
+                        <div class="product__price">
+                          <span class="product__price-text">Цена:</span>
+                          <span class="sub-price"><s>280</s></span>
+                          <span class="price"><span>180</span> руб</span>
                         </div>
                       </div>
-                      <p class="product__view-text"><span>Бесплатная доставка</span> по Челябинску при заказе <br> от 1000 рублейч</p>
-                    </div>
-
-                  </div>
-                  <div class="product__content">
-                    <div class="product__headed">
-                      <h1 class="product__title">Жироудалитель “Unicum”</h1>
-                      <div class="product__price">
-                        <span class="product__price-text">Цена:</span>
-                        <span class="sub-price"><s>280</s></span>
-                        <span class="price"><span>180</span> руб</span>
-                      </div>
-                    </div>
-                    <div class="product__action">
-                      <div class="field-num product__field-num">
-                        <span class="field-num__input-and-btns">
-                          <button class="field-num__btn field-num__btn--minus" type="button">-</button>
-                          <button class="field-num__btn field-num__btn--plus" type="button">+</button>
-                          <input class="field-num__input" type="number" value="9" name="quantity" max="10" min="1" step="1">
-                        </span>
-                      </div>
-                      <div class="product__btn-group">
-                        <a class="btn btn--sm btn--main" href="#">В корзину&nbsp;&nbsp;<svg class="btn__icon" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#basket-icon"></use></svg></a>
-                        <a class="btn-icon" href="#">
-                          <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#favorit-icon"></use></svg>
-                        </a>
-                      </div>
-                      <div class="product__btn-group">
-                        <a class="btn btn--sm btn--orange" href="#">Быстрый заказ</a>
-                      </div>
-                      <div class="product__specifications">
-                        <h5>Характеристики товара</h5>
-                        <ul class="dashed-list">
-                          <li><span class="name">Объем</span><span class="value">520 мл.</span></li>
-                          <li><span class="name">Бренд</span><span class="value">Unicum</span></li>
-                          <li><span class="name">Отдушка, запах</span><span class="value">Фреш</span></li>
-                        </ul>
-                      </div>
-                      <div class="product__contacts">
-                        <div class="product__contacts-info">
-                          <a class="main-phone" href="tel:+78001234567">8 800 123-45-67</a>
-                          <p><a class="call-link" href="#">Вам перезонить?</a></p>
+                      <div class="product__action">
+                        <div class="field-num product__field-num">
+                          <span class="field-num__input-and-btns">
+                            <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                            <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                            <input class="field-num__input" type="number" value="9" name="quantity" max="10" min="1" step="1">
+                          </span>
                         </div>
-                        <div class="product__contacts-social">
-                          <ul class="social">
-                            <li class="social__link-wrap  social__link-wrap--you" title="Youtube">
-                              <a class="social__link" href="#">
-                                <svg height="682pt" viewBox="-21 -117 682.66672 682" width="682pt" xmlns="http://www.w3.org/2000/svg"><path d="m626.8125 64.035156c-7.375-27.417968-28.992188-49.03125-56.40625-56.414062-50.082031-13.703125-250.414062-13.703125-250.414062-13.703125s-200.324219 0-250.40625 13.183593c-26.886719 7.375-49.03125 29.519532-56.40625 56.933594-13.179688 50.078125-13.179688 153.933594-13.179688 153.933594s0 104.378906 13.179688 153.933594c7.382812 27.414062 28.992187 49.027344 56.410156 56.410156 50.605468 13.707031 250.410156 13.707031 250.410156 13.707031s200.324219 0 250.40625-13.183593c27.417969-7.378907 49.03125-28.992188 56.414062-56.40625 13.175782-50.082032 13.175782-153.933594 13.175782-153.933594s.527344-104.382813-13.183594-154.460938zm-370.601562 249.878906v-191.890624l166.585937 95.945312zm0 0"/></svg>
-                              </a>
-                            </li>
-                            <li class="social__link-wrap  social__link-wrap--fb" title="Facebook">
-                              <a class="social__link" href="#">
-                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                	 viewBox="0 0 310 310" style="enable-background:new 0 0 310 310;" xml:space="preserve">
-                                	<path id="XMLID_835_" d="M81.703,165.106h33.981V305c0,2.762,2.238,5,5,5h57.616c2.762,0,5-2.238,5-5V165.765h39.064
-                                		c2.54,0,4.677-1.906,4.967-4.429l5.933-51.502c0.163-1.417-0.286-2.836-1.234-3.899c-0.949-1.064-2.307-1.673-3.732-1.673h-44.996
-                                		V71.978c0-9.732,5.24-14.667,15.576-14.667c1.473,0,29.42,0,29.42,0c2.762,0,5-2.239,5-5V5.037c0-2.762-2.238-5-5-5h-40.545
-                                		C187.467,0.023,186.832,0,185.896,0c-7.035,0-31.488,1.381-50.804,19.151c-21.402,19.692-18.427,43.27-17.716,47.358v37.752H81.703
-                                		c-2.762,0-5,2.238-5,5v50.844C76.703,162.867,78.941,165.106,81.703,165.106z"/>
+                        <div class="product__btn-group">
+                          <a class="btn btn--sm btn--main" href="#">В корзину&nbsp;&nbsp;<svg class="btn__icon" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#basket-icon"></use></svg></a>
+                          <a class="btn-icon" href="#">
+                            <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#favorit-icon"></use></svg>
+                          </a>
+                        </div>
+                        <div class="product__btn-group">
+                          <a class="btn btn--sm btn--orange" href="#">Быстрый заказ</a>
+                        </div>
+                        <div class="product__specifications">
+                          <h5>Характеристики товара</h5>
+                          <ul class="dashed-list">
+                            <li><span class="name">Объем</span><span class="value">520 мл.</span></li>
+                            <li><span class="name">Бренд</span><span class="value">Unicum</span></li>
+                            <li><span class="name">Отдушка, запах</span><span class="value">Фреш</span></li>
+                          </ul>
+                        </div>
+                        <div class="product__contacts">
+                          <div class="product__contacts-info">
+                            <a class="main-phone" href="tel:+78001234567">8 800 123-45-67</a>
+                            <p><a class="call-link" href="#">Вам перезонить?</a></p>
+                          </div>
+                          <div class="product__contacts-social">
+                            <ul class="social">
+                              <li class="social__link-wrap  social__link-wrap--you" title="Youtube">
+                                <a class="social__link" href="#">
+                                  <svg height="682pt" viewBox="-21 -117 682.66672 682" width="682pt" xmlns="http://www.w3.org/2000/svg"><path d="m626.8125 64.035156c-7.375-27.417968-28.992188-49.03125-56.40625-56.414062-50.082031-13.703125-250.414062-13.703125-250.414062-13.703125s-200.324219 0-250.40625 13.183593c-26.886719 7.375-49.03125 29.519532-56.40625 56.933594-13.179688 50.078125-13.179688 153.933594-13.179688 153.933594s0 104.378906 13.179688 153.933594c7.382812 27.414062 28.992187 49.027344 56.410156 56.410156 50.605468 13.707031 250.410156 13.707031 250.410156 13.707031s200.324219 0 250.40625-13.183593c27.417969-7.378907 49.03125-28.992188 56.414062-56.40625 13.175782-50.082032 13.175782-153.933594 13.175782-153.933594s.527344-104.382813-13.183594-154.460938zm-370.601562 249.878906v-191.890624l166.585937 95.945312zm0 0"/></svg>
+                                </a>
+                              </li>
+                              <li class="social__link-wrap  social__link-wrap--fb" title="Facebook">
+                                <a class="social__link" href="#">
+                                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                  viewBox="0 0 310 310" style="enable-background:new 0 0 310 310;" xml:space="preserve">
+                                  <path id="XMLID_835_" d="M81.703,165.106h33.981V305c0,2.762,2.238,5,5,5h57.616c2.762,0,5-2.238,5-5V165.765h39.064
+                                  c2.54,0,4.677-1.906,4.967-4.429l5.933-51.502c0.163-1.417-0.286-2.836-1.234-3.899c-0.949-1.064-2.307-1.673-3.732-1.673h-44.996
+                                  V71.978c0-9.732,5.24-14.667,15.576-14.667c1.473,0,29.42,0,29.42,0c2.762,0,5-2.239,5-5V5.037c0-2.762-2.238-5-5-5h-40.545
+                                  C187.467,0.023,186.832,0,185.896,0c-7.035,0-31.488,1.381-50.804,19.151c-21.402,19.692-18.427,43.27-17.716,47.358v37.752H81.703
+                                  c-2.762,0-5,2.238-5,5v50.844C76.703,162.867,78.941,165.106,81.703,165.106z"/>
                                 </svg>
                               </a>
                             </li>
@@ -293,6 +301,8 @@
       @@include('blocks/page-footer/page-footer.html')
     </div>
 
+  </div>
+    <div class="off-canvas__overlay" data-toggle="off-canvas"></div>
   </div>
 
   @@include('_include/page_bottom.html')

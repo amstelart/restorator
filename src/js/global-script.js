@@ -1,6 +1,13 @@
 // Если на проекте jQuery
 $( document ).ready(function() {
 
+    var MqL = 1199;
+    moveNavigation();
+    $(window).on('resize', function(){
+      (!window.requestAnimationFrame) ? setTimeout(moveNavigation, 300) : window.requestAnimationFrame(moveNavigation);
+    });
+
+    // инициализация каруселей
     $("#banner-carousel").owlCarousel({
       items: 1,
       nav: true,
@@ -204,26 +211,26 @@ $( document ).ready(function() {
     });
     // end product view
 
-    var mainNav = $('.sidebar');
+    // .end инициализация каруселей
 
-    $('.burger').on('click', function(event){
-      event.preventDefault();
-      $('body').toggleClass('no-scroll');
-      mainNav.find('.catalog-nav').toggleClass('catalog-nav--open');
-      $(this).toggleClass('burger--close');
-    });
 
     // Работа аккордеона
-    $('.catalog-nav__pseudolink').on('click', function(e){
+    $('.catalog-nav__pseudolink').on('click', function(e) {
       e.stopPropagation();
       $(this).closest('.catalog-nav__item').toggleClass('catalog-nav__item--show-child');
+
+      if ($(this).closest('.catalog-nav__item').hasClass('catalog-nav__item--show-child')) {
+        $(this).next('.catalog-nav__sublist-wrapper').slideDown(200);
+      } else {
+        $(this).next('.catalog-nav__sublist-wrapper').slideUp(200);
+      }
+
     });
 
 
-    $('.catalog-nav__toggler').on('click', function(event){
+    $('.catalog-nav__toggler').on('click', function(e){
       event.preventDefault();
-      $('.catalog-nav').toggleClass('catalog-nav--show');
-      // mainNav.find('.catalog-nav').toggleClass('catalog-nav--open');
+      $('.catalog-nav').slideToggle(200).end().toggleClass('catalog-nav--show');
       $(this).toggleClass('open');
     });
 
@@ -313,4 +320,31 @@ $( document ).ready(function() {
       });
     });
     // ./end range slider
+
+    function checkWindowWidth() {
+  		//check window width (scrollbar included)
+  		var e = window,
+              a = 'inner';
+          if (!('innerWidth' in window )) {
+              a = 'client';
+              e = document.documentElement || document.body;
+          }
+          if ( e[ a+'Width' ] >= MqL ) {
+  			return true;
+  		} else {
+  			return false;
+  		}
+  	}
+
+    function moveNavigation(){
+  		var navigation = $('.catalog-nav');
+    		var desktop = checkWindowWidth();
+          if ( desktop ) {
+  			navigation.detach();
+  			navigation.insertBefore('.d-nav');
+  		} else {
+  			navigation.detach();
+  			navigation.insertAfter('.m-nav');
+  		}
+  	}
 });

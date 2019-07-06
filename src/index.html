@@ -16,148 +16,158 @@
   </div>
   <!-- ./end Временный блок для отображения модальных окон -->
 
-  <div class="page__inner">
+  <div class="off-canvas" id="off-canvas">
 
-    <div class="page__content">
+    <aside class="off-canvas__aside" role="complementary" aria-label="Боковое меню">
+      <div class="off-canvas__header">
+        <button class="catalog-nav__toggler">Каталог товаров</button>
+        <button class="btn btn--sm btn--main" type="button" data-toggle="off-canvas">закрыть</button>
+      </div>
+      <div class="m-nav"></div>
+    </aside>
 
-      @@include('blocks/page-header/page-header.html')
+    <div class="page__inner off-canvas__page-content">
+      <div class="page__content">
 
-      <main class="page-main" role="main">
+        @@include('blocks/page-header/page-header.html')
 
-        <div class="main-top">
+        <main class="page-main" role="main">
+
+          <div class="main-top">
+            <div class="container">
+              <div class="main-top__inner">
+                <div class="main-top__sidebar">
+                  <button class="catalog-nav__toggler">Каталог товаров</button>
+                </div>
+                <div class="main-top__content">
+                  <form class="main-top__search" action="">
+                    <input type="search" class="search__input" placeholder="Поиск">
+                    <button type="submit" class="btn btn--search">
+                      <svg width="15" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#search-icon"></use></svg>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="container">
-            <div class="main-top__inner">
-              <div class="main-top__sidebar">
-                <button class="catalog-nav__toggler">Каталог товаров</button>
-              </div>
-              <div class="main-top__content">
-                <form class="main-top__search" action="">
-                  <input type="search" class="search__input" placeholder="Поиск">
-                  <button type="submit" class="btn btn--search">
-                    <svg width="15" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#search-icon"></use></svg>
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
+            <div class="page-main__inner">
 
-        <div class="container">
-          <div class="page-main__inner">
+              @@include('blocks/sidebar/sidebar.html')
 
-            @@include('blocks/sidebar/sidebar.html')
-
-            <div class="main">
-              <div class="main__inner">
-                <div class="media-box">
-                  <div class="media-box__slider">
-                    <div class="owl-carousel owl-theme" id="banner-carousel">
-                      <div class="banner-img">
-                        <img src="img/slider-item-01.jpg" alt="">
+              <div class="main">
+                <div class="main__inner">
+                  <div class="media-box">
+                    <div class="media-box__slider">
+                      <div class="owl-carousel owl-theme" id="banner-carousel">
+                        <div class="banner-img">
+                          <img src="img/slider-item-01.jpg" alt="">
+                        </div>
+                        <div class="banner-img">
+                          <img src="img/slider-item-01.jpg" alt="">
+                        </div>
+                        <div class="banner-img">
+                          <img src="img/slider-item-01.jpg" alt="">
+                        </div>
                       </div>
-                      <div class="banner-img">
-                        <img src="img/slider-item-01.jpg" alt="">
-                      </div>
-                      <div class="banner-img">
-                        <img src="img/slider-item-01.jpg" alt="">
+                    </div>
+                    <div class="media-box__banner">
+                      <a href="#">Подробнее</a>
+                      <img src="img/banner-1.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="carousel-box">
+                    <h2 class="carousel-box__title text-center">Хиты продаж</h2>
+                    <div class="owl-carousel owl-theme product-card-carousel" id="hits-carousel">
+                      @@include('blocks/product-card/product-card.html')
+                      @@include('blocks/product-card/product-card.html')
+                      @@include('blocks/product-card/product-card.html')
+                      @@include('blocks/product-card/product-card.html')
+                      @@include('blocks/product-card/product-card.html')
+                      @@include('blocks/product-card/product-card.html')
+                      @@include('blocks/product-card/product-card.html')
+                      @@include('blocks/product-card/product-card.html')
+                    </div>
+                  </div>
+
+                  <div class="carousel-box">
+                    <h2 class="carousel-box__title text-center">Новое поступление</h2>
+                    <div class="owl-carousel owl-theme product-card-carousel" id="arrival-carousel">
+                      @@include('blocks/product-card/product-card.html')
+                      @@include('blocks/product-card/product-card.html')
+                      @@include('blocks/product-card/product-card.html')
+                      @@include('blocks/product-card/product-card.html')
+                      @@include('blocks/product-card/product-card.html')
+                      @@include('blocks/product-card/product-card.html')
+                      @@include('blocks/product-card/product-card.html')
+                      @@include('blocks/product-card/product-card.html')
+                    </div>
+                  </div>
+
+                  <!-- Карусель брендов -->
+                  <div class="carousel-box">
+                    <h2 class="carousel-box__title text-center">Популярные бренды</h2>
+                    <div class="owl-carousel owl-theme" id="brands-carousel">
+                      @@include('blocks/brand-item/brand-item.html')
+                    </div>
+                  </div>
+                  <!-- ./end Карусель брендов -->
+
+                  <!-- Карусель галлерея -->
+                  <div class="carousel-box">
+                    <h4>О нас</h4>
+                    <p>Широкий ассортимент одноразовой посуды, пищевой упаковки, гигиенической продукции, упаковочных материалов, хозтоваров для уборки, бытовой химии, расходников и множество других полезных товаров.</p>
+                    <ul>
+                      <li>Labore et dolore</li>
+                      <li>Ultrices gravida</li>
+                      <li>Maecenas accumsan</li>
+                    </ul>
+                    <div class="owl-carousel owl-theme" id="photo-carousel">
+                      @@include('blocks/carousel-photo-item/carousel-photo-item.html')
+                    </div>
+                    <p>Чтобы узнать больше о нас <a href="restorator.ru/about-us">restorator.ru/about-us</a></p>
+                  </div>
+                  <!-- ./end Карусель галлерея -->
+
+                  <div class="text-box text-box--wrapper">
+                    <h4>О доставе</h4>
+                    <p>Для удобства клиентов и возможности поставок по всей России наша компания имеет собственные склады, автопарк и разветвленную сеть региональных филиалов.</p>
+                    <p>Мы используем комбинированный вариант доставки заказов, а значит, можем доставить любой заказ в крупные города РФ максимально быстро и с оптимальной стоимостью доставки.</p>
+                    <p>Можем предложить логистическое решение для заказа любого веса и объема, а также будем сотрудничать с любой транспортной компанией по пожеланию клиента. География поставок постоянно расширяется.</p>
+                    <p><a href="#">Подробнее о доставке</a></p>
+                  </div>
+
+                  <!-- Карусель отзывы -->
+                  <div class="carousel-box">
+                    <h2 class="carousel-box__title">Отзывы о нашей работе</h2>
+                    <div class="owl-carousel owl-theme" id="reviews-carousel">
+                      @@include('blocks/reviews-card/reviews-card.html')
+                      @@include('blocks/reviews-card/reviews-card.html')
+                      @@include('blocks/reviews-card/reviews-card.html')
+                    </div>
+                    <div class="carousel__footer">
+                      <div class="carousel__dots-wrap"></div>
+                      <div class="carousel__btn-group">
+                        <a class="btn btn--main" href="#">Смотреть еще отзывы</a>
                       </div>
                     </div>
                   </div>
-                  <div class="media-box__banner">
-                    <a href="#">Подробнее</a>
-                    <img src="img/banner-1.jpg" alt="">
-                  </div>
+                  <!-- ./end Карусель отзывы -->
                 </div>
-                <div class="carousel-box">
-                  <h2 class="carousel-box__title text-center">Хиты продаж</h2>
-                  <div class="owl-carousel owl-theme product-card-carousel" id="hits-carousel">
-                    @@include('blocks/product-card/product-card.html')
-                    @@include('blocks/product-card/product-card.html')
-                    @@include('blocks/product-card/product-card.html')
-                    @@include('blocks/product-card/product-card.html')
-                    @@include('blocks/product-card/product-card.html')
-                    @@include('blocks/product-card/product-card.html')
-                    @@include('blocks/product-card/product-card.html')
-                    @@include('blocks/product-card/product-card.html')
-                  </div>
-                </div>
-                
-                <div class="carousel-box">
-                  <h2 class="carousel-box__title text-center">Новое поступление</h2>
-                  <div class="owl-carousel owl-theme product-card-carousel" id="arrival-carousel">
-                    @@include('blocks/product-card/product-card.html')
-                    @@include('blocks/product-card/product-card.html')
-                    @@include('blocks/product-card/product-card.html')
-                    @@include('blocks/product-card/product-card.html')
-                    @@include('blocks/product-card/product-card.html')
-                    @@include('blocks/product-card/product-card.html')
-                    @@include('blocks/product-card/product-card.html')
-                    @@include('blocks/product-card/product-card.html')
-                  </div>
-                </div>
-
-                <!-- Карусель брендов -->
-                <div class="carousel-box">
-                  <h2 class="carousel-box__title text-center">Популярные бренды</h2>
-                  <div class="owl-carousel owl-theme" id="brands-carousel">
-                    @@include('blocks/brand-item/brand-item.html')
-                  </div>
-                </div>
-                <!-- ./end Карусель брендов -->
-
-                <!-- Карусель галлерея -->
-                <div class="carousel-box">
-                  <h4>О нас</h4>
-                  <p>Широкий ассортимент одноразовой посуды, пищевой упаковки, гигиенической продукции, упаковочных материалов, хозтоваров для уборки, бытовой химии, расходников и множество других полезных товаров.</p>
-                  <ul>
-                    <li>Labore et dolore</li>
-                    <li>Ultrices gravida</li>
-                    <li>Maecenas accumsan</li>
-                  </ul>
-                  <div class="owl-carousel owl-theme" id="photo-carousel">
-                    @@include('blocks/carousel-photo-item/carousel-photo-item.html')
-                  </div>
-                  <p>Чтобы узнать больше о нас <a href="restorator.ru/about-us">restorator.ru/about-us</a></p>
-                </div>
-                <!-- ./end Карусель галлерея -->
-
-                <div class="text-box text-box--wrapper">
-                  <h4>О доставе</h4>
-                  <p>Для удобства клиентов и возможности поставок по всей России наша компания имеет собственные склады, автопарк и разветвленную сеть региональных филиалов.</p>
-                  <p>Мы используем комбинированный вариант доставки заказов, а значит, можем доставить любой заказ в крупные города РФ максимально быстро и с оптимальной стоимостью доставки.</p>
-                  <p>Можем предложить логистическое решение для заказа любого веса и объема, а также будем сотрудничать с любой транспортной компанией по пожеланию клиента. География поставок постоянно расширяется.</p>
-                  <p><a href="#">Подробнее о доставке</a></p>
-                </div>
-
-                <!-- Карусель отзывы -->
-                <div class="carousel-box">
-                  <h2 class="carousel-box__title">Отзывы о нашей работе</h2>
-                  <div class="owl-carousel owl-theme" id="reviews-carousel">
-                    @@include('blocks/reviews-card/reviews-card.html')
-                    @@include('blocks/reviews-card/reviews-card.html')
-                    @@include('blocks/reviews-card/reviews-card.html')
-                  </div>
-                  <div class="carousel__footer">
-                    <div class="carousel__dots-wrap"></div>
-                    <div class="carousel__btn-group">
-                      <a class="btn btn--main" href="#">Смотреть еще отзывы</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- ./end Карусель отзывы -->
               </div>
             </div>
           </div>
-        </div>
 
-      </main>
+        </main>
 
+      </div>
+
+      <div class="page__footer-wrapper">
+        @@include('blocks/page-footer/page-footer.html')
+      </div>
     </div>
-
-    <div class="page__footer-wrapper">
-      @@include('blocks/page-footer/page-footer.html')
-    </div>
-
+    <div class="off-canvas__overlay" data-toggle="off-canvas"></div>
   </div>
 
   @@include('blocks/modal/modal.html')

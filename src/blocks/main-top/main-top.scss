@@ -25,9 +25,9 @@
 
   &__sidebar {
     @include col();
-    @include col(lg, 3);
+    @include col(xl, 3);
 
-    @media (max-width: ($screen-lg - 1)) {
+    @media (max-width: ($screen-xl - 1)) {
       display: none;
     }
 
@@ -40,7 +40,7 @@
 
   &__content {
     @include col();
-    @include col(lg, 9);
+    @include col(xl, 9);
     display: flex;
     align-items: center;
 

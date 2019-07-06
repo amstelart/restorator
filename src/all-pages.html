@@ -10,61 +10,71 @@
 
 <body>
 
-  <div class="page__inner">
+  <div class="off-canvas" id="off-canvas">
+    <aside class="off-canvas__aside" role="complementary" aria-label="Боковое меню">
+      <div class="off-canvas__header">
+        <button class="catalog-nav__toggler">Каталог товаров</button>
+        <button class="btn btn--sm btn--main" type="button" data-toggle="off-canvas">закрыть</button>
+      </div>
+      <div class="m-nav"></div>
+    </aside>
+    <div class="page__inner off-canvas__page-content">
 
-    <div class="page__content">
+      <div class="page__content">
 
-      @@include('blocks/page-header/page-header.html')
+        @@include('blocks/page-header/page-header.html')
 
-      <main class="page-main" role="main">
-        <div class="main-top">
+        <main class="page-main" role="main">
+          <div class="main-top">
+            <div class="container">
+              <div class="main-top__inner">
+                <div class="main-top__sidebar">
+                  <button class="catalog-nav__toggler">Каталог товаров</button>
+                </div>
+                <div class="main-top__content">
+                  <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Каталог товаров</a></li>
+                    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Личный кабинет</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="container">
-            <div class="main-top__inner">
-              <div class="main-top__sidebar">
-                <button class="catalog-nav__toggler">Каталог товаров</button>
-              </div>
-              <div class="main-top__content">
-                <ul class="breadcrumbs">
-                  <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Каталог товаров</a></li>
-                  <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Личный кабинет</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+            <div class="page-main__inner">
 
-        <div class="container">
-          <div class="page-main__inner">
+              @@include('blocks/sidebar/sidebar.html')
 
-            @@include('blocks/sidebar/sidebar.html')
-
-            <div class="main">
-              <div class="main__inner">
-                <ul>
-                  <li style="margin-bottom: 5px;"><a target="_blank" href="index.html">Главная</a></li>
-                  <li style="margin-bottom: 5px;"><a target="_blank" href="catalog-part.html">Каталог</a></li>
-                  <li style="margin-bottom: 5px;"><a target="_blank" href="product.html">Карточка товара</a></li>
-                  <li style="margin-bottom: 5px;"><a target="_blank" href="contacts.html">Контакты</a></li>
-                  <li style="margin-bottom: 5px;"><a target="_blank" href="basket.html">Корзина</a></li>
-                  <li style="margin-bottom: 5px;"><a target="_blank" href="lk.html">Личный кабинет</a></li>
-                  <li style="margin-bottom: 5px;"><a target="_blank" href="lk--order.html">Личный кабинет заказ</a></li>
-                  <li style="margin-bottom: 5px;"><a target="_blank" href="lk--manager.html">Личный кабинет мой менеджер</a></li>
-                  <li style="margin-bottom: 5px;"><a target="_blank" href="checkout.html">Оформление заказа</a></li>
-                  <li style="margin-bottom: 5px;"><a target="_blank" href="registration.html">Регистрация авторизация</a></li>
-                </ul>
+              <div class="main">
+                <div class="main__inner">
+                  <ul>
+                    <li style="margin-bottom: 5px;"><a target="_blank" href="index.html">Главная</a></li>
+                    <li style="margin-bottom: 5px;"><a target="_blank" href="catalog-part.html">Каталог</a></li>
+                    <li style="margin-bottom: 5px;"><a target="_blank" href="product.html">Карточка товара</a></li>
+                    <li style="margin-bottom: 5px;"><a target="_blank" href="contacts.html">Контакты</a></li>
+                    <li style="margin-bottom: 5px;"><a target="_blank" href="basket.html">Корзина</a></li>
+                    <li style="margin-bottom: 5px;"><a target="_blank" href="lk.html">Личный кабинет</a></li>
+                    <li style="margin-bottom: 5px;"><a target="_blank" href="lk--order.html">Личный кабинет заказ</a></li>
+                    <li style="margin-bottom: 5px;"><a target="_blank" href="lk--manager.html">Личный кабинет мой менеджер</a></li>
+                    <li style="margin-bottom: 5px;"><a target="_blank" href="checkout.html">Оформление заказа</a></li>
+                    <li style="margin-bottom: 5px;"><a target="_blank" href="registration.html">Регистрация авторизация</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-      </main>
+        </main>
+
+      </div>
+
+      <div class="page__footer-wrapper">
+        @@include('blocks/page-footer/page-footer.html')
+      </div>
 
     </div>
-
-    <div class="page__footer-wrapper">
-      @@include('blocks/page-footer/page-footer.html')
-    </div>
-
+    <div class="off-canvas__overlay" data-toggle="off-canvas"></div>
   </div>
 
   @@include('_include/page_bottom.html')

@@ -469,3 +469,19 @@ a {
     }
   }
 }
+
+.login-link-group {
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    margin: 0.2em;
+    color: $color-main;
+  }
+}

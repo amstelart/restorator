@@ -45,6 +45,15 @@ $border-radius:               3px !default;
     color: inherit;
   }
 
+  &--xl {
+
+    font-weight: 600;
+
+    @media (min-width: $screen-xl) {
+      font-size: 20px;
+    }
+  }
+
   &--danger {
     background-color: $color-danger;
     border: 1px solid darken($color-danger, 10%);

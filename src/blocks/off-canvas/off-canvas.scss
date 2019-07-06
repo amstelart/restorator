@@ -9,7 +9,7 @@ $transition-time:             0.3s !default;
 
 $toggler-part-height:         3px !default;
 
-$off-canvas-width:            250px !default; // ширина этого блока
+$off-canvas-width:            300px !default; // ширина этого блока
 
 .off-canvas {
 
@@ -22,8 +22,8 @@ $off-canvas-width:            250px !default; // ширина этого бло�
     max-height: 30vh;
     overflow-y: auto;
     backface-visibility: hidden;
-    background-color: $gray-darkest;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     transition: transform $transition-time ease;
 
     .js & {
@@ -35,13 +35,25 @@ $off-canvas-width:            250px !default; // ширина этого бло�
       transform: translateX(($off-canvas-width * -1));
     }
 
-    a {
-      color: #fff;
+    // a {
+    //   color: #000;
+    //
+    //   &:hover,
+    //   &:focus {
+    //     color: #fff;
+    //   }
+    // }
+  }
 
-      &:hover,
-      &:focus {
-        color: #fff;
-      }
+  &__header {
+    display: flex;
+    border: 1px solid #7c1921;
+
+    .catalog-nav__toggler {
+      flex-grow: 1;
+      min-width: inherit;
+      height: auto;
+      border-right: 1px solid #7c1921;
     }
   }
 

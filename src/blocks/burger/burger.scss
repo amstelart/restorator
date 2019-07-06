@@ -13,69 +13,26 @@ $toggler-part-bg-color:       #000 !default;
   z-index: 1;
   display: flex;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  justify-content: center;
   user-select: none;
   cursor: pointer;
-
-  display: inline-block;
-  padding: 0;
-  background: none;
-  border: none;
+  border: 2px solid $color-main;
+  border-radius: 3px;
+  background: #fff;
+  padding: 5px;
   flex-shrink: 0;
+
+  svg {
+    // fill: $color-main;
+  }
+
+  &:hover {
+    svg {
+      fill: $color-main;
+    }
+  }
 
   &:focus {
     outline: none;
-  }
-
-  > span {
-    display: inline-block;
-    width: 100%;
-    height: $toggler-part-height;
-    background: $toggler-part-bg-color;
-    position: relative;
-    transition: background $transition-time $transition-time;
-
-    &:before,
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      width: 100%;
-      height: $toggler-part-height;
-      background: $toggler-part-bg-color;
-      transform-origin: 50% 50%;
-      transition: top $transition-time $transition-time, transform $transition-time;
-    }
-
-    &:before {
-      top: -10px;
-    }
-
-    &:after {
-      top: 10px;
-    }
-  }
-
-  &--close {
-
-    > span {
-      transition: background $transition-time 0s;
-      background: transparent;
-
-      &:before,
-      &:after {
-        transition: top $transition-time, transform $transition-time $transition-time;
-        top: 0;
-      }
-
-      &:before {
-        transform: rotate3d(0, 0, 1, 45deg);
-      }
-
-      &:after {
-        transform: rotate3d(0, 0, 1, -45deg);
-      }
-    }
   }
 }

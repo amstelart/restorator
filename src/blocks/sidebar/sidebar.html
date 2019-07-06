@@ -11,32 +11,31 @@
 -->
 
 <div class="sidebar">
-
+  <div class="d-nav"></div>
   <nav class="catalog-nav catalog-nav--show">
     <div class="catalog-nav__wrap">
       <form action="" class="catalog-nav__form">
         <div class="field-checkbox">
           <div class="field-checkbox__input-wrap">
             <label class="field-checkbox__name">
-              <input class="field-checkbox__input" type="checkbox" id="" name="">
+              <input class="field-checkbox__input" type="checkbox" id="catalog-group" name="" checked>
               <span class="field-checkbox__name-text">Стандарт</span>
             </label>
           </div>
           <div class="field-checkbox__input-wrap">
             <label class="field-checkbox__name">
-              <input class="field-checkbox__input" type="checkbox" id="" name="">
+              <input class="field-checkbox__input" type="checkbox" id="catalog-group" name="">
               <span class="field-checkbox__name-text">Эконом</span>
             </label>
           </div>
           <div class="field-checkbox__input-wrap">
             <label class="field-checkbox__name">
-              <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+              <input class="field-checkbox__input" type="checkbox" id="catalog-group" name="">
               <span class="field-checkbox__name-text">Премиум</span>
             </label>
           </div>
         </div>
       </form>
-
       <ul class="catalog-nav__list">
         <li class="catalog-nav__item catalog-nav__item--show-child">
           <span class="catalog-nav__pseudolink">
@@ -65,10 +64,39 @@
                   Салфетки для чистки плит
                 </a>
               </li>
-              <li class="catalog-nav__item">
-                <a href="" class="catalog-nav__link">
+              <li class="catalog-nav__item lvl-2">
+                <span class="catalog-nav__link lvl-2">
                   Одноразовая посуда
-                </a>
+                </span>
+                <div class="catalog-nav__sublist-wrapper lvl-2">
+                  <ul class="catalog-nav__list">
+                    <li class="catalog-nav__item">
+                      <a href="#" class="catalog-nav__link">
+                        Тарелки
+                      </a>
+                    </li>
+                    <li class="catalog-nav__item">
+                      <a href="" class="catalog-nav__link">
+                        Стаканы 0.5
+                      </a>
+                    </li>
+                    <li class="catalog-nav__item">
+                      <a href="" class="catalog-nav__link">
+                        Стаканы 0.2
+                      </a>
+                    </li>
+                    <li class="catalog-nav__item">
+                      <a href="" class="catalog-nav__link">
+                        Вилки пластиковые
+                      </a>
+                    </li>
+                    <li class="catalog-nav__item">
+                      <a href="" class="catalog-nav__link">
+                        Ложки пластиковые
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li class="catalog-nav__item">
                 <a href="" class="catalog-nav__link">
@@ -260,7 +288,6 @@
         </li>
       </ul>
     </div>
-    <div id="catalog-nav-backdrop" class="catalog-nav__backdrop"></div>
   </nav>
 
   <div class="widget widget--news">
@@ -291,7 +318,7 @@
       <div class="widget__footer"></div>
     </div>
   </div>
-  <div class="widget widget--filter">
+  <!-- <div class="widget widget--filter">
     <div class="widget__inner">
       <div class="widget__header">
         <h6 class="widget__title">Подбор по параметрам</h6>
@@ -358,5 +385,5 @@
         <a href="#" class="btn btn--sm btn--main">Применить</a>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>

@@ -9,35 +9,18 @@
   position: relative;
   z-index: 10;
   background-color: #fff;
-  // box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.09);
-  padding: 0 20px;
   margin-bottom: 20px;
+  display: none;
 
-  @media (min-width: $screen-lg) {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.2s;
-
-    &--show {
-      max-height: 100%;
-      transition: max-height 0.6s;
-    }
-  }
-
-  @media (max-width: ($screen-lg - 1)) {
-    position: absolute;
-    top: 111px;
-    left: 0;
-    height: 0;
-    padding: 0;
-    margin: 0;
+  &--show {
+    display: block;
   }
 
 
   &__form {
 
     .field-checkbox {
-      // padding: 15px 20px 0 20px;
+      padding: 20px;
     }
 
     .field-checkbox__input-wrap {
@@ -47,53 +30,7 @@
   }
 
   &__wrap {
-    // мобильный вид списка
-    @media (max-width: ($menu-desktop-width - 1)) {
 
-      position: relative;
-      left: -334px;
-      z-index: 2;
-      width: 320px;
-      height: calc(100vh - 111px);
-      padding: 10px 15px;
-      overflow-y: auto;
-      background-color: #fff;
-
-
-      #{$block-name}--open & {
-        left: 0;
-        transition: left 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
-        // box-shadow: 0 2px 40px rgba(72, 72, 72, 0.35);
-      }
-    }
-  }
-
-  &__backdrop {
-    position: fixed;
-    z-index: 1;
-    width: 0;
-    height: 0;
-    opacity: 0;
-    transition: opacity $transition-time;
-
-    @media (max-width: ($menu-desktop-width - 1)) {
-
-      #{$block-name}--open & {
-        display: block;
-        height: auto;
-        width: auto;
-        top: 111px;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: #000;
-        opacity: 0.85;
-      }
-    }
-
-    @media (min-width: $screen-lg) {
-      display: none;
-    }
   }
 
   // первый уровень
@@ -101,10 +38,6 @@
     margin: 0;
     padding: 0;
     list-style: none;
-
-    // @media (min-width: $screen-lg) and (max-width: ($screen-xl - 1)) {
-    //   font-size: 14px;
-    // }
 
     @media (max-width: ($screen-xl - 1)) {
       font-size: 14px;
@@ -120,7 +53,7 @@
     font-size: 16px;
     font-weight: 700;
     position: relative;
-    padding: 0.8em 12px 0.8em 0;
+    padding: 0.8em 20px 0.8em 20px;
     border-bottom: 1px solid $border-color;
     cursor: pointer;
 
@@ -134,10 +67,6 @@
       display: inline-block;
       vertical-align: middle;
       margin-right: 6px;
-
-      @media (min-width: $screen-lg) and (max-width: ($screen-xl - 1)) {
-        display: none;
-      }
     }
 
     &:after {
@@ -146,7 +75,7 @@
       width: 8px;
       height: 8px;
       top: 50%;
-      right: 0;
+      right: 8px;
       border-bottom: 1px solid #000;
       border-right: 1px solid #000;
       transform: translateY(-70%) rotate(45deg);
@@ -162,10 +91,11 @@
 
   &__link {
     display: block;
-    padding: 0.5em 0;
+    padding: 0.5em 20px;
     text-decoration: none;
     background-color: #fff;
     color: #000;
+    cursor: pointer;
 
     &:hover,
     &:focus {
@@ -176,25 +106,46 @@
 
   &__sublist-wrapper {
 
-    @media (min-width: $menu-desktop-width) {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.2s;
-      z-index: 1;
-      border-bottom: 1px solid transparent;
+    z-index: 1;
+    border-bottom: 1px solid transparent;
 
-      #{$block-name}__item--show-child > & {
-        max-height: 100vh;
-        transition: max-height 0.6s;
-        border-color: $border-color;
+    #{$block-name}__item--show-child > & {
+      display: block;
+      border-color: $border-color;
+    }
+
+    &.lvl-2 {
+      display: none;
+      z-index: 5;
+      margin: 0 20px;
+      background: #fff;
+      border: 1px solid $border-color;
+
+      @media (min-width: $screen-xl) {
+        position: absolute;
+        margin: 0;
+        left: 100%;
+        top: -20px;
+        min-width: 100%;
+        padding: 20px;
+      }
+
+      &:hover {
+        display: block;
       }
     }
   }
 
+  .catalog-nav__link.lvl-2 {
+    &:hover ~ {
 
+      .catalog-nav__sublist-wrapper.lvl-2 {
+        display: block;
+      }
+    }
+  }
 
   // переключатель
-
   &__toggler {
     display: inline-block;
     position: relative;

@@ -39,6 +39,10 @@
     &.cost {
       text-align: right;
       width: 20%;
+
+      .price-value {
+        margin-left: 10px;
+      }
     }
   }
 
