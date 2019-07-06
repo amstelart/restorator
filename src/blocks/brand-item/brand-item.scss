@@ -8,18 +8,37 @@
 
   border: 1px solid $border-color;
   background: #fff;
-  max-width: 220px;
-  height: 220px;
-  position: relative;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &__logo {
+    width: auto !important;
+    max-width:  160px;
+    height: auto;
     padding: 30px;
-    object-fit: contain;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 
+  @media (min-width: $screen-md) {
+    height: 130px;
+
+    #{$block-name}__logo {
+      padding: 30px;
+    }
+  }
+  @media (min-width: $screen-lg) {
+    height: 170px;
+
+    #{$block-name}__logo {
+      padding: 30px;
+    }
+  }
+  @media (min-width: $screen-xl) {
+    height: 220px;
+
+    #{$block-name}__logo {
+      padding: 20px;
+    }
+  }
 }

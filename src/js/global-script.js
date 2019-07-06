@@ -46,6 +46,8 @@ $( document ).ready(function() {
       nav: true,
       dots: false,
       loop: true,
+      autoHeight:false,
+      autoHeightClass: 'brand-item ',
       responsive : {
         0 : {
           items: 2,
@@ -61,7 +63,6 @@ $( document ).ready(function() {
         },
         992 : {
           items: 4,
-          autoHeight: true,
         },
         1200 : {
           items: 4,
@@ -78,12 +79,12 @@ $( document ).ready(function() {
       center: false,
       responsive : {
         0 : {
-          items: 2,
+          items: 3,
           loop: true,
           center: true,
         },
         480 : {
-          items: 2,
+          items: 3,
         },
         768 : {
           items: 4,
