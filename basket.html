@@ -43,709 +43,713 @@
 
 <body>
 
-  <div class="page__inner">
+  <div class="off-canvas" id="off-canvas">
+    <aside class="off-canvas__aside" role="complementary" aria-label="Боковое меню">
+      <div class="m-nav"></div>
+    </aside>
+    <div class="page__inner off-canvas__page-content">
 
-    <div class="page__content">
+      <div class="page__content">
 
-      <header class="page-header" role="banner">
-        <div class="header-top">
-          <div class="container header-top__inner">
-            <div class="header-top__item header-top__item--nav">
-              <ul class="top-nav">
-                <li class="top-nav__item">
-                  <a class="top-nav__link" href="#">О нас</a>
-                </li>
-                <li class="top-nav__item">
-                  <a class="top-nav__link" href="#">Новости</a>
-                </li>
-                <li class="top-nav__item">
-                  <a class="top-nav__link" href="#">Доставка</a>
-                </li>
-                <li class="top-nav__item">
-                  <a class="top-nav__link" href="#">Контакты</a>
-                </li>
-                <li class="top-nav__item">
-                  <a class="top-nav__link" href="#">Оплата</a>
-                </li>
-              </ul>
-            </div>
-            <div class="header-top__item header-top__item--social">
-              <ul class="social">
-                <li class="social__link-wrap  social__link-wrap--you" title="Youtube">
-                  <a class="social__link" href="#">
-                    <svg height="682pt" viewBox="-21 -117 682.66672 682" width="682pt" xmlns="http://www.w3.org/2000/svg"><path d="m626.8125 64.035156c-7.375-27.417968-28.992188-49.03125-56.40625-56.414062-50.082031-13.703125-250.414062-13.703125-250.414062-13.703125s-200.324219 0-250.40625 13.183593c-26.886719 7.375-49.03125 29.519532-56.40625 56.933594-13.179688 50.078125-13.179688 153.933594-13.179688 153.933594s0 104.378906 13.179688 153.933594c7.382812 27.414062 28.992187 49.027344 56.410156 56.410156 50.605468 13.707031 250.410156 13.707031 250.410156 13.707031s200.324219 0 250.40625-13.183593c27.417969-7.378907 49.03125-28.992188 56.414062-56.40625 13.175782-50.082032 13.175782-153.933594 13.175782-153.933594s.527344-104.382813-13.183594-154.460938zm-370.601562 249.878906v-191.890624l166.585937 95.945312zm0 0"/></svg>
-                  </a>
-                </li>
-                <li class="social__link-wrap  social__link-wrap--fb" title="Facebook">
-                  <a class="social__link" href="#">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    	 viewBox="0 0 310 310" style="enable-background:new 0 0 310 310;" xml:space="preserve">
-                    	<path id="XMLID_835_" d="M81.703,165.106h33.981V305c0,2.762,2.238,5,5,5h57.616c2.762,0,5-2.238,5-5V165.765h39.064
-                    		c2.54,0,4.677-1.906,4.967-4.429l5.933-51.502c0.163-1.417-0.286-2.836-1.234-3.899c-0.949-1.064-2.307-1.673-3.732-1.673h-44.996
-                    		V71.978c0-9.732,5.24-14.667,15.576-14.667c1.473,0,29.42,0,29.42,0c2.762,0,5-2.239,5-5V5.037c0-2.762-2.238-5-5-5h-40.545
-                    		C187.467,0.023,186.832,0,185.896,0c-7.035,0-31.488,1.381-50.804,19.151c-21.402,19.692-18.427,43.27-17.716,47.358v37.752H81.703
-                    		c-2.762,0-5,2.238-5,5v50.844C76.703,162.867,78.941,165.106,81.703,165.106z"/>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social__link-wrap  social__link-wrap--inst" title="Instagram">
-                  <a class="social__link" href="#">
-                    <svg height="511pt" viewBox="0 0 511 511.9" width="511pt" xmlns="http://www.w3.org/2000/svg"><path d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0"/><path d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0"/><path d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0"/></svg>
-                  </a>
-                </li>
-                <li class="social__link-wrap  social__link-wrap--tw" title="twitter">
-                  <a class="social__link" href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 449.956 449.956">
-                      <path d="M449.956 85.657c-17.702 7.614-35.408 12.369-53.102 14.279 19.985-11.991 33.503-28.931 40.546-50.819-18.281 10.847-37.787 18.268-58.532 22.267-18.274-19.414-40.73-29.125-67.383-29.125-25.502 0-47.246 8.992-65.24 26.98-17.984 17.987-26.977 39.731-26.977 65.235 0 6.851.76 13.896 2.284 21.128-37.688-1.903-73.042-11.372-106.068-28.407C82.46 110.158 54.433 87.46 31.403 59.101c-8.375 14.272-12.564 29.787-12.564 46.536 0 15.798 3.711 30.456 11.138 43.97 7.422 13.512 17.417 24.455 29.98 32.831-14.849-.572-28.743-4.475-41.684-11.708v1.142c0 22.271 6.995 41.824 20.983 58.674 13.99 16.848 31.645 27.453 52.961 31.833a95.543 95.543 0 0 1-24.269 3.138c-5.33 0-11.136-.475-17.416-1.42 5.9 18.459 16.75 33.633 32.546 45.535 15.799 11.896 33.691 18.028 53.677 18.418-33.498 26.262-71.66 39.393-114.486 39.393-8.186 0-15.607-.373-22.27-1.139 42.827 27.596 90.03 41.394 141.612 41.394 32.738 0 63.478-5.181 92.21-15.557 28.746-10.369 53.297-24.267 73.665-41.686 20.362-17.415 37.925-37.448 52.674-60.097 14.75-22.651 25.738-46.298 32.977-70.946 7.23-24.653 10.848-49.344 10.848-74.092 0-5.33-.096-9.325-.287-11.991 18.087-13.127 33.504-29.023 46.258-47.672z"></path>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <a href="#" class="header-top__item header-top__item--entry">
-              <svg width="15" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-icon"></use></svg>
-              <span>Войти</span>
-            </a>
-          </div>
-        </div>
-        <div class="header-main">
-          <div class="container">
-            <div class="header-main__inner">
-              <button class="burger"><span></span></button>
-              <a href="index.html" class="header-main__item header-main__item--logo">
-                <img src="img/logo.png" alt="">
-              </a>
-              <div class="header-main__item header-main__item--contacts">
-                <p>г. Челябинск</p>
-                <a class="main-phone" href="tel:+78001234567">8 800 123-45-67</a>
-                <p><a class="call-link" href="#modal-call" data-toggle="modal">Вам перезонить?</a></p>
+        <header class="page-header" role="banner">
+          <div class="header-top">
+            <div class="container header-top__inner">
+              <div class="header-top__item header-top__item--nav">
+                <ul class="top-nav">
+                  <li class="top-nav__item">
+                    <a class="top-nav__link" href="#">О нас</a>
+                  </li>
+                  <li class="top-nav__item">
+                    <a class="top-nav__link" href="#">Новости</a>
+                  </li>
+                  <li class="top-nav__item">
+                    <a class="top-nav__link" href="#">Доставка</a>
+                  </li>
+                  <li class="top-nav__item">
+                    <a class="top-nav__link" href="#">Контакты</a>
+                  </li>
+                  <li class="top-nav__item">
+                    <a class="top-nav__link" href="#">Оплата</a>
+                  </li>
+                </ul>
               </div>
-              <div class="header-main__item header-main__item--wt">
-                <div class="main-wt">
+              <div class="header-top__item header-top__item--social">
+                <ul class="social">
+                  <li class="social__link-wrap  social__link-wrap--you" title="Youtube">
+                    <a class="social__link" href="#">
+                      <svg height="682pt" viewBox="-21 -117 682.66672 682" width="682pt" xmlns="http://www.w3.org/2000/svg"><path d="m626.8125 64.035156c-7.375-27.417968-28.992188-49.03125-56.40625-56.414062-50.082031-13.703125-250.414062-13.703125-250.414062-13.703125s-200.324219 0-250.40625 13.183593c-26.886719 7.375-49.03125 29.519532-56.40625 56.933594-13.179688 50.078125-13.179688 153.933594-13.179688 153.933594s0 104.378906 13.179688 153.933594c7.382812 27.414062 28.992187 49.027344 56.410156 56.410156 50.605468 13.707031 250.410156 13.707031 250.410156 13.707031s200.324219 0 250.40625-13.183593c27.417969-7.378907 49.03125-28.992188 56.414062-56.40625 13.175782-50.082032 13.175782-153.933594 13.175782-153.933594s.527344-104.382813-13.183594-154.460938zm-370.601562 249.878906v-191.890624l166.585937 95.945312zm0 0"/></svg>
+                    </a>
+                  </li>
+                  <li class="social__link-wrap  social__link-wrap--fb" title="Facebook">
+                    <a class="social__link" href="#">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      	 viewBox="0 0 310 310" style="enable-background:new 0 0 310 310;" xml:space="preserve">
+                      	<path id="XMLID_835_" d="M81.703,165.106h33.981V305c0,2.762,2.238,5,5,5h57.616c2.762,0,5-2.238,5-5V165.765h39.064
+                      		c2.54,0,4.677-1.906,4.967-4.429l5.933-51.502c0.163-1.417-0.286-2.836-1.234-3.899c-0.949-1.064-2.307-1.673-3.732-1.673h-44.996
+                      		V71.978c0-9.732,5.24-14.667,15.576-14.667c1.473,0,29.42,0,29.42,0c2.762,0,5-2.239,5-5V5.037c0-2.762-2.238-5-5-5h-40.545
+                      		C187.467,0.023,186.832,0,185.896,0c-7.035,0-31.488,1.381-50.804,19.151c-21.402,19.692-18.427,43.27-17.716,47.358v37.752H81.703
+                      		c-2.762,0-5,2.238-5,5v50.844C76.703,162.867,78.941,165.106,81.703,165.106z"/>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__link-wrap  social__link-wrap--inst" title="Instagram">
+                    <a class="social__link" href="#">
+                      <svg height="511pt" viewBox="0 0 511 511.9" width="511pt" xmlns="http://www.w3.org/2000/svg"><path d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0"/><path d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0"/><path d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0"/></svg>
+                    </a>
+                  </li>
+                  <li class="social__link-wrap  social__link-wrap--tw" title="twitter">
+                    <a class="social__link" href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 449.956 449.956">
+                        <path d="M449.956 85.657c-17.702 7.614-35.408 12.369-53.102 14.279 19.985-11.991 33.503-28.931 40.546-50.819-18.281 10.847-37.787 18.268-58.532 22.267-18.274-19.414-40.73-29.125-67.383-29.125-25.502 0-47.246 8.992-65.24 26.98-17.984 17.987-26.977 39.731-26.977 65.235 0 6.851.76 13.896 2.284 21.128-37.688-1.903-73.042-11.372-106.068-28.407C82.46 110.158 54.433 87.46 31.403 59.101c-8.375 14.272-12.564 29.787-12.564 46.536 0 15.798 3.711 30.456 11.138 43.97 7.422 13.512 17.417 24.455 29.98 32.831-14.849-.572-28.743-4.475-41.684-11.708v1.142c0 22.271 6.995 41.824 20.983 58.674 13.99 16.848 31.645 27.453 52.961 31.833a95.543 95.543 0 0 1-24.269 3.138c-5.33 0-11.136-.475-17.416-1.42 5.9 18.459 16.75 33.633 32.546 45.535 15.799 11.896 33.691 18.028 53.677 18.418-33.498 26.262-71.66 39.393-114.486 39.393-8.186 0-15.607-.373-22.27-1.139 42.827 27.596 90.03 41.394 141.612 41.394 32.738 0 63.478-5.181 92.21-15.557 28.746-10.369 53.297-24.267 73.665-41.686 20.362-17.415 37.925-37.448 52.674-60.097 14.75-22.651 25.738-46.298 32.977-70.946 7.23-24.653 10.848-49.344 10.848-74.092 0-5.33-.096-9.325-.287-11.991 18.087-13.127 33.504-29.023 46.258-47.672z"></path>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <a href="#" class="header-top__item header-top__item--entry">
+                <svg width="15" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-icon"></use></svg>
+                <span>Войти</span>
+              </a>
+            </div>
+          </div>
+          <div class="header-main">
+            <div class="container">
+              <div class="header-main__inner">
+                <button class="burger" data-toggle="off-canvas"><span></span></button>
+                <a href="index.html" class="header-main__item header-main__item--logo">
+                  <img src="img/logo.png" alt="">
+                </a>
+                <div class="header-main__item header-main__item--contacts">
+                  <p>г. Челябинск</p>
+                  <a class="main-phone" href="tel:+78001234567">8 800 123-45-67</a>
+                  <p><a class="call-link" href="#modal-call" data-toggle="modal">Вам перезонить?</a></p>
+                </div>
+                <div class="header-main__item header-main__item--wt">
+                  <div class="main-wt">
+                    <div><b>Пн-пт с 9 до 18</b></div>
+                    <div>сб и вс выходной</div>
+                  </div>
+                </div>
+                <div class="header-main__item header-main__item--med">
+                  <a class="header-med" href="#">
+                    <img src="img/med.png" alt="">
+                  </a>
+                </div>
+                <div class="header-main__item">
+                  <a href="#" class="header-btn header-btn--favorit">
+                    <div class="header-btn__inner">
+                      <div class="header-btn__icon-wrap">
+                        <span class="value">12</span>
+                        <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#favorit-icon"></use></svg>
+                      </div>
+                      <div class="header-btn__content">
+                        <h5>Избранное</h5>
+                        <div>2530р</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="header-main__item">
+                  <div class="dropdown dropdown--basket">
+                    <a id="dropdown-basket" href="#" class="header-btn header-btn--basket dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      <div class="header-btn__inner">
+                        <div class="header-btn__icon-wrap">
+                          <span class="value">12</span>
+                          <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#basket-icon"></use></svg>
+                        </div>
+                        <div class="header-btn__content">
+                          <h5>Корзина</h5>
+                          <span>1550р</span>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="dropdown__menu dropdown__menu--right" aria-labelledby="dropdown-basket">
+                      <div class="basket-list">
+                        <div class="basket-list__header">
+                          <div class="basket-list__cell name">Наименование</div>
+                          <div class="basket-list__cell price">Цена</div>
+                          <div class="basket-list__cell cost">Стоимость</div>
+                        </div>
+                        <div class="basket-list__el">
+                          <div class="basket-list__cell name">
+                            <div class="basket-el__img-wrap">
+                              <img src="img/product-card-img.png" alt="">
+                            </div>
+                            <div class="basket-el__name">Средство для чистки плит</div>
+                          </div>
+                          <div class="basket-list__cell price">
+                            <span class="price-value">180&nbsp;руб</span>
+                            <div class="field-num field-num--light">
+                              <span class="field-num__input-wrap">
+                                <span class="field-num__input-and-btns">
+                                  <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                  <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                  <input class="field-num__input" type="number" value="9" name="quantity" max="10" min="1" step="1">
+                                </span>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="basket-list__cell cost"><span class="price-value">360&nbsp;руб</span></div>
+                        </div>
+                        <div class="basket-list__el">
+                          <div class="basket-list__cell name">
+                            <div class="basket-el__img-wrap">
+                              <img src="img/product-card-img.png" alt="">
+                            </div>
+                            <div class="basket-el__name">Средство для чистки плит</div>
+                          </div>
+                          <div class="basket-list__cell price">
+                            <span class="price-value">180&nbsp;руб</span>
+                            <div class="field-num field-num--light">
+                              <span class="field-num__input-wrap">
+                                <span class="field-num__input-and-btns">
+                                  <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                  <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                  <input class="field-num__input" type="number" value="9" name="quantity" max="10" min="1" step="1">
+                                </span>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="basket-list__cell cost"><span class="price-value">1080&nbsp;руб</span></div>
+                        </div>
+                        <div class="basket-list__footer">
+                          <div class="basket-list__cell all-cost">Всего <span class="price-value">1440&nbsp;руб</span></div>
+                          <div class="basket-list__cell action"><a href="#" class="btn btn--sm btn--orange">Оформить заказ</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+
+        <main class="page-main page-main--no-sidebar" role="main">
+          <div class="main-top">
+            <div class="container">
+              <div class="main-top__inner">
+                <div class="main-top__sidebar">
+                  <button class="catalog-nav__toggler">Каталог товаров</button>
+                </div>
+                <div class="main-top__content">
+                  <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+                    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Корзина</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="page-main__inner">
+
+              <div class="sidebar">
+                <div class="d-nav"></div>
+                <nav class="catalog-nav catalog-nav--show">
+                  <div class="catalog-nav__wrap">
+                    <form action="" class="catalog-nav__form">
+                      <div class="field-checkbox">
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" id="" name="">
+                            <span class="field-checkbox__name-text">Стандарт</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" id="" name="">
+                            <span class="field-checkbox__name-text">Эконом</span>
+                          </label>
+                        </div>
+                        <div class="field-checkbox__input-wrap">
+                          <label class="field-checkbox__name">
+                            <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                            <span class="field-checkbox__name-text">Премиум</span>
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+                    <ul class="catalog-nav__list">
+                      <li class="catalog-nav__item catalog-nav__item--show-child">
+                        <span class="catalog-nav__pseudolink">
+                          <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-dishwasher"></use></svg>
+                          Кухонная зона
+                        </span>
+                        <div class="catalog-nav__sublist-wrapper">
+                          <ul class="catalog-nav__list">
+                            <li class="catalog-nav__item">
+                              <a href="#" class="catalog-nav__link">
+                                Все для мытья посуды
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Средства индивидуальной защиты
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Салфетки для уборки
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Салфетки для чистки плит
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Одноразовая посуда
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Пищевая упаковка
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Бумажная продукция для кухни
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Фасовочные пакеты, мешки для мусора
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="catalog-nav__item catalog-nav__item--show-child">
+                        <span class="catalog-nav__pseudolink">
+                          <svg width="22" height="22"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-tissue"></use></svg>
+                          Все для туалетных комнат
+                        </span>
+                        <div class="catalog-nav__sublist-wrapper">
+                          <ul class="catalog-nav__list">
+                            <li class="catalog-nav__item">
+                              <a href="#" class="catalog-nav__link">
+                                Диспенсеры
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Гигиеническая продукция
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Дезинфицирующие средства и таблетки
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Сушилки для рук
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Средства для мытья стекол и зеркал
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Освежители воздуха
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Мыло
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Средства для сантехники
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Уборка мусора
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="catalog-nav__item  catalog-nav__item--show-child">
+                        <span class="catalog-nav__pseudolink">
+                          <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-furniture"></use></svg>
+                          Гостевой зал
+                        </span>
+                        <div class="catalog-nav__sublist-wrapper">
+                          <ul class="catalog-nav__list">
+                            <li class="catalog-nav__item">
+                              <a href="#" class="catalog-nav__link">
+                                Салфетки сервировочные и диспенсеры
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Средства для мытья стекол и зеркал
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Стиральные порошки
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Средства для уборки
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="catalog-nav__item  catalog-nav__item--show-child">
+                        <span class="catalog-nav__pseudolink">
+                          <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-mop"></use></svg>
+                          Чистота полов
+                        </span>
+                        <div class="catalog-nav__sublist-wrapper">
+                          <ul class="catalog-nav__list">
+                            <li class="catalog-nav__item">
+                              <a href="#" class="catalog-nav__link">
+                                Швабры и тряпки для мытья полов
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Средства для мытья полов
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Тележки уборочные
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="catalog-nav__item  catalog-nav__item--show-child">
+                        <span class="catalog-nav__pseudolink">
+                          <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-skewer"></use></svg>
+                          Барные принадлежности
+                        </span>
+                        <div class="catalog-nav__sublist-wrapper">
+                          <ul class="catalog-nav__list">
+                            <li class="catalog-nav__item">
+                              <a href="#" class="catalog-nav__link">
+                                Трубочки
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Шпажки
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Вафельное полотно
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Прочее
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="catalog-nav__item  catalog-nav__item--show-child">
+                        <span class="catalog-nav__pseudolink">
+                          <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-stationery"></use></svg>
+                          Канцтовары
+                        </span>
+                        <div class="catalog-nav__sublist-wrapper">
+                          <ul class="catalog-nav__list">
+                            <li class="catalog-nav__item">
+                              <a href="#" class="catalog-nav__link">
+                                Чековая лента
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Детский уголок
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Офисные принадлежности
+                              </a>
+                            </li>
+                            <li class="catalog-nav__item">
+                              <a href="" class="catalog-nav__link">
+                                Фискальные накопители для терминалов
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+
+                <div class="widget widget--news">
+                  <div class="widget__inner">
+                    <div class="widget__header">
+                      <h6 class="widget__title">Новости</h6>
+                    </div>
+                    <div class="widget__body">
+                      <h5>Приглашаем на выставку RosUpack 2019</h5>
+                      <p>Приглашаем посетить наш стенд на выставке RosUpack 2019 С 18 по 21 июня «Триал Маркет» примет участие в крупнейшей в России и Восточной Европе...</p>
+                    </div>
+                    <div class="widget__footer">
+                      <span class="date">10.10.2019</span>
+                      <a href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="widget widget--youtube">
+                  <div class="widget__inner">
+                    <div class="widget__header">
+                      <h6 class="widget__title">Видео с Youtube</h6>
+                    </div>
+                    <div class="widget__body">
+                      <div class="embed-responsive  embed-responsive--16-9">
+                        <iframe src="https://www.youtube.com/embed/HNpLuXOg7xQ" frameborder="0" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                    <div class="widget__footer"></div>
+                  </div>
+                </div>
+                <div class="widget widget--filter">
+                  <div class="widget__inner">
+                    <div class="widget__header">
+                      <h6 class="widget__title">Подбор по параметрам</h6>
+                    </div>
+                    <div class="widget__body">
+                      <form action="" class="catalog-filter">
+                        <div class="catalog-filter__part">
+                          <div class="catalog-filter__name">Параметр 1</div>
+                          <div class="field-checkbox">
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                                <span class="field-checkbox__name-text">Текст у флажка</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="checkbox" id="" name="">
+                                <span class="field-checkbox__name-text">Текст у флажка</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="checkbox" id="" name="">
+                                <span class="field-checkbox__name-text">Текст у флажка</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="catalog-filter__part">
+                          <div class="catalog-filter__name">Параметр 2</div>
+                          <div class="field-radio field-radio--inline">
+                            <div class="field-radio__input-wrap">
+                              <label class="field-radio__name">
+                                <input class="field-radio__input" type="radio" id="" name="demo-radio" checked>
+                                <span class="field-radio__name-text">Да</span>
+                              </label>
+                            </div>
+                            <div class="field-radio__input-wrap">
+                              <label class="field-radio__name">
+                                <input class="field-radio__input" type="radio" id="" name="demo-radio">
+                                <span class="field-radio__name-text">Нет</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="catalog-filter__part">
+                          <div class="catalog-filter__name">Параметр 3</div>
+                          <div class="range-filter">
+                            <div class="range-filter__input-wrap">
+                              <input class="range-filter__input" type="text" id="input-with-keypress-0">
+                              <div class="range-filter__separator">до</div>
+                              <input class="range-filter__input" type="text" id="input-with-keypress-1">
+                            </div>
+                            <div class="range-filter__slider">
+                              <div id="steps-slider"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="widget__footer">
+                      <a href="#" class="btn btn--sm btn--orange">Сбросить</a>
+                      <a href="#" class="btn btn--sm btn--main">Применить</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="main">
+                <div class="main__inner">
+
+                  <h1 class="main__title">Корзина</h1>
+
+                  <div class="table-mobile-scroll">
+
+                    <table class="table basket-table">
+                      <tr>
+                        <th class="cell-image"></th>
+                        <th class="cell-name">Наименование</th>
+                        <th class="cell-price-pack">Цена за упаковку</th>
+                        <th class="cell-amount-pack">Кол-во в упаковке</th>
+                        <th class="cell-amount">Кол-во</th>
+                        <th class="cell-price">Стоимость</th>
+                        <th class="cell-status">Статус</th>
+                        <th class="cell-close"></th>
+                      </tr>
+                      <tr>
+                        <td class="cell-image"><img src="img/product-card-img.png" alt=""></td>
+                        <td class="cell-name">
+                          <h5>Средство для чистки плит 3л</h5>
+                          <ul class="dashed-list">
+                            <li><span class="name">Объем</span><span class="value">520 мл.</span></li>
+                            <li><span class="name">Бренд</span><span class="value">Unicum</span></li>
+                            <li><span class="name">Отдушка, запах</span><span class="value">Фреш</span></li>
+                          </ul>
+                          <div class="vendor-code"><span class="name">Артикул</span><span class="value">6325945</span></div>
+                        </td>
+                        <td class="cell-price-pack">
+                          <div class="product-card__price">
+                            <div class="sub-price"><s>280</s></div>
+                            <div class="price"><span>180</span> руб</div>
+                          </div>
+                        </td>
+                        <td class="cell-amount-pack">20 шт</td>
+                        <td class="cell-amount">
+                          <div class="field-num">
+                            <span class="field-num__input-and-btns">
+                              <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                              <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                              <input class="field-num__input" type="number" value="9" name="quantity" max="10" min="1" step="1">
+                            </span>
+                          </div>
+                        </td>
+                        <td class="cell-price">
+                          <div class="product-card__price">
+                            <div class="sub-price"><s>280</s></div>
+                            <div class="price"><span>180</span> руб</div>
+                          </div>
+                        </td>
+                        <td class="cell-status">На складе</td>
+                        <td class="cell-close"><span class="close" aria-label="Закрыть"><span></span></span></td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div class="basket-action">
+                    <div class="basket-action__item">
+                      <form class="basket-action__form" action="">
+                        <label class="field-text">
+                          <span class="field-text__name">Добавить товары по артикулу</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" value="Арт: 6325945" id="" name="">
+                          </span>
+                        </label>
+                        <button class="btn btn--sm btn--main">Добавить</button>
+                      </form>
+                    </div>
+                    <div class="basket-action__item">
+                      <a class="basket-action__clear" href="#">Очистить корзину</a>
+                      <p class="basket-action__price">Итог: <span>16&nbsp;950&nbsp;руб</span></p>
+                      <a href="#" class="btn btn--sm btn--main">Оформить заказ</a>
+                    </div>
+                  </div>
+
+                  <div class="carousel-box">
+                    <h2 class="carousel-box__title text-center">Популярные бренды</h2>
+                    <div class="owl-carousel owl-theme" id="brands-carousel">
+
+                      <div class="brand-item">
+                        <img class="brand-item__logo" src="img/logo-brand-ace.png" alt="">
+                      </div>
+                      <div class="brand-item">
+                        <img class="brand-item__logo" src="img/logo-brand-lenor.png" alt="">
+                      </div>
+                      <div class="brand-item">
+                        <img class="brand-item__logo" src="img/logo-brand-finish.png" alt="">
+                      </div>
+                      <div class="brand-item">
+                        <img class="brand-item__logo" src="img/logo-brand-dove.png" alt="">
+                      </div>
+                      <div class="brand-item">
+                        <img class="brand-item__logo" src="img/logo-brand-lenor.png" alt="">
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </main>
+
+      </div>
+
+      <div class="page__footer-wrapper">
+
+        <footer class="page-footer" role="contentinfo">
+          <div class="container">
+            <div class="page-footer__inner">
+              <div class="page-footer__item page-footer__item--contacts">
+                <a class="page-footer__logo" href="index.html">
+                  <img src="img/logo-white.png" alt="">
+                </a>
+                <div class="page-footer__contacts">
+                  <p>г. Челябинск</p>
+                  <a class="main-phone" href="tel:+78001234567">8 800 123-45-67</a>
+                  <p><a class="call-link" href="#modal-call" data-toggle="modal">Вам перезонить?</a></p>
+                </div>
+                <div class="page-footer__wt">
                   <div><b>Пн-пт с 9 до 18</b></div>
                   <div>сб и вс выходной</div>
                 </div>
               </div>
-              <div class="header-main__item header-main__item--med">
-                <a class="header-med" href="#">
-                  <img src="img/med.png" alt="">
-                </a>
-              </div>
-              <div class="header-main__item">
-                <a href="#" class="header-btn header-btn--favorit">
-                  <div class="header-btn__inner">
-                    <div class="header-btn__icon-wrap">
-                      <span class="value">12</span>
-                      <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#favorit-icon"></use></svg>
-                    </div>
-                    <div class="header-btn__content">
-                      <h5>Избранное</h5>
-                      <div>2530р</div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="header-main__item">
-                <div class="dropdown dropdown--basket">
-                  <a id="dropdown-basket" href="#" class="header-btn header-btn--basket dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    <div class="header-btn__inner">
-                      <div class="header-btn__icon-wrap">
-                        <span class="value">12</span>
-                        <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#basket-icon"></use></svg>
-                      </div>
-                      <div class="header-btn__content">
-                        <h5>Корзина</h5>
-                        <span>1550р</span>
-                      </div>
-                    </div>
-                  </a>
-                  <div class="dropdown__menu dropdown__menu--right" aria-labelledby="dropdown-basket">
-                    <div class="basket-list">
-                      <div class="basket-list__header">
-                        <div class="basket-list__cell name">Наименование</div>
-                        <div class="basket-list__cell price">Цена</div>
-                        <div class="basket-list__cell cost">Стоимость</div>
-                      </div>
-                      <div class="basket-list__el">
-                        <div class="basket-list__cell name">
-                          <div class="basket-el__img-wrap">
-                            <img src="img/product-card-img.png" alt="">
-                          </div>
-                          <div class="basket-el__name">Средство для чистки плит</div>
-                        </div>
-                        <div class="basket-list__cell price">
-                          <span class="price-value">180&nbsp;руб</span>
-                          <div class="field-num field-num--light">
-                            <span class="field-num__input-wrap">
-                              <span class="field-num__input-and-btns">
-                                <button class="field-num__btn field-num__btn--minus" type="button">-</button>
-                                <button class="field-num__btn field-num__btn--plus" type="button">+</button>
-                                <input class="field-num__input" type="number" value="9" name="quantity" max="10" min="1" step="1">
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                        <div class="basket-list__cell cost"><span class="price-value">360&nbsp;руб</span></div>
-                      </div>
-                      <div class="basket-list__el">
-                        <div class="basket-list__cell name">
-                          <div class="basket-el__img-wrap">
-                            <img src="img/product-card-img.png" alt="">
-                          </div>
-                          <div class="basket-el__name">Средство для чистки плит</div>
-                        </div>
-                        <div class="basket-list__cell price">
-                          <span class="price-value">180&nbsp;руб</span>
-                          <div class="field-num field-num--light">
-                            <span class="field-num__input-wrap">
-                              <span class="field-num__input-and-btns">
-                                <button class="field-num__btn field-num__btn--minus" type="button">-</button>
-                                <button class="field-num__btn field-num__btn--plus" type="button">+</button>
-                                <input class="field-num__input" type="number" value="9" name="quantity" max="10" min="1" step="1">
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                        <div class="basket-list__cell cost"><span class="price-value">1080&nbsp;руб</span></div>
-                      </div>
-                      <div class="basket-list__footer">
-                        <div class="basket-list__cell all-cost">Всего <span class="price-value">1440&nbsp;руб</span></div>
-                        <div class="basket-list__cell action"><a href="#" class="btn btn--sm btn--orange">Оформить заказ</a></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-
-
-      <main class="page-main page-main--no-sidebar" role="main">
-        <div class="main-top">
-          <div class="container">
-            <div class="main-top__inner">
-              <div class="main-top__sidebar">
-                <button class="catalog-nav__toggler">Каталог товаров</button>
-              </div>
-              <div class="main-top__content">
-                <ul class="breadcrumbs">
-                  <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
-                  <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Корзина</a></li>
+              <div class="page-footer__item page-footer__item--links">
+                <ul class="page-footer__list">
+                  <li><a href="#">Брендирование</a></li>
+                  <li><a href="#">О нас</a></li>
+                  <li><a href="#">Обратная связь</a></li>
+                  <li><a href="#">Отзывы</a></li>
                 </ul>
+                <ul class="page-footer__list">
+                  <li><a href="#">Контакты</a></li>
+                  <li><a href="#">Блог</a></li>
+                  <li><a href="#">Как стать поставщиком</a></li>
+                  <li><a href="#">Доставка и оплата</a></li>
+                </ul>
+                <p class="page-footer__copyright">
+                  © 2019, ООО «Restorator».<br>All Rights Reserved.
+                </p>
+              </div>
+              <div class="page-footer__item page-footer__item--map">
+                <img src="img/map-placeholder.jpg" alt="">
               </div>
             </div>
           </div>
-        </div>
+        </footer>
 
-        <div class="container">
-          <div class="page-main__inner">
-
-            <div class="sidebar">
-
-              <nav class="catalog-nav catalog-nav--show">
-                <div class="catalog-nav__wrap">
-                  <form action="" class="catalog-nav__form">
-                    <div class="field-checkbox">
-                      <div class="field-checkbox__input-wrap">
-                        <label class="field-checkbox__name">
-                          <input class="field-checkbox__input" type="checkbox" id="" name="">
-                          <span class="field-checkbox__name-text">Стандарт</span>
-                        </label>
-                      </div>
-                      <div class="field-checkbox__input-wrap">
-                        <label class="field-checkbox__name">
-                          <input class="field-checkbox__input" type="checkbox" id="" name="">
-                          <span class="field-checkbox__name-text">Эконом</span>
-                        </label>
-                      </div>
-                      <div class="field-checkbox__input-wrap">
-                        <label class="field-checkbox__name">
-                          <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
-                          <span class="field-checkbox__name-text">Премиум</span>
-                        </label>
-                      </div>
-                    </div>
-                  </form>
-
-                  <ul class="catalog-nav__list">
-                    <li class="catalog-nav__item catalog-nav__item--show-child">
-                      <span class="catalog-nav__pseudolink">
-                        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-dishwasher"></use></svg>
-                        Кухонная зона
-                      </span>
-                      <div class="catalog-nav__sublist-wrapper">
-                        <ul class="catalog-nav__list">
-                          <li class="catalog-nav__item">
-                            <a href="#" class="catalog-nav__link">
-                              Все для мытья посуды
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Средства индивидуальной защиты
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Салфетки для уборки
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Салфетки для чистки плит
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Одноразовая посуда
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Пищевая упаковка
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Бумажная продукция для кухни
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Фасовочные пакеты, мешки для мусора
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="catalog-nav__item catalog-nav__item--show-child">
-                      <span class="catalog-nav__pseudolink">
-                        <svg width="22" height="22"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-tissue"></use></svg>
-                        Все для туалетных комнат
-                      </span>
-                      <div class="catalog-nav__sublist-wrapper">
-                        <ul class="catalog-nav__list">
-                          <li class="catalog-nav__item">
-                            <a href="#" class="catalog-nav__link">
-                              Диспенсеры
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Гигиеническая продукция
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Дезинфицирующие средства и таблетки
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Сушилки для рук
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Средства для мытья стекол и зеркал
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Освежители воздуха
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Мыло
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Средства для сантехники
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Уборка мусора
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="catalog-nav__item  catalog-nav__item--show-child">
-                      <span class="catalog-nav__pseudolink">
-                        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-furniture"></use></svg>
-                        Гостевой зал
-                      </span>
-                      <div class="catalog-nav__sublist-wrapper">
-                        <ul class="catalog-nav__list">
-                          <li class="catalog-nav__item">
-                            <a href="#" class="catalog-nav__link">
-                              Салфетки сервировочные и диспенсеры
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Средства для мытья стекол и зеркал
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Стиральные порошки
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Средства для уборки
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="catalog-nav__item  catalog-nav__item--show-child">
-                      <span class="catalog-nav__pseudolink">
-                        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-mop"></use></svg>
-                        Чистота полов
-                      </span>
-                      <div class="catalog-nav__sublist-wrapper">
-                        <ul class="catalog-nav__list">
-                          <li class="catalog-nav__item">
-                            <a href="#" class="catalog-nav__link">
-                              Швабры и тряпки для мытья полов
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Средства для мытья полов
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Тележки уборочные
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="catalog-nav__item  catalog-nav__item--show-child">
-                      <span class="catalog-nav__pseudolink">
-                        <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-skewer"></use></svg>
-                        Барные принадлежности
-                      </span>
-                      <div class="catalog-nav__sublist-wrapper">
-                        <ul class="catalog-nav__list">
-                          <li class="catalog-nav__item">
-                            <a href="#" class="catalog-nav__link">
-                              Трубочки
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Шпажки
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Вафельное полотно
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Прочее
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="catalog-nav__item  catalog-nav__item--show-child">
-                      <span class="catalog-nav__pseudolink">
-                        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-stationery"></use></svg>
-                        Канцтовары
-                      </span>
-                      <div class="catalog-nav__sublist-wrapper">
-                        <ul class="catalog-nav__list">
-                          <li class="catalog-nav__item">
-                            <a href="#" class="catalog-nav__link">
-                              Чековая лента
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Детский уголок
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Офисные принадлежности
-                            </a>
-                          </li>
-                          <li class="catalog-nav__item">
-                            <a href="" class="catalog-nav__link">
-                              Фискальные накопители для терминалов
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div id="catalog-nav-backdrop" class="catalog-nav__backdrop"></div>
-              </nav>
-
-              <div class="widget widget--news">
-                <div class="widget__inner">
-                  <div class="widget__header">
-                    <h6 class="widget__title">Новости</h6>
-                  </div>
-                  <div class="widget__body">
-                    <h5>Приглашаем на выставку RosUpack 2019</h5>
-                    <p>Приглашаем посетить наш стенд на выставке RosUpack 2019 С 18 по 21 июня «Триал Маркет» примет участие в крупнейшей в России и Восточной Европе...</p>
-                  </div>
-                  <div class="widget__footer">
-                    <span class="date">10.10.2019</span>
-                    <a href="#">Подробнее</a>
-                  </div>
-                </div>
-              </div>
-              <div class="widget widget--youtube">
-                <div class="widget__inner">
-                  <div class="widget__header">
-                    <h6 class="widget__title">Видео с Youtube</h6>
-                  </div>
-                  <div class="widget__body">
-                    <div class="embed-responsive  embed-responsive--16-9">
-                      <iframe src="https://www.youtube.com/embed/HNpLuXOg7xQ" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </div>
-                  <div class="widget__footer"></div>
-                </div>
-              </div>
-              <div class="widget widget--filter">
-                <div class="widget__inner">
-                  <div class="widget__header">
-                    <h6 class="widget__title">Подбор по параметрам</h6>
-                  </div>
-                  <div class="widget__body">
-                    <form action="" class="catalog-filter">
-                      <div class="catalog-filter__part">
-                        <div class="catalog-filter__name">Параметр 1</div>
-                        <div class="field-checkbox">
-                          <div class="field-checkbox__input-wrap">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
-                              <span class="field-checkbox__name-text">Текст у флажка</span>
-                            </label>
-                          </div>
-                          <div class="field-checkbox__input-wrap">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox" id="" name="">
-                              <span class="field-checkbox__name-text">Текст у флажка</span>
-                            </label>
-                          </div>
-                          <div class="field-checkbox__input-wrap">
-                            <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox" id="" name="">
-                              <span class="field-checkbox__name-text">Текст у флажка</span>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="catalog-filter__part">
-                        <div class="catalog-filter__name">Параметр 2</div>
-                        <div class="field-radio field-radio--inline">
-                          <div class="field-radio__input-wrap">
-                            <label class="field-radio__name">
-                              <input class="field-radio__input" type="radio" id="" name="demo-radio" checked>
-                              <span class="field-radio__name-text">Да</span>
-                            </label>
-                          </div>
-                          <div class="field-radio__input-wrap">
-                            <label class="field-radio__name">
-                              <input class="field-radio__input" type="radio" id="" name="demo-radio">
-                              <span class="field-radio__name-text">Нет</span>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="catalog-filter__part">
-                        <div class="catalog-filter__name">Параметр 3</div>
-                        <div class="range-filter">
-                          <div class="range-filter__input-wrap">
-                            <input class="range-filter__input" type="text" id="input-with-keypress-0">
-                            <div class="range-filter__separator">до</div>
-                            <input class="range-filter__input" type="text" id="input-with-keypress-1">
-                          </div>
-                          <div class="range-filter__slider">
-                            <div id="steps-slider"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="widget__footer">
-                    <a href="#" class="btn btn--sm btn--orange">Сбросить</a>
-                    <a href="#" class="btn btn--sm btn--main">Применить</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="main">
-              <div class="main__inner">
-
-                <h1 class="main__title">Корзина</h1>
-
-                <div class="table-mobile-scroll">
-
-                  <table class="table basket-table">
-                    <tr>
-                      <th class="cell-image"></th>
-                      <th class="cell-name">Наименование</th>
-                      <th class="cell-price-pack">Цена за упаковку</th>
-                      <th class="cell-amount-pack">Кол-во в упаковке</th>
-                      <th class="cell-amount">Кол-во</th>
-                      <th class="cell-price">Стоимость</th>
-                      <th class="cell-status">Статус</th>
-                      <th class="cell-close"></th>
-                    </tr>
-                    <tr>
-                      <td class="cell-image"><img src="img/product-card-img.png" alt=""></td>
-                      <td class="cell-name">
-                        <h5>Средство для чистки плит 3л</h5>
-                        <ul class="dashed-list">
-                          <li><span class="name">Объем</span><span class="value">520 мл.</span></li>
-                          <li><span class="name">Бренд</span><span class="value">Unicum</span></li>
-                          <li><span class="name">Отдушка, запах</span><span class="value">Фреш</span></li>
-                        </ul>
-                        <div class="vendor-code"><span class="name">Артикул</span><span class="value">6325945</span></div>
-                      </td>
-                      <td class="cell-price-pack">
-                        <div class="product-card__price">
-                          <div class="sub-price"><s>280</s></div>
-                          <div class="price"><span>180</span> руб</div>
-                        </div>
-                      </td>
-                      <td class="cell-amount-pack">20 шт</td>
-                      <td class="cell-amount">
-                        <div class="field-num">
-                          <span class="field-num__input-and-btns">
-                            <button class="field-num__btn field-num__btn--minus" type="button">-</button>
-                            <button class="field-num__btn field-num__btn--plus" type="button">+</button>
-                            <input class="field-num__input" type="number" value="9" name="quantity" max="10" min="1" step="1">
-                          </span>
-                        </div>
-                      </td>
-                      <td class="cell-price">
-                        <div class="product-card__price">
-                          <div class="sub-price"><s>280</s></div>
-                          <div class="price"><span>180</span> руб</div>
-                        </div>
-                      </td>
-                      <td class="cell-status">На складе</td>
-                      <td class="cell-close"><span class="close" aria-label="Закрыть"><span></span></span></td>
-                    </tr>
-                  </table>
-                </div>
-
-                <div class="basket-action">
-                  <div class="basket-action__item">
-                    <form class="basket-action__form" action="">
-                      <label class="field-text">
-                        <span class="field-text__name">Добавить товары по артикулу</span>
-                        <span class="field-text__input-wrap">
-                          <input class="field-text__input" type="text" value="Арт: 6325945" id="" name="">
-                        </span>
-                      </label>
-                      <button class="btn btn--sm btn--main">Добавить</button>
-                    </form>
-                  </div>
-                  <div class="basket-action__item">
-                    <a class="basket-action__clear" href="#">Очистить корзину</a>
-                    <p class="basket-action__price">Итог: <span>16&nbsp;950&nbsp;руб</span></p>
-                    <a href="#" class="btn btn--sm btn--main">Оформить заказ</a>
-                  </div>
-                </div>
-
-                <div class="carousel-box">
-                  <h2 class="carousel-box__title text-center">Популярные бренды</h2>
-                  <div class="owl-carousel owl-theme" id="brands-carousel">
-
-                    <div class="brand-item">
-                      <img class="brand-item__logo" src="img/logo-brand-ace.png" alt="">
-                    </div>
-                    <div class="brand-item">
-                      <img class="brand-item__logo" src="img/logo-brand-lenor.png" alt="">
-                    </div>
-                    <div class="brand-item">
-                      <img class="brand-item__logo" src="img/logo-brand-finish.png" alt="">
-                    </div>
-                    <div class="brand-item">
-                      <img class="brand-item__logo" src="img/logo-brand-dove.png" alt="">
-                    </div>
-                    <div class="brand-item">
-                      <img class="brand-item__logo" src="img/logo-brand-lenor.png" alt="">
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </main>
+      </div>
 
     </div>
-
-    <div class="page__footer-wrapper">
-
-      <footer class="page-footer" role="contentinfo">
-        <div class="container">
-          <div class="page-footer__inner">
-            <div class="page-footer__item page-footer__item--contacts">
-              <a class="page-footer__logo" href="index.html">
-                <img src="img/logo-white.png" alt="">
-              </a>
-              <div class="page-footer__contacts">
-                <p>г. Челябинск</p>
-                <a class="main-phone" href="tel:+78001234567">8 800 123-45-67</a>
-                <p><a class="call-link" href="#modal-call" data-toggle="modal">Вам перезонить?</a></p>
-              </div>
-              <div class="page-footer__wt">
-                <div><b>Пн-пт с 9 до 18</b></div>
-                <div>сб и вс выходной</div>
-              </div>
-            </div>
-            <div class="page-footer__item page-footer__item--links">
-              <ul class="page-footer__list">
-                <li><a href="#">Брендирование</a></li>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Обратная связь</a></li>
-                <li><a href="#">Отзывы</a></li>
-              </ul>
-              <ul class="page-footer__list">
-                <li><a href="#">Контакты</a></li>
-                <li><a href="#">Блог</a></li>
-                <li><a href="#">Как стать поставщиком</a></li>
-                <li><a href="#">Доставка и оплата</a></li>
-              </ul>
-              <p class="page-footer__copyright">
-                © 2019, ООО «Restorator».<br>All Rights Reserved.
-              </p>
-            </div>
-            <div class="page-footer__item page-footer__item--map">
-              <img src="img/map-placeholder.jpg" alt="">
-            </div>
-          </div>
-        </div>
-      </footer>
-
-    </div>
-
+    <div class="off-canvas__overlay" data-toggle="off-canvas"></div>
   </div>
   <script src="js/script.min.js"></script>
 
