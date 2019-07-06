@@ -34,7 +34,7 @@ $typo-margin-vertical:        1em;
     height: 45px;
 
     #{$block-name}:not(#{$block-name}--disabled) button:focus ~ & { // stylelint-disable-line
-      @include field-focus;
+      // @include field-focus;
     }
   }
 

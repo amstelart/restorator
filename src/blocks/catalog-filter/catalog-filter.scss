@@ -1,0 +1,20 @@
+// В этом файле должны быть стили для БЭМ-блока catalog-filter, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.catalog-filter {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__part {
+    margin-bottom: 15px;
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+}

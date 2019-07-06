@@ -117,4 +117,17 @@ $line-height:                 1.375em !default;
   &__help-text {
     @include field-help-text;
   }
+
+  &--inline {
+    display: flex;
+    flex-wrap: wrap;
+
+    .field-checkbox__input-wrap {
+      margin-top: 0.6875em;
+    }
+
+    .field-checkbox__name {
+      margin-right: 15px;
+    }
+  }
 }

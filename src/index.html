@@ -70,7 +70,7 @@
                 </div>
                 <div class="carousel-box">
                   <h2 class="carousel-box__title text-center">Хиты продаж</h2>
-                  <div class="owl-carousel owl-theme" id="hits-carousel">
+                  <div class="owl-carousel owl-theme product-card-carousel" id="hits-carousel">
                     @@include('blocks/product-card/product-card.html')
                     @@include('blocks/product-card/product-card.html')
                     @@include('blocks/product-card/product-card.html')
@@ -81,9 +81,10 @@
                     @@include('blocks/product-card/product-card.html')
                   </div>
                 </div>
-                <div class="main-carousel-box">
-                  <h2 class="main-carousel-box__title text-center">Новое поступление</h2>
-                  <div class="owl-carousel owl-theme" id="arrival-carousel">
+                
+                <div class="carousel-box">
+                  <h2 class="carousel-box__title text-center">Новое поступление</h2>
+                  <div class="owl-carousel owl-theme product-card-carousel" id="arrival-carousel">
                     @@include('blocks/product-card/product-card.html')
                     @@include('blocks/product-card/product-card.html')
                     @@include('blocks/product-card/product-card.html')
@@ -94,13 +95,17 @@
                     @@include('blocks/product-card/product-card.html')
                   </div>
                 </div>
+
+                <!-- Карусель брендов -->
                 <div class="carousel-box">
                   <h2 class="carousel-box__title text-center">Популярные бренды</h2>
                   <div class="owl-carousel owl-theme" id="brands-carousel">
                     @@include('blocks/brand-item/brand-item.html')
                   </div>
                 </div>
+                <!-- ./end Карусель брендов -->
 
+                <!-- Карусель галлерея -->
                 <div class="carousel-box">
                   <h4>О нас</h4>
                   <p>Широкий ассортимент одноразовой посуды, пищевой упаковки, гигиенической продукции, упаковочных материалов, хозтоваров для уборки, бытовой химии, расходников и множество других полезных товаров.</p>
@@ -114,6 +119,7 @@
                   </div>
                   <p>Чтобы узнать больше о нас <a href="restorator.ru/about-us">restorator.ru/about-us</a></p>
                 </div>
+                <!-- ./end Карусель галлерея -->
 
                 <div class="text-box text-box--wrapper">
                   <h4>О доставе</h4>
@@ -123,6 +129,7 @@
                   <p><a href="#">Подробнее о доставке</a></p>
                 </div>
 
+                <!-- Карусель отзывы -->
                 <div class="carousel-box">
                   <h2 class="carousel-box__title">Отзывы о нашей работе</h2>
                   <div class="owl-carousel owl-theme" id="reviews-carousel">
@@ -137,7 +144,7 @@
                     </div>
                   </div>
                 </div>
-
+                <!-- ./end Карусель отзывы -->
               </div>
             </div>
           </div>

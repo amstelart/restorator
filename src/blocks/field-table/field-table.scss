@@ -1,0 +1,17 @@
+// В этом файле должны быть стили для БЭМ-блока field-table, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.field-table {
+
+  $block-name:                &; // #{$block-name}__element
+
+  .table {
+    font-size: 14px;
+
+    .mw {
+      width: 80px;
+    }
+  }
+
+}

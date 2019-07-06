@@ -73,4 +73,33 @@ $transition-time:             0.3s !default;
       }
     }
   }
+
+  &--sort {
+
+    #{$block-name}__name {
+      font-size: 16px;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+
+    #{$block-name}__toggler {
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    #{$block-name}__menu {
+      min-width: auto;
+      padding: 0;
+      left: 0;
+      right: 0;
+      font-size: 16px;
+      font-weight: 600;
+
+      .menu__link {
+        padding: 0.3em 0.7em;
+      }
+    }
+  }
 }

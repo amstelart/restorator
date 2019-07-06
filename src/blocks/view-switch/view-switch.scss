@@ -1,0 +1,41 @@
+// В этом файле должны быть стили для БЭМ-блока view-switch, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.view-switch {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+
+  &__item {
+    margin: 0;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d6effb;
+    box-shadow: inset 1px 0 #d6effb;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .3s;
+    margin-left: 20px;
+    background: #fff;
+    border: 1px solid transparent;
+
+    svg {
+      fill: #efefef;
+    }
+
+    &.active {
+
+      border-color: $color-main;
+      
+      svg {
+        fill: $color-main;
+      }
+    }
+  }
+
+}

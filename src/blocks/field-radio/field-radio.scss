@@ -32,6 +32,7 @@ $line-height:                 1.375em !default;
     margin-right: 0.6em;
     font-weight: 400;
     line-height: $line-height;
+    cursor: pointer;
   }
 
   &__name-text {
@@ -59,7 +60,7 @@ $line-height:                 1.375em !default;
     &:before {
       content: '';
       position: absolute;
-      top: 0.1em;
+      top: 0.2em;
       left: 0;
       width: 14px;
       height: 14px;
@@ -68,14 +69,14 @@ $line-height:                 1.375em !default;
       border-radius: 50%;
     }
 
-    @at-root input:focus ~ &:before {
-      @include field-focus;
-    }
+    // @at-root input:focus ~ &:before {
+    //   @include field-focus;
+    // }
 
     &:after {
       content: '';
       position: absolute;
-      top: calc(0.1em + 4px);
+      top: calc(0.2em + 4px);
       left: 4px;
       width: 6px;
       height: 6px;
@@ -115,5 +116,20 @@ $line-height:                 1.375em !default;
 
   &__help-text {
     @include field-help-text;
+  }
+
+  &--inline {
+    display: flex;
+    flex-wrap: wrap;
+
+    .field-radio__title,
+    .field-radio__input-wrap {
+      margin-top: 0.6875em;
+    }
+
+    .field-radio__name,
+    .field-radio__title {
+      margin-right: 15px;
+    }
   }
 }

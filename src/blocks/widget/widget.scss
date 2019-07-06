@@ -42,4 +42,33 @@
       padding-top: 15px;
     }
   }
+
+  &--filter {
+    #{$block-name}__inner {
+      padding: 0;
+    }
+    #{$block-name}__header {
+      background: $color-main;
+      padding: 20px 20px;
+      border-bottom: none;
+    }
+    #{$block-name}__title {
+      color: #fff;
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    #{$block-name}__body {
+      padding: 20px;
+    }
+
+    #{$block-name}__footer {
+      display: flex;
+
+      .btn {
+        flex-grow: 1;
+      }
+    }
+  }
 }
