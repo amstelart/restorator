@@ -28,10 +28,9 @@ $( document ).ready(function() {
           nav: true,
           loop: true,
           center: true,
-          autoWidth:true,
         },
         480 : {
-          items: 3,
+          items: 2,
           autoWidth:true,
         },
         768 : {

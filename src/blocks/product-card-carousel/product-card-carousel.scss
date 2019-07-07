@@ -7,7 +7,7 @@
   $block-name:                &; // #{$block-name}__element
 
   .product-card {
-    @media (max-width: ($screen-lg - 1)){
+    @media (max-width: ($screen-lg - 1) and (min-width: $screen-md)) {
       max-width: 280px;
     }
   }
