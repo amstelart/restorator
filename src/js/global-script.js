@@ -40,7 +40,6 @@ $( document ).ready(function() {
         },
         992 : {
           items: 3,
-          autoWidth:true,
         },
         1200 : {
           items: 3,

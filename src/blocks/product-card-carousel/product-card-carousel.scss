@@ -1,0 +1,14 @@
+// В этом файле должны быть стили для БЭМ-блока product-card-carousel, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.product-card-carousel {
+
+  $block-name:                &; // #{$block-name}__element
+
+  .product-card {
+    @media (max-width: ($screen-lg - 1)){
+      max-width: 280px;
+    }
+  }
+}

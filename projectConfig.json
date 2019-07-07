@@ -89,7 +89,8 @@
     "mini-card-grid": [],
     "catalog-filter": [],
     "range-filter": [],
-    "field-table": []
+    "field-table": [],
+    "product-card-carousel": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
