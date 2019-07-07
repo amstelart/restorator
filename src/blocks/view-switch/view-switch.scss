@@ -10,28 +10,43 @@
 
   &__item {
     margin: 0;
-    width: 54px;
-    height: 54px;
+    width: 42px;
+    height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #d6effb;
-    box-shadow: inset 1px 0 #d6effb;
     cursor: pointer;
     text-decoration: none;
     transition: all .3s;
-    margin-left: 20px;
     background: #fff;
     border: 1px solid transparent;
 
+    & + & {
+      margin-left: 15px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 54px;
+      height: 54px;
+      margin-left: 20px;
+
+      svg {
+        width: 38px;
+        height: 38px;
+      }
+    }
+
     svg {
       fill: #efefef;
+      width: 20px;
+      height: 20px;
     }
 
     &.active {
 
       border-color: $color-main;
-      
+
       svg {
         fill: $color-main;
       }

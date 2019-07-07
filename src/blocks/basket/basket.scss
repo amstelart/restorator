@@ -101,23 +101,28 @@
     }
 
     @media (min-width: $screen-xl) {
-      display: flex;
-      align-items: center;
+      
 
       .field-text {
-        display: flex;
-        align-items: center;
         margin-bottom: 0;
+        display: inline-block;
       }
 
       .field-text__name {
-        flex-grow: 1;
-        white-space: nowrap;
         margin-right: 10px;
+        min-width: 192px;
+        display: inline-block;
       }
       .field-text__input-wrap {
         min-width: 150px;
         margin-right: 10px;
+        display: inline-block;
+      }
+
+      .btn {
+        min-width: 130px;
+        display: inline-block;
+        width: auto;
       }
     }
   }
