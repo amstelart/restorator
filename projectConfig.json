@@ -90,7 +90,8 @@
     "catalog-filter": [],
     "range-filter": [],
     "field-table": [],
-    "product-card-carousel": []
+    "product-card-carousel": [],
+    "product-card-list": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
