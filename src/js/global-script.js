@@ -1,6 +1,8 @@
 // Если на проекте jQuery
 $( document ).ready(function() {
 
+  // $('select').niceSelect();
+
     var MqL = 1199;
     moveNavigation();
     $(window).on('resize', function(){

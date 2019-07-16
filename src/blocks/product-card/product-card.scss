@@ -13,6 +13,9 @@
     background: #fff;
     border: 1px solid $border-color;
     padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   &__header {
@@ -32,6 +35,11 @@
     .vendor-code {
       font-size: 12px;
       line-height: 1.3;
+      margin-left: auto;
+
+      span {
+        display: block;
+      }
 
       @media (min-width: $screen-lg) {
         font-size: 14px;
@@ -66,8 +74,6 @@
   }
 
   &__info {
-    display: flex;
-    align-items: flex-end;
     margin-bottom: 15px;
   }
 
@@ -75,21 +81,32 @@
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 0;
+    margin-bottom: 10px;
+
+    a {
+      color: #000;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-main;
+      }
+    }
 
     @media (min-width: $screen-lg) {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 
   &__price {
 
-    text-align: right;
-    margin-left: 15px;
+    display: flex;
+    align-items: center;
 
     .sub-price {
       font-size: 14px;
       color: #b8b8b8;
       font-weight: 600;
+      margin-right: 15px;
 
       @media (min-width: $screen-lg) {
         font-size: 16px;
@@ -115,6 +132,10 @@
     }
   }
 
+  &__footer {
+    margin-top: auto;
+  }
+
   &__action {
     display: flex;
   }
@@ -125,6 +146,35 @@
 
     @media (min-width: $screen-lg) {
       margin: 0 15px;
+    }
+  }
+}
+
+.sub-price {
+  font-size: 14px;
+  color: #b8b8b8;
+  font-weight: 600;
+  margin-right: 15px;
+
+  @media (min-width: $screen-lg) {
+    font-size: 16px;
+  }
+}
+
+.price {
+  font-size: 14px;
+  white-space: nowrap;
+  color: #ae232f;
+  font-weight: 700;
+
+  span {
+    font-size: 18px;
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: 16px;
+    span {
+      font-size: 24px;
     }
   }
 }

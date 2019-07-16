@@ -11,13 +11,13 @@
 
 <div class="product-card-list">
   <div class="product-card-list__inner">
-    <div class="product-card-list__img-wrap">
+    <a href="#" class="product-card-list__img-wrap">
       <img class="product-card-img" src="img/product-card-img.png" alt="">
-    </div>
+    </a>
     <div class="product-card-list__body">
       <div class="product-card-list__body-top">
         <div class="part-name">
-          <h5 class="product-card__name">Средство для чистки плит 3л</h5>
+          <h5 class="product-card__name"><a href="#">Средство для чистки плит 3л</a></h5>
           <div class="product-card__kit">
             <div class="kit-item">В упакопке <span>3 шт</span></div>
             <div class="kit-item">В коробке <span>5 уп</span></div>
@@ -36,10 +36,10 @@
         </div>
       </div>
       <div class="product-card-list__body-bottom">
-        <div class="product-card__action">
-          <a class="btn-icon" href="#">
+        <form action="" class="product-card__action">
+          <button class="btn-icon" href="#">
             <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#favorit-icon"></use></svg>
-          </a>
+          </button>
           <div class="field-num product-card__field-num">
             <span class="field-num__input-and-btns">
               <button class="field-num__btn field-num__btn--minus" type="button">-</button>
@@ -47,11 +47,11 @@
               <input class="field-num__input" type="number" value="9" name="quantity" max="10" min="1" step="1">
             </span>
           </div>
-          <a class="btn-icon btn-icon--text" href="#">
+          <button class="btn-icon btn-icon--text" href="#">
             <span>В корзину</span>
             <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#basket-icon"></use></svg>
-          </a>
-        </div>
+          </button>
+        </form>
       </div>
     </div>
   </div>

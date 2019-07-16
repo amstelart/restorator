@@ -451,32 +451,31 @@
                   <!-- блок сортировки -->
                   <div class="catalog-sort">
                     <div class="catalog-sort__item">
-                      <span class="dropdown dropdown--sort">
-                        <span class="dropdown__name">Сортировать по:</span>
-                        <span class="dropdown__toggler field-select__select" id="dropdown-sort-1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Цена &uarr;
-                        </span>
-                        <ul class="dropdown__menu  menu" aria-labelledby="dropdown-sort-1">
-                          <li class="menu__item"><a class="menu__link" href="#">Цена &uarr;</a></li>
-                          <li class="menu__item"><a class="menu__link" href="#">Цена &darr;</a></li>
-                          <li class="menu__item"><a class="menu__link" href="#">Название &uarr;</a></li>
-                          <li class="menu__item"><a class="menu__link" href="#">Название &darr;</a></li>
-                        </ul>
-                      </span>
+                      <label class="field-select field-select--sort">
+                        <div class="field-select__name">Сортировать по:</div>
+                        <div class="field-select__select-wrap">
+                          <select class="field-select__select" id="" name="">
+                            <option>Цена &uarr;</option>
+                            <option>Цена &darr;</option>
+                            <option>Название &darr;</option>
+                            <option>Название &darr;</option>
+                          </select>
+                        </div>
+                      </label>
                     </div>
 
                     <div class="catalog-sort__item">
-                      <span class="dropdown dropdown--sort">
-                        <span class="dropdown__name">Показывать по:</span>
-                        <span class="dropdown__toggler field-select__select" id="dropdown-sort-2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          8
-                        </span>
-                        <ul class="dropdown__menu  menu" aria-labelledby="dropdown-sort-2">
-                          <li class="menu__item"><a class="menu__link" href="#">16</a></li>
-                          <li class="menu__item"><a class="menu__link" href="#">24</a></li>
-                          <li class="menu__item"><a class="menu__link" href="#">32</a></li>
-                        </ul>
-                      </span>
+                      <label class="field-select field-select--sort">
+                        <div class="field-select__name">Показывать по:</div>
+                        <div class="field-select__select-wrap">
+                          <select class="field-select__select" id="" name="">
+                            <option>8</option>
+                            <option>16</option>
+                            <option>24</option>
+                            <option>32</option>
+                          </select>
+                        </div>
+                      </label>
                     </div>
 
                     <div class="catalog-sort__viewer">
@@ -494,8 +493,90 @@
 
                   <!-- каталог -->
                   <div class="catalog-grid">
-                    @@include('blocks/product-card/product-card.html')
-                    @@include('blocks/product-card/product-card.html')
+                    <div class="product-card">
+                      <div class="product-card__inner">
+                        <div class="product-card__header">
+                          <div class="label label--hit">Хит</div>
+                          <div class="label label--new">Новинка</div>
+                          <div class="vendor-code">Артикул: <span>6325945</span></div>
+                        </div>
+                        <div class="product-card__body">
+                          <div class="product-card__kit">
+                            <div class="kit-item">В упакопке <span>3 шт</span></div>
+                            <div class="kit-item">В коробке <span>5 уп</span></div>
+                          </div>
+                          <a href="#" class="product-card__img-wrap">
+                            <img class="product-card-img" src="img/product-card-img.png" alt="">
+                          </a>
+                        </div>
+                        <div class="product-card__footer">
+                          <div class="product-card__info">
+                            <h5 class="product-card__name"><a href="#">Картриджи чернильные Parker "Cartridge Quink", синие, 5 шт, 1950384</a></h5>
+                            <div class="product-card__price">
+                              <!-- <div class="sub-price"><s>280</s></div> -->
+                              <div class="price"><span>14196</span> руб</div>
+                            </div>
+                          </div>
+                          <form action="" class="product-card__action">
+                            <button class="btn-icon" href="#">
+                              <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#favorit-icon"></use></svg>
+                            </button>
+                            <div class="field-num product-card__field-num">
+                              <span class="field-num__input-and-btns">
+                                <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                <input class="field-num__input" type="number" value="9" name="quantity" max="10" min="1" step="1">
+                              </span>
+                            </div>
+                            <button class="btn-icon" href="#">
+                              <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#basket-icon"></use></svg>
+                            </button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-card">
+                      <div class="product-card__inner">
+                        <div class="product-card__header">
+                          <!-- <div class="label label--hit">Хит</div>
+                          <div class="label label--new">Новинка</div> -->
+                          <div class="vendor-code">Артикул: <span>6325945</span></div>
+                        </div>
+                        <div class="product-card__body">
+                          <div class="product-card__kit">
+                            <div class="kit-item">В упакопке <span>3 шт</span></div>
+                            <div class="kit-item">В коробке <span>5 уп</span></div>
+                          </div>
+                          <a href="#" class="product-card__img-wrap">
+                            <img class="product-card-img" src="img/product-card-img.png" alt="">
+                          </a>
+                        </div>
+                        <div class="product-card__footer">
+                          <div class="product-card__info">
+                            <h5 class="product-card__name"><a href="#">Ручка перьевая Delucci черная, 0,8мм, корпус золото, подар.уп. CPs_81914</a></h5>
+                            <div class="product-card__price">
+                              <div class="sub-price"><s>12280</s></div>
+                              <div class="price"><span>14196</span> руб</div>
+                            </div>
+                          </div>
+                          <form action="" class="product-card__action">
+                            <button class="btn-icon" href="#">
+                              <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#favorit-icon"></use></svg>
+                            </button>
+                            <div class="field-num product-card__field-num">
+                              <span class="field-num__input-and-btns">
+                                <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                <input class="field-num__input" type="number" value="9" name="quantity" max="10" min="1" step="1">
+                              </span>
+                            </div>
+                            <button class="btn-icon" href="#">
+                              <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#basket-icon"></use></svg>
+                            </button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
                     @@include('blocks/product-card/product-card.html')
                     @@include('blocks/product-card/product-card.html')
                     @@include('blocks/product-card/product-card.html')
